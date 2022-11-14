@@ -1,0 +1,9 @@
+@mixin media-in($point) {
+  @each $device, $size in $breakpoint {
+    @if $point == $device {
+      @media (min-width: $size) {
+        @content;
+      }
+    }
+  }
+}
