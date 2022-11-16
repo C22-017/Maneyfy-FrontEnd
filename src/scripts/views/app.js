@@ -2,7 +2,7 @@
 // import UrlParser from '../routes/url-parser';
 // import routes from '../routes/routes';
 
-// import './components/hero-element';
+import './components/hero-element';
 // import './components/item-restaurant';
 // import './components/detail-restaurant-info';
 // import './components/item-menu-drink';
