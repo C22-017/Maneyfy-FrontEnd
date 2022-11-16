@@ -2,8 +2,12 @@
  * headline
  */
 
+ .heros {
+  padding-top: 7.5rem;
+ } 
  .headline {
   overflow: auto;
+  
 }
 
 .headline__figure {
@@ -15,22 +19,16 @@
   width: 100%;
 }
 
-.headline__figure figcaption {
-  text-align: center;
-  color: #666666;
-  font-size: 13px;
-  font-weight: 400;
-  margin-top: 8px;
-}
+
 
 .headline__content {
-  width: 600px;
+  width: 1000px;
   float: left;
   padding: 16px 32px;
 }
 
 .headline__title {
-  font-size: 32px;
+  font-size: 68px;
   font-weight: 500;
 }
 
