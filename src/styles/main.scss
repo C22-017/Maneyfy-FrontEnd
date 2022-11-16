@@ -5,7 +5,8 @@
 @import 'propertise/mixins';
 @import 'propertise/helper';
 
-@import 'components/app-bar';
+@import 'pages/landing/appbar';
+@import 'pages/landing/hero';
 @import 'components/button';
 // @import 'components/footer';
 
@@ -20,7 +21,7 @@
 }
 
 html {
-  background: white;
+  background: #EEF7FF;
 }
 
 body {

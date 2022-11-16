@@ -14,41 +14,43 @@
   </head>
   
   <body id="mainContent" tabindex="0">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+    <header class="header">
+      <div class="app-bar">
+        <div class="brand_logo">
+          <a href="index.html">
+            <picture>
+              <!-- <source type="image/webp" srcset="${CONFIG.IMAGE_BRAND_LOGO_PATH}.webp">
+              <source type="image/png" srcset="${CONFIG.IMAGE_BRAND_LOGO_PATH}.png"> -->
+              <img class="logo"  src="..//public/images/logo-title-black.png" alt="Maneyfy">
+            </picture>
+          </a>
         </div>
+        <div class="hamburger">
+          <button id="btnMenu" aria-label="menu open"><span class="material-icons">menu</a></button>
+        </div>
+      
+        <nav id="drawer" class="nav">
+          <ul class="nav_list">
+            <li class="nav_item"><a href="#/home"><span class="material-icons" aria-hidden="true">home</span> Home</a></li>
+            <li class="nav_item"><a href="#/favorite"><span class="material-icons" aria-hidden="true">favorite</span> Favorite</a></li>
+            <li class="nav_item"><a href="https://github.com/TegarNH" target="_blank" rel="noopener">Login</a></li>
+          </ul>
+        </nav>
       </div>
-    </nav>
+    </header>
+    
+    
+
+    <div class="headline mt-5">
+      <div class="headline__content">
+        <h1 class="headline__title">#Kelola keuanganmu dalam satu tempat</h1>
+        <p class="headline__description">Merekap, Melacak, Mengontrol, hingga mengubah<br> kebiasaan dalam mengelola keuangan dengan Maneyfy.</p>
+        <button class="headline__button">Read More</button>
+      </div>
+      <figure class="headline__figure">
+        <img src="..//public/images/heros/hero-large.png" alt="Maneyfy-Hero-Image">
+      </figure>
+    </div>
+
   </body>
 </html>
