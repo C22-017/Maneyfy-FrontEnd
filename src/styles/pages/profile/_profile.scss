@@ -1,0 +1,44 @@
+@import '../../propertise/variabels';
+
+body {
+  background-color: $background-very-light-blue;
+}
+.profil {
+  background-color: #ffff;
+  align-items: center;
+  padding: 1em;
+  border-radius: 35px;
+}
+
+.kelola {
+  padding: 1em;
+  background-color: #ffff;
+  gap: 30px;
+  justify-content: center;
+  border-radius: 35px;
+  .pemasukan {
+    background-color: $background-font-income;
+    padding: 1em;
+    border-radius: 20px;
+    color: #ffff;
+  }
+  .dompet {
+    background-color: $background-amount-wallet;
+    padding: 1em;
+    border-radius: 20px;
+    color: #ffff;
+    h3 {
+      text-align: center;
+    }
+  }
+  .pengeluaran {
+    background-color: $background-font-outcome;
+    padding: 1em;
+    border-radius: 20px;
+    color: #ffff;
+    iconify-icon {
+      color: black;
+      font-size: 5em;
+    }
+  }
+}
