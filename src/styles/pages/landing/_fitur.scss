@@ -1,0 +1,45 @@
+.fitur {
+ background-color: white;
+ padding-top: 3rem;
+}
+
+.main-fitur {
+ padding-top: 5rem;
+} 
+
+.fitur .title__main {
+ text-align: center;
+ font-size: 45px;
+ font-weight:700;
+ color: #404040;
+}
+.headline {
+ overflow: auto;
+ 
+}
+
+.headline__figure {
+ width: 450px;
+ float: right;
+}
+
+.headline__figure img {
+ width: 100%;
+}
+
+.headline__content {
+ width: 1000px;
+ // float: left;
+ padding: 16px 32px;
+}
+
+.title-fitur1 {
+ font-size: 45px;
+ font-weight: 500;
+}
+
+.headline__description {
+ font-size: 16px;
+ margin-top: 12px;
+}
+
