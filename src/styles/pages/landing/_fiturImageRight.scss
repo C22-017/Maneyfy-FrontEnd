@@ -1,0 +1,60 @@
+.fitur {
+ background-color: white;
+ padding-top: 3rem;
+ overflow:initial;
+}
+
+.main-fitur {
+ width: auto;
+ height: 500px;
+} 
+
+.title__main {
+ text-align: center;
+ font-size: 45px;
+ font-weight:700;
+ color: #404040;
+}
+
+
+
+.fitur__figure {
+ width: 600px;
+ margin-right: 124px;
+ height: 447.12px;
+ float: right;
+}
+
+.fitur__figure img {
+  width: 100%;
+}
+
+.fitur__content {
+ width: 600px;
+ height: 447px;
+ float: left;
+ padding: 16px 32px;
+ margin-left: 124px;
+}
+
+.title-fitur1 {
+ font-size: 40px;
+ width: 500px;
+ padding-top: 150px;
+ font-weight:700;
+ color: #404040;
+}
+
+.fitur__description {
+ font-size: 16px;
+ margin-top: 12px;
+}
+
+// content in right
+.fitur__content-right {
+ width: 600px;
+ height: 447px;
+ float: right;
+ padding: 16px 32px;
+ margin-right: 124px;
+}
