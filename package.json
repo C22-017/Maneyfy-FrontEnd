@@ -24,7 +24,6 @@
     "@babel/core": "^7.18.5",
     "@babel/preset-env": "^7.18.2",
     "babel-loader": "^8.2.5",
-    "bootstrap": "^5.2.2",
     "clean-webpack-plugin": "^4.0.0",
     "codeceptjs": "^3.3.6",
     "copy-webpack-plugin": "^11.0.0",
@@ -65,6 +64,8 @@
     "workbox-webpack-plugin": "^6.5.4"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.2",
     "idb": "^7.1.0",
     "lazysizes": "^5.3.2",
     "regenerator-runtime": "^0.13.9",

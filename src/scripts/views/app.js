@@ -48,7 +48,7 @@ class App {
     const url = UrlParser.parseActiveUrlWithCombiner();
     const page = routes[url];
     this._content.innerHTML += await page.render();
-    // await page.afterRender();
+    await page.afterRender();
 
     // const skipLinkElem = document.querySelector('.skip-link');
     // skipLinkElem.addEventListener('click', (event) => {
@@ -56,28 +56,24 @@ class App {
     //   document.querySelector('#mainContent').focus();
     // });
 
-    const showNavbar = (toggleId, navId, bodyId, headerId) => {
-      const toggle = document.getElementById(toggleId);
-      const nav = document.getElementById(navId);
-      const bodypd = document.getElementById(bodyId);
-      const headerpd = document.getElementById(headerId);
+    const toggle = document.getElementById('header-toggle');
+    const nav = document.getElementById('nav-bar');
+    const bodypd = document.getElementById('body-pd');
+    const headerpd = document.getElementById('header');
 
-      // Validate that all variables exist
-      if (toggle && nav && bodypd && headerpd) {
-        toggle.addEventListener('click', () => {
-          // show navbar
-          nav.classList.toggle('show');
-          // change icon
-          toggle.classList.toggle('bx-x');
-          // add padding to body
-          bodypd.classList.toggle('body-pd');
-          // add padding to header
-          headerpd.classList.toggle('body-pd');
-        });
-      }
-    };
-
-    showNavbar('header-toggle', 'nav-bar', 'body-pd', 'header');
+    // Validate that all variables exist
+    if (toggle && nav && bodypd && headerpd) {
+      toggle.addEventListener('click', () => {
+        // show navbar
+        nav.classList.toggle('show-l');
+        // change icon
+        toggle.classList.toggle('bx-x');
+        // add padding to body
+        bodypd.classList.toggle('body-pd');
+        // add padding to header
+        headerpd.classList.toggle('body-pd');
+      });
+    }
 
     /*= ==== LINK ACTIVE ===== */
     const linkColor = document.querySelectorAll('.nav_link');
@@ -89,6 +85,8 @@ class App {
       }
     }
     linkColor.forEach((l) => l.addEventListener('click', colorLink));
+
+    // Your code to run since DOM is loaded and ready
   }
 }
 
