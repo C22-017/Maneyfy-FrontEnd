@@ -1,14 +1,17 @@
-const Profile = {
-  async render() {
-    return `
-        <header class="header" id="header">
-          <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
-          <div class="header_img"> <img src="https://i.imgur.com/hczKIze.jpg" alt=""> </div>
-        </header>
-  
-        <side-bar class="l-navbar" id="nav-bar"></side-bar>
-  
-        <main class="container">
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <main class="container">
         <h1 class="titlePage mb-5 pt-3">Profil Saya</h1>
 
         <section class="profil mb-5 row">
@@ -114,29 +117,12 @@ const Profile = {
             </div>
         </section>
     </main>
-    `;
-  },
 
-  // async afterRender() {
-  //   // try {
-  //   //   const restaurants = await RestaurantAPIDicoding.getListRestaurant();
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.1/dist/iconify-icon.min.js"></script>
 
-  //   //   this._initContentHomePage(restaurants);
-  //   // } catch (error) {
-  //   //   console.log(error);
-  //   // }
-  // },
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
 
-  // _initContentHomePage(restaurants) {
-  //   // ExploreRestaurantInitiator.init({
-  //   //   restaurants,
-  //   //   listRestaurantContainer: document.querySelector('.explore-container'),
-  //   // });
-  //   // RecommendedRestaurantInitiator.init({
-  //   //   restaurantsRecommended: restaurants,
-  //   //   listRecommendedContainer: document.querySelector('.recommendation-container'),
-  //   // });
-  // },
-};
-
-export default Profile;
+</html>
