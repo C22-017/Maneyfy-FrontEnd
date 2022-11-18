@@ -1,44 +1,106 @@
 @import '../../propertise/variabels';
+@import '../../propertise/helper';
+@import '../../propertise/mixins';
 
 body {
   background-color: $background-very-light-blue;
 }
+.titlePage {
+  margin: 0 1rem;
+  font-weight: bold;
+}
+
 .profil {
   background-color: #ffff;
-  align-items: center;
-  padding: 1em;
+  align-items: flex-end;
+  padding: 0.8rem;
   border-radius: 35px;
+  background-image: url('/src/public/images/backgroundProfil.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 10rem;
+  margin: 0 1rem;
+  justify-content: center;
+
+  @include media-in(mobile) {
+    height: 16rem;
+    justify-content: flex-start;
+    margin: 0 1.2rem;
+  }
+
+  .name {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0;
+
+    @include media-in(mobile) {
+      font-size: 1.5rem;
+    }
+  }
+  .email {
+    font-size: 0.8rem;
+
+    @include media-in(mobile) {
+      font-size: 1rem;
+    }
+  }
 }
 
 .kelola {
-  padding: 1em;
+  padding: 1.7rem 1rem;
   background-color: #ffff;
   gap: 30px;
   justify-content: center;
   border-radius: 35px;
+  margin: 1rem 1rem;
+  .titleKelola {
+    // color: #ffff;
+    font-size: 0.8rem;
+    font-weight: bold;
+    max-width: max-content;
+    background-color: transparent;
+
+    @include media-in(tablet) {
+      font-size: 1.5rem;
+    }
+  }
   .pemasukan {
     background-color: $background-font-income;
     padding: 1em;
     border-radius: 20px;
-    color: #ffff;
+    .button {
+      justify-content: end;
+      display: flex;
+      .like {
+        display: flex;
+        width: 55px;
+        height: 55px;
+        align-items: center;
+        justify-content: center;
+        background-color: $primary-color;
+        border-radius: 50%;
+        border: 0;
+        margin-top: 1rem;
+
+        p {
+          margin: 0;
+          font-size: 3rem;
+        }
+      }
+    }
   }
   .dompet {
     background-color: $background-amount-wallet;
     padding: 1em;
     border-radius: 20px;
-    color: #ffff;
-    h3 {
-      text-align: center;
-    }
   }
   .pengeluaran {
     background-color: $background-font-outcome;
     padding: 1em;
     border-radius: 20px;
-    color: #ffff;
-    iconify-icon {
-      color: black;
-      font-size: 5em;
-    }
+  }
+  .modal-content {
+    background-color: #eef7ff;
   }
 }

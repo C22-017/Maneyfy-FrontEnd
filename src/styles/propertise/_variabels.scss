@@ -1,11 +1,10 @@
 $breakpoint: (
-  'small-mobile': 100px, 
-  'mobile': 500px, 
-  'tablet': 650px, 
-  'desktop': 1100px, 
-  'desktop-large': 1600px
+  'small-mobile': 100px,
+  'mobile': 500px,
+  'tablet': 650px,
+  'desktop': 1100px,
+  'desktop-large': 1600px,
 );
-
 
 // COLOR //
 $primary-color: #5cb0f7;
@@ -26,3 +25,6 @@ $background-amount-wallet: #779eb8;
 $background-font-outcome: #d56e57;
 
 $background-dropdown-month: #d0e3ee;
+
+// Font //
+$logo-font-size: 1.5rem;
