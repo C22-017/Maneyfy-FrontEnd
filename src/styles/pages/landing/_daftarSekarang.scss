@@ -1,0 +1,54 @@
+/*
+ * heading
+ */
+
+ .daftar {
+  padding-top: 7rem;
+  height: 558px;
+ } 
+ .heading {
+  overflow: auto;
+  
+}
+
+.heading__figure {
+  width: 600px;
+  height: 564px;
+  float: right;
+  margin-right: 124px;;
+}
+
+.heading__figure img {
+  width: 100%;
+}
+
+.heading__daftar {
+  width: 650px;
+  float: left;
+  padding-top: 200px;
+  // padding: 16px 32px;
+  margin-left: 124px;
+}
+
+.heading__title {
+  font-size: 40px;
+  font-weight:700;
+  color: #404040;
+}
+
+.heading__button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  margin-top: 24px;
+  cursor: pointer;
+  padding: 8px 16px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  background-color: #2c3e50;
+  transition: opacity 0.3s;
+}
+
+.heading__button:hover {
+  opacity: 0.8;
+}

@@ -7,6 +7,7 @@
 .main-fitur {
  width: auto;
  height: 500px;
+ padding-top:0rem;
 } 
 
 .title__main {
@@ -19,7 +20,7 @@
 
 
 .fitur__figure {
- width: 600px;
+ width: 550px;
  margin-right: 124px;
  height: 447.12px;
  float: right;
@@ -39,7 +40,7 @@
 
 .title-fitur1 {
  font-size: 40px;
- width: 500px;
+ width: 600px;
  padding-top: 150px;
  font-weight:700;
  color: #404040;
@@ -52,9 +53,15 @@
 
 // content in right
 .fitur__content-right {
- width: 600px;
+ width: 630px;
  height: 447px;
  float: right;
  padding: 16px 32px;
  margin-right: 124px;
+}
+
+// edit khusus lihat laporan
+.report_img {
+  width: 500px;
+  height: 300px;
 }
