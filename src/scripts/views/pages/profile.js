@@ -4,11 +4,11 @@ const Profile = {
   async render() {
     return `
         <header class="header" id="header">
-          <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
-          <div class="header_img"> <img src="https://i.imgur.com/hczKIze.jpg" alt=""> </div>
+            <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+            <div class="header_img"> <img src="https://i.imgur.com/hczKIze.jpg" alt=""> </div>
         </header>
   
-        <side-bar class="l-navbar" id="nav-bar"></side-bar>
+        <side-bar></side-bar>
   
         <main class="container">
         <h1 class="titlePage mb-5 pt-3">Profil Saya</h1>

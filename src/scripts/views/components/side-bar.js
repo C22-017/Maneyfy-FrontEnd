@@ -1,4 +1,4 @@
-// import CONFIG from '../../globals/config';
+import CONFIG from '../../globals/config';
 
 class SideBar extends HTMLElement {
   connectedCallback() {
@@ -9,8 +9,8 @@ class SideBar extends HTMLElement {
     this.innerHTML = `
     <div class="l-navbar" id="nav-bar">
             <nav class="nav">
-                <div> <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span
-                            class="nav_logo-name">BBBootstrap</span> </a>
+                <div> <a href="#" class="nav_logo"> <img src="" class="img-fluid"> <span
+                            class="nav_logo-name">Maneyfy</span> </a>
                     <div class="nav_list">
                         <a href="#" class="nav_link active"> <i class='bx bx-grid-alt nav_icon'></i>
                             <span class="nav_name">
@@ -24,7 +24,7 @@ class SideBar extends HTMLElement {
                         </a>
                     </div>
                 </div>
-                <a href="#" class="nav_link">
+                <a href="#" class="nav_link nav_logout">
                     <i class='bx bx-log-out bx-rotate-180 large'></i>
                     <span class="nav_name">
                         Keluar Akun
