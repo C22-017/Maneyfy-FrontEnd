@@ -4,6 +4,7 @@ import routes from '../routes/routes';
 
 import './components/app-bar';
 import './components/side-bar';
+import './components/top-header';
 import './components/skip-link-element';
 
 // import './components/hero-element';
@@ -50,6 +51,10 @@ class App {
     const url = UrlParser.parseActiveUrlWithCombiner();
     const page = routes[url];
     this._content.innerHTML += await page.render();
+    this._content.innerHTML += `
+      <script src="https://code.iconify.design/3/3.0.0/iconify.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    `;
     // await page.afterRender();
 
     // const skipLinkElem = document.querySelector('.skip-link');
@@ -63,6 +68,7 @@ class App {
       const nav = document.getElementById(navId);
       const bodypd = document.getElementById(bodyId);
       const headerpd = document.getElementById(headerId);
+      // const navName = document.querySelectorAll(navNameAll);
 
       // Validate that all variables exist
       if (toggle && nav && bodypd && headerpd) {
@@ -75,6 +81,9 @@ class App {
           bodypd.classList.toggle('body-pd');
           // add padding to header
           headerpd.classList.toggle('body-pd');
+          // navName.forEach((navItem) => {
+          //   navItem.classList.toggle('show-nav-name');
+          // });
         });
       }
     };

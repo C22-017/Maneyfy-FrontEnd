@@ -1,12 +1,8 @@
 const Dashboard = {
   async render() {
     return `
-      <header class="header" id="header">
-        <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
-        <div class="header_img"> <img src="https://i.imgur.com/hczKIze.jpg" alt=""> </div>
-      </header>
-
-      <side-bar class="l-navbar" id="nav-bar"></side-bar>
+      <top-header></top-header>
+      <side-bar></side-bar>
 
       <main class="height-100 bg-light">
         <h4>Main Components</h4>
