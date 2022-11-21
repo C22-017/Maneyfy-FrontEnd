@@ -1,0 +1,70 @@
+/*--------------------------------------------------------------
+# Features
+--------------------------------------------------------------*/
+.features .feature-box {
+ padding: 24px 20px;
+ box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+ transition: 0.3s;
+ background-color: #fff;
+ height: 100%;
+}
+
+
+.content {
+ text-align: left;
+ justify-content: left;
+ padding-top: 250px;
+}
+
+.section-header {
+ text-align: center;
+ font-size: 32px;
+ color: #404040;
+ font-weight: 700;
+}
+.features {
+ background-color: #fff;
+ padding-top: 40px;
+ text-align: center;
+}
+
+.features .feature-box i {
+ line-height: 0;
+ background: #ffffff;
+ padding: 4px;
+ margin-right: 10px;
+ font-size: 24px;
+ border-radius: 3px;
+ transition: 0.3s;
+}
+
+.features .feature-box:hover i {
+ background: #4154f1;
+ color: #fff;
+}
+
+
+.features .feture-tabs {
+ padding-top: 10px;
+}
+
+.features .feture-tabs h3 {
+ color: #404040;
+ font-weight: 700;
+ font-size: 35px;
+ margin-bottom: 10px;
+}
+
+@media (max-width: 667px) {
+ .features .feture-tabs h3 {
+   font-size: 28px;
+ }
+ .features .feture-tabs .content{
+   padding-top: 0px;
+   text-align: center;
+   justify-content: center;
+ }
+ .features .container {
+   padding: 8px;
+ }
+}
