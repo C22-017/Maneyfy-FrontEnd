@@ -1,9 +1,10 @@
+@import '../components/header-side-bar';
 // // Landing Page
 // @import 'landing/';
 // @import 'landing/';
 
-// // Dashboard Page
-// @import 'dashboard/';
+// Dashboard Page
+@import 'dashboard/dashboard-page';
 // @import 'dashboard/';
 
 // // Login-Register Page
@@ -19,3 +20,8 @@
 // @import 'tips/';
 
 
+:root {
+  --header-height: 4rem; // = 64px
+  --nav-width: 6.25rem; // = 100px
+  --z-fixed: 100;
+}

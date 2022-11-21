@@ -6,6 +6,7 @@ import './components/app-bar';
 import './components/side-bar';
 import './components/top-header';
 import './components/skip-link-element';
+import './components/wallet-list';
 
 // import './components/hero-element';
 // import './components/item-restaurant';
@@ -51,51 +52,13 @@ class App {
     const url = UrlParser.parseActiveUrlWithCombiner();
     const page = routes[url];
     this._content.innerHTML += await page.render();
-    // await page.afterRender();
+    await page.afterRender();
 
     // const skipLinkElem = document.querySelector('.skip-link');
     // skipLinkElem.addEventListener('click', (event) => {
     //   event.preventDefault();
     //   document.querySelector('#mainContent').focus();
     // });
-
-    const showNavbar = (toggleId, navId, bodyId, headerId) => {
-      const toggle = document.getElementById(toggleId);
-      const nav = document.getElementById(navId);
-      const bodypd = document.getElementById(bodyId);
-      const headerpd = document.getElementById(headerId);
-      // const navName = document.querySelectorAll(navNameAll);
-
-      // Validate that all variables exist
-      if (toggle && nav && bodypd && headerpd) {
-        toggle.addEventListener('click', () => {
-          // show navbar
-          nav.classList.toggle('show-navbar');
-          // change icon
-          toggle.classList.toggle('bx-x');
-          // add padding to body
-          bodypd.classList.toggle('body-pd');
-          // add padding to header
-          headerpd.classList.toggle('body-pd');
-          // navName.forEach((navItem) => {
-          //   navItem.classList.toggle('show-nav-name');
-          // });
-        });
-      }
-    };
-
-    showNavbar('header-toggle', 'nav-bar', 'body-pd', 'header');
-
-    /*= ==== LINK ACTIVE ===== */
-    const linkColor = document.querySelectorAll('.nav_link');
-
-    function colorLink() {
-      if (linkColor) {
-        linkColor.forEach((l) => l.classList.remove('active'));
-        this.classList.add('active');
-      }
-    }
-    linkColor.forEach((l) => l.addEventListener('click', colorLink));
   }
 }
 
