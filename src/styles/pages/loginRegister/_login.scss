@@ -24,6 +24,10 @@ form {
  margin-left: 120px;
 }
 
+.form-label {
+ margin-left: 120px;
+}
+
 .button-login {
  font-family: "Montserrat", sans-serif;
  font-weight: 700;
@@ -73,7 +77,12 @@ form {
  }
  .h-custom .form-control {
   margin-left: 0px;
+  padding-left: 20px;
+  margin-right:5px;
   width: 100%;
+ }
+ .h-custom .form-label {
+  margin-left: 0px;
  }
  .hero {
   display: none;
