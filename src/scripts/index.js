@@ -1,4 +1,7 @@
 import 'regenerator-runtime';
+// import 'jquery';
+import 'bootstrap';
+// import 'popper.js';
 import '../styles/main.scss';
 
 import App from './views/app';
