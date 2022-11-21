@@ -15,11 +15,11 @@ class SideBar extends HTMLElement {
               <span class="nav_logo-name">Maneyfy</span>
             </a>
             <div>
-              <a href="#/dashboard" class="nav_link active"> 
+              <a href="#/dashboard" class="nav_link" id="dashboard-link"> 
                 <i class='bx bxs-dashboard large'></i>
                 <span class="nav_name">Dashboard</span>
               </a>
-              <a href="#/tips" class="nav_link"> 
+              <a href="#/tips" class="nav_link" id="tips-link"> 
                 <span class="iconify large" data-icon="mdi:idea"></span>
                 <span class="nav_name">Tips</span>
               </a>

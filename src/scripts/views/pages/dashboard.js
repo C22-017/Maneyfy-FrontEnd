@@ -4,7 +4,7 @@ const Dashboard = {
       <top-header></top-header>
       <side-bar></side-bar>
 
-      <main>
+      <main class="container">
         <h4>Main Components</h4>
       </main>
       
@@ -38,16 +38,11 @@ const Dashboard = {
 
     showNavbar('header-toggle', 'icon-toggle', 'nav-bar', 'body-pd', 'header');
 
-    /*= ==== LINK ACTIVE ===== */
-    const linkColor = document.querySelectorAll('.nav_link');
+    const dashboardLink = document.getElementById('dashboard-link');
+    const tipsLink = document.getElementById('tips-link');
 
-    function colorLink() {
-      if (linkColor) {
-        linkColor.forEach((l) => l.classList.remove('active'));
-        this.classList.add('active');
-      }
-    }
-    linkColor.forEach((l) => l.addEventListener('click', colorLink));
+    tipsLink.classList.remove('active');
+    dashboardLink.classList.add('active');
   },
 
   // _initContentHomePage(restaurants) {

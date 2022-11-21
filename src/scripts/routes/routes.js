@@ -3,6 +3,7 @@ import Tips from '../views/pages/tips';
 
 const routes = {
   '/': Dashboard,
+  '/dashboard': Dashboard,
   '/tips': Tips,
 };
 

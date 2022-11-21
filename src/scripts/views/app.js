@@ -49,8 +49,23 @@ class App {
   async renderPage() {
     const url = UrlParser.parseActiveUrlWithCombiner();
     const page = routes[url];
-    this._content.innerHTML += await page.render();
+    this._content.innerHTML = await page.render();
     await page.afterRender();
+
+    const bodyPd = document.getElementById('body-pd');
+
+    bodyPd.classList.remove('body-pd');
+
+    /*= ==== LINK ACTIVE ===== */
+    // const linkColor = document.querySelectorAll('.nav_link');
+
+    // function colorLink() {
+    //   if (linkColor) {
+    //     linkColor.forEach((l) => l.classList.remove('active'));
+    //     this.classList.add('active');
+    //   }
+    // }
+    // linkColor.forEach((l) => l.addEventListener('click', colorLink));
 
     // const skipLinkElem = document.querySelector('.skip-link');
     // skipLinkElem.addEventListener('click', (event) => {
