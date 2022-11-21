@@ -6,17 +6,24 @@ height: 1px;
 background: #eee;
 }
 
+.head {
+ padding-top: 80px;
+}
 .logo {
  // width: 500px;
  height: 100px;
 }
 
+form {
+ width: 75%;
 
+}
 
-
-
-
-
+.form-input {
+ background-color: #A7CCED;
+ justify-content: center;
+ padding-left: 200px;
+}
 
 .h-custom {
 height: calc(100% - 73px);
