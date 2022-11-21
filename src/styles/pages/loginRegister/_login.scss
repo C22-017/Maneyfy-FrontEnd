@@ -15,6 +15,13 @@ background: #eee;
 
 form {
  width: 100%;
+
+}
+
+.form-control {
+ width: 70%;
+ justify-content: center;
+ margin-left: 120px;
 }
 
 .button-login {
@@ -63,6 +70,10 @@ form {
  @media (max-width: 450px) {
  .h-custom {
  height: 100%;
+ }
+ .h-custom .form-control {
+  margin-left: 0px;
+  width: 100%;
  }
  .hero {
   display: none;
