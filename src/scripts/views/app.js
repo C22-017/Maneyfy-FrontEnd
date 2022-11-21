@@ -4,6 +4,7 @@ import routes from '../routes/routes';
 
 import './components/app-bar';
 import './components/side-bar';
+import './components/top-header';
 import './components/skip-link-element';
 
 // import './components/hero-element';
@@ -48,6 +49,7 @@ class App {
     const url = UrlParser.parseActiveUrlWithCombiner();
     const page = routes[url];
     this._content.innerHTML += await page.render();
+
     await page.afterRender();
 
     // const skipLinkElem = document.querySelector('.skip-link');
