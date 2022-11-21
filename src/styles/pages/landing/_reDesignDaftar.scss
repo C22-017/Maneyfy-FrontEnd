@@ -82,11 +82,14 @@
    width: 100%;
  }
  .daftar .btn-get-register i{
-  width: 180px;
+  width: 100px;
   text-align: center;
   margin-left: 0px;
-  height: 10px;
   font-size: 0px;
-  transition: none;
+  display: none;
+ }
+ .daftar .btn-get-register span {
+  width: 260px;
+  text-align: center;
  }
 }
