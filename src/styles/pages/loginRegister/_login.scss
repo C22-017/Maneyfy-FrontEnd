@@ -7,15 +7,14 @@ background: #eee;
 }
 
 .head {
- padding-top: 80px;
+ padding-top: 10px;
 }
 .logo {
- // width: 500px;
  height: 100px;
 }
 
 form {
- width: 75%;
+ width: 100%;
 }
 
 .button-login {
@@ -43,7 +42,7 @@ form {
  width: 200px;
  padding: 20px 30px;
  border-radius: 20px;
- border: #3c91ea;
+ border: #42B2FA;
  border-style:solid;
  transition: 0.5s;
  text-decoration: none;
@@ -56,7 +55,6 @@ form {
 .form-input {
  background-color: #A7CCED;
  justify-content: center;
- padding-left: 200px;
 }
 
 .h-custom {
@@ -65,5 +63,8 @@ height: calc(100% - 73px);
 @media (max-width: 450px) {
 .h-custom {
 height: 100%;
+}
+.hero {
+ display: none;
 }
 }
