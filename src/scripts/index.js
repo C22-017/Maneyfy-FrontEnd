@@ -1,11 +1,13 @@
 /* eslint-disable no-unused-vars */
 import 'regenerator-runtime';
+// import 'jquery';
+import 'bootstrap';
+// import 'popper.js';
 import '../styles/main.scss';
 
 import App from './views/app';
 // import swRegister from './utils/sw-register';
 
-const bootstrap = require('bootstrap');
 // const app = new App();
 
 const app = new App({

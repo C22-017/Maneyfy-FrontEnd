@@ -1,8 +1,9 @@
-// import Dashboard from '../views/pages/dashboard';
+import Dashboard from '../views/pages/dashboard';
 import Tips from '../views/pages/tips';
 
 const routes = {
-  '/': Tips,
+  '/': Dashboard,
+  '/tips': Tips,
 };
 
 export default routes;
