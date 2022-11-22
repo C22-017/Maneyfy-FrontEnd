@@ -12,7 +12,6 @@ class TopHeader extends HTMLElement {
           <button id="header-toggle">
             <i class='bx bx-menu large' id="icon-toggle"></i>
           </button>
-          <h4>Halaman Utama</h4>
         </div>
         <div class="header-right">
           <div class="dropdown profile-container-ui">
@@ -28,8 +27,7 @@ class TopHeader extends HTMLElement {
           </div>
           <div class="dropdown wallet-container">
             <button class="dropdown-toggle" type="button" id="dropdownWallet" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <img src="${CONFIG.ICON_WALLET}" alt="" class="icon-header">
-              Dompet 1
+              <img src="${CONFIG.ICON_WALLET}" alt="" class="icon-header"><span class="dompet-list"> Dompet 1</span>
             </button>
             <wallet-list class="dropdown-menu" aria-labelledby="dropdownWallet"></wallet-list>
           </div>
