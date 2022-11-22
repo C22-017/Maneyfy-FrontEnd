@@ -1,5 +1,5 @@
 const pemasukan = `
-<div class="pemasukan col-12 col-sm-12 col-lg-3 text-center">
+            <div class="pemasukan col-12 col-sm-12 col-lg-3 text-center">
                 <button type="button" class="btn titleKelola" data-bs-toggle="modal" data-bs-target="#kelolaPemasukan">
                     Kategori Pemasukan
                 </button>
