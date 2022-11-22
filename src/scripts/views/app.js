@@ -2,13 +2,16 @@
 import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
 
-import './components/app-bar';
 import './components/side-bar';
 import './components/top-header';
 import './components/skip-link-element';
 import './components/wallet-list';
+import './components/hero-landing';
+import './components/app-bar';
+import './components/features-maneyfy';
+import './components/register-now';
+import './components/skip-link';
 
-// import './components/hero-element';
 // import './components/item-restaurant';
 // import './components/detail-restaurant-info';
 // import './components/item-menu-drink';
@@ -18,16 +21,16 @@ import './components/wallet-list';
 // import './components/favorite-button';
 
 class App {
-  // constructor({
-  //   button, itemDrawers, drawer, content,
-  // }) {
-  //   this._button = button;
-  //   this._itemDrawers = itemDrawers;
-  //   this._drawer = drawer;
-  //   this._content = content;
+//   constructor({
+//     button, itemDrawers, drawer, content,
+//   }) {
+//     this._button = button;
+//     this._itemDrawers = itemDrawers;
+//     this._drawer = drawer;
+//     this._content = content;
 
-  //   // this._initialAppShell();
-  // }
+  //     this._initialAppShell();
+  //   }
   constructor({
     content,
   }) {
@@ -39,19 +42,19 @@ class App {
     // this._initialAppShell();
   }
 
-  // _initialAppShell() {
-  //   DrawerInitiator.init({
-  //     button: this._button,
-  //     itemDrawers: this._itemDrawers,
-  //     drawer: this._drawer,
-  //     content: this._content,
-  //   });
-  // }
+  //   _initialAppShell() {
+  //     DrawerInitiator.init({
+  //       button: this._button,
+  //       itemDrawers: this._itemDrawers,
+  //       drawer: this._drawer,
+  //       content: this._content,
+  //     });
+  //   }
 
   async renderPage() {
     const url = UrlParser.parseActiveUrlWithCombiner();
     const page = routes[url];
-    this._content.innerHTML += await page.render();
+    this._content.innerHTML = await page.render();
     await page.afterRender();
 
     // const skipLinkElem = document.querySelector('.skip-link');

@@ -1,0 +1,95 @@
+/*--------------------------------------------------------------
+# Daftar
+--------------------------------------------------------------*/
+.daftar {
+ width: 100%;
+ height: 100vh;
+ background-size: cover;
+}
+
+.daftar h1 {
+ margin: 0;
+ font-size: 40px;
+ font-weight: 700;
+ color: #404040 ;
+}
+
+.daftar .btn-get-register {
+ font-family: "Montserrat", sans-serif;
+ font-weight: 700;
+ margin-top: 30px;
+ line-height: 0;
+ padding: 20px 30px;
+ border-radius: 4px;
+ transition: 0.5s;
+ text-decoration: none;
+ color: #fff;
+ background: #42B2FA;
+ box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
+}
+
+.daftar .btn-get-register:hover {
+ opacity: 0.8;
+}
+
+.daftar .btn-get-register i {
+ margin-left: 5px;
+ font-size: 18px;
+ transition: 0.3s;
+}
+
+.daftar .btn-get-register:hover i {
+ transform: translateX(5px);
+}
+
+.daftar .daftar-img {
+ text-align: right;
+}
+
+@media (min-width:1024px) {
+ .daftar {
+  background-attachment: fixed;
+ }
+}
+
+@media (max-width: 991px) {
+ .daftar {
+  height: auto;
+  margin-top: 5rem;
+  padding: 120px 1.5rem 60px 1rem;
+ }
+ .daftar .daftar-img {
+  text-align: center;
+  margin-top: 80px;
+ }
+ .daftar .hero-img img {
+  width: 80%;
+ }
+}
+
+@media (max-width: 768px) {
+ .daftar {
+   text-align: center;
+   padding-top:180px;
+   height: 680px;
+ }
+
+ .daftar h1 {
+   font-size: 32px;
+ }
+
+ .daftar .daftar-img img {
+   width: 100%;
+ }
+ .daftar .btn-get-register i{
+  width: 100px;
+  text-align: center;
+  margin-left: 0px;
+  font-size: 0px;
+  display: none;
+ }
+ .daftar .btn-get-register span {
+  width: 260px;
+  text-align: center;
+ }
+}

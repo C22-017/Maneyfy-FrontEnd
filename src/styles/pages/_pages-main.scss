@@ -1,7 +1,10 @@
 @import '../components/header-side-bar';
 // // Landing Page
-// @import 'landing/';
-// @import 'landing/';
+@import 'landing/footer';
+@import 'landing/reDesignAppBar';
+@import 'landing/reDesignDaftar';
+@import 'landing/reDesignFeature';
+@import 'landing/reDesignHero';
 
 // Dashboard Page
 @import 'dashboard/dashboard-page';
