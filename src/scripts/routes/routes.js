@@ -1,8 +1,10 @@
-// import Dashboard from '../views/pages/dashboard';
-import Profile from '../views/pages/profile';
+import Dashboard from '../views/pages/dashboard';
+import Tips from '../views/pages/tips';
 
 const routes = {
-  '/': Profile,
+  '/': Dashboard,
+  '/dashboard': Dashboard,
+  '/tips': Tips,
 };
 
 export default routes;

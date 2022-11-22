@@ -15,20 +15,20 @@ class SideBar extends HTMLElement {
               <span class="nav_logo-name">Maneyfy</span>
             </a>
             <div>
-              <a href="#" class="nav_link active"> 
+              <a href="#/dashboard" class="nav_link" id="dashboard-link"> 
                 <i class='bx bxs-dashboard large'></i>
                 <span class="nav_name">Dashboard</span>
               </a>
-              <a href="#" class="nav_link"> 
+              <a href="#/tips" class="nav_link" id="tips-link"> 
                 <span class="iconify large" data-icon="mdi:idea"></span>
                 <span class="nav_name">Tips</span>
               </a>
             </div>
           </div>
-          <a href="#" class="nav_logout">
+          <button href="#" class="nav_logout">
             <i class='bx bx-log-out bx-rotate-180 large'></i>
             <span class="nav_name">Keluar Akun</span>
-          </a>
+          </button>
         </nav>
       </div>
     `;

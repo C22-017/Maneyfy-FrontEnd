@@ -5,8 +5,8 @@ class SkipLinkElement extends HTMLElement {
 
   _render() {
     this.innerHTML = `
-        <a href="#mainContent" class="skip-link">Menuju ke konten <span class="material-icons" aria-hidden="true">skip_next</span></a>
-      `;
+      <a href="#mainContent" class="skip-link">Menuju ke konten <span class="material-icons" aria-hidden="true">skip_next</span></a>
+    `;
   }
 }
 
