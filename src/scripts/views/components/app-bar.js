@@ -7,25 +7,14 @@ class AppBar extends HTMLElement {
 
   _render() {
     this.innerHTML = `
-        <div class="brand_logo">
-          <a href="index.html">
-            <picture>
-              <source type="image/webp" srcset="${CONFIG.IMAGE_BRAND_LOGO_PATH}.webp">
-              <source type="image/png" srcset="${CONFIG.IMAGE_BRAND_LOGO_PATH}.png">
-              <img src="${CONFIG.IMAGE_BRAND_LOGO_PATH}.png" alt="Maneyfy">
-            </picture>
-          </a>
-        </div>
-      
-        <div class="hamburger">
-          <button id="btnMenu" aria-label="menu open"><span class="material-icons">menu</a></button>
-        </div>
-      
-        <nav id="drawer" class="nav">
-          <ul class="nav_list">
-            <li class="nav_item"><a href="https://github.com/TegarNH" target="_blank" rel="noopener">Login</a></li>
-          </ul>
-        </nav>`;
+      <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="${CONFIG.IMAGE_BRAND_LOGO_PATH}" alt="">
+        </a>
+        <nav id="navbar" class="navbar">  
+          <a class="getstarted scrollto" href="#/login">Login</a>
+        </nav>
+      </div>`;
   }
 }
 

@@ -1,15 +1,19 @@
 const Landing = {
   async render() {
     return `
-      <skip-link-element></skip-link-element>
-      <header>      
+      <skip-link></skip-link>
+      <header id="header" class="header fixed-top">      
         <app-bar></app-bar>
       </header>
     
-      <main></main>
+      <main>
+        <hero-landing></hero-landing>
+        <features-maneyfy></features-maneyfy>
+        <register-now></register-now>
+      </main>
     
       <footer>
-        <footer-element></footer-element>
+        <p><a href="https://github.com/C22-017/Maneyfy-FrontEnd" target="_blank" rel="noopener">Copyright 2022 - Maneyfy </p>
       </footer>
     `;
   },

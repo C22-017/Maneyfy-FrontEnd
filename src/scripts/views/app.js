@@ -1,8 +1,13 @@
 // import DrawerInitiator from '../utils/initiators/drawer-initiator';
-// import UrlParser from '../routes/url-parser';
-// import routes from '../routes/routes';
+import UrlParser from '../routes/url-parser';
+import routes from '../routes/routes';
 
-import './components/hero-element';
+import './components/hero-landing';
+import './components/app-bar';
+import './components/features-maneyfy';
+import './components/register-now';
+import './components/skip-link';
+
 // import './components/item-restaurant';
 // import './components/detail-restaurant-info';
 // import './components/item-menu-drink';
@@ -11,7 +16,7 @@ import './components/hero-element';
 // import './components/search-restaurant';
 // import './components/favorite-button';
 
-// class App {
+class App {
 //   constructor({
 //     button, itemDrawers, drawer, content,
 //   }) {
@@ -20,30 +25,40 @@ import './components/hero-element';
 //     this._drawer = drawer;
 //     this._content = content;
 
-//     this._initialAppShell();
-//   }
+  //     this._initialAppShell();
+  //   }
+  constructor({
+    content,
+  }) {
+    // this._button = button;
+    // this._itemDrawers = itemDrawers;
+    // this._drawer = drawer;
+    this._content = content;
 
-//   _initialAppShell() {
-//     DrawerInitiator.init({
-//       button: this._button,
-//       itemDrawers: this._itemDrawers,
-//       drawer: this._drawer,
-//       content: this._content,
-//     });
-//   }
+    // this._initialAppShell();
+  }
 
-//   async renderPage() {
-//     const url = UrlParser.parseActiveUrlWithCombiner();
-//     const page = routes[url];
-//     this._content.innerHTML = await page.render();
-//     await page.afterRender();
+  //   _initialAppShell() {
+  //     DrawerInitiator.init({
+  //       button: this._button,
+  //       itemDrawers: this._itemDrawers,
+  //       drawer: this._drawer,
+  //       content: this._content,
+  //     });
+  //   }
 
-//     const skipLinkElem = document.querySelector('.skip-link');
-//     skipLinkElem.addEventListener('click', (event) => {
-//       event.preventDefault();
-//       document.querySelector('#mainContent').focus();
-//     });
-//   }
-// }
+  async renderPage() {
+    const url = UrlParser.parseActiveUrlWithCombiner();
+    const page = routes[url];
+    this._content.innerHTML = await page.render();
+    await page.afterRender();
 
-// export default App;
+    // const skipLinkElem = document.querySelector('.skip-link');
+    // skipLinkElem.addEventListener('click', (event) => {
+    //   event.preventDefault();
+    //   document.querySelector('#mainContent').focus();
+    // });
+  }
+}
+
+export default App;

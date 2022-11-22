@@ -1,4 +1,4 @@
-class SkipLinkElement extends HTMLElement {
+class SkipLink extends HTMLElement {
   connectedCallback() {
     this._render();
   }
@@ -10,4 +10,4 @@ class SkipLinkElement extends HTMLElement {
   }
 }
 
-customElements.define('skip-link-element', SkipLinkElement);
+customElements.define('skip-link', SkipLink);
