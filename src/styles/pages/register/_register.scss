@@ -1,0 +1,89 @@
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+
+.head {
+ padding-top: 10px;
+}
+.logo {
+ height: 90px;
+}
+
+form {
+ width: 100%;
+}
+
+.form-control {
+ width: 70%;
+ justify-content: center;
+ margin-left: 120px;
+}
+
+.form-label {
+ margin-left: 120px;
+}
+
+.button-login {
+ font-family: "Montserrat", sans-serif;
+ font-weight: 700;
+ margin-top: 30px;
+ line-height: 0;
+ width: 200px;
+ padding: 20px 30px;
+ border-radius: 4px;
+ transition: 0.5s;
+ text-decoration: none;
+ color: #fff;
+ border-style:none;
+ background: #42B2FA;
+ border-radius: 20px;
+ box-shadow: 0px 5px 30px rgba(216, 220, 255, 0.4);
+}
+
+.button-register {
+ font-family: "Montserrat", sans-serif;
+ font-weight: 700;
+ margin-top: 30px;
+ line-height: 0;
+ width: 200px;
+ padding: 20px 30px;
+ border-radius: 20px;
+ border: #42B2FA;
+ border-style:solid;
+ transition: 0.5s;
+ text-decoration: none;
+ color: black;
+ background: white;
+
+ box-shadow: 0px 5px 30px rgba(216, 220, 255, 0.4);
+}
+
+.form-input {
+ background-color: #A7CCED;
+ justify-content: center;
+}
+
+.h-custom {
+ height: calc(100% - 73px);
+ }
+ @media (max-width: 450px) {
+ .h-custom {
+ height: 100%;
+ }
+ .h-custom .form-control {
+  margin-left: 0px;
+  padding-left: 20px;
+  margin-right:5px;
+  width: 100%;
+ }
+ .h-custom .form-label {
+  margin-left: 0px;
+ }
+ .hero {
+  display: none;
+ }
+}
