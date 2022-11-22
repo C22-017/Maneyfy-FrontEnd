@@ -18,20 +18,22 @@
 body {
   width: 100%;
   scroll-behavior: smooth;
-  background-color: var(--background-landing);
   position: relative;
   font-family: 'Montserrat', sans-serif;
-  // min-height: 100vh;
 }
 
-main {
-  margin: 0;
+.main-landing {
   margin: 0 auto;
+  background-color: $background-landing;
+}
+
+.main-logged-in {
+  margin: 0;
   padding: 0;
   background-color: $background-very-light-blue;
 }
 
-// a {
-//   text-decoration: none;
-//   cursor: pointer;
-// }
+a {
+  text-decoration: none;
+  cursor: pointer;
+}

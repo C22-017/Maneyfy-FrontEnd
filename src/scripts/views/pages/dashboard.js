@@ -4,14 +4,16 @@ const Dashboard = {
       <top-header></top-header>
       <side-bar></side-bar>
 
-      <main>
+      <main class="main-logged-in">
         <h4>Main Components</h4>
       </main>
-      
     `;
   },
 
   async afterRender() {
+    const bodyPd = document.getElementById('body-pd');
+    bodyPd.classList.remove('body-pd');
+    bodyPd.classList.add('body-logged-in');
     // try {
     //   const restaurants = await RestaurantAPIDicoding.getListRestaurant();
 

@@ -4,7 +4,6 @@ import routes from '../routes/routes';
 
 import './components/side-bar';
 import './components/top-header';
-import './components/skip-link-element';
 import './components/wallet-list';
 import './components/hero-landing';
 import './components/app-bar';

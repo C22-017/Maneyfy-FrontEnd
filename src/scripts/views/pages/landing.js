@@ -1,12 +1,11 @@
 const Landing = {
   async render() {
     return `
-      <skip-link></skip-link>
-      <header id="header" class="header fixed-top">      
+      <header id="header" class="header-landing fixed-top">      
         <app-bar></app-bar>
       </header>
     
-      <main>
+      <main class="main-landing">
         <hero-landing></hero-landing>
         <features-maneyfy></features-maneyfy>
         <register-now></register-now>
@@ -18,15 +17,18 @@ const Landing = {
     `;
   },
 
-  // async afterRender() {
-  //   try {
-  //     const restaurants = await RestaurantAPIDicoding.getListRestaurant();
+  async afterRender() {
+    const bodyPd = document.getElementById('body-pd');
+    bodyPd.classList.remove('body-pd');
+    bodyPd.classList.remove('body-logged-in');
+    //   try {
+    //     const restaurants = await RestaurantAPIDicoding.getListRestaurant();
 
-  //     this._initContentHomePage(restaurants);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // },
+    //     this._initContentHomePage(restaurants);
+    //   } catch (error) {
+    //     console.log(error);
+    //   }
+    // },
 
   // _initContentHomePage(restaurants) {
   //   ExploreRestaurantInitiator.init({
@@ -37,7 +39,7 @@ const Landing = {
   //     restaurantsRecommended: restaurants,
   //     listRecommendedContainer: document.querySelector('.recommendation-container'),
   //   });
-  // },
+  },
 };
 
 export default Landing;
