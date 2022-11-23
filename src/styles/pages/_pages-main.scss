@@ -1,13 +1,17 @@
-// // Landing Page
-// @import 'landing/';
-// @import 'landing/';
+// @import '../components/header-side-bar';
+// // // Landing Page
+// @import 'landing/footer';
+// @import 'landing/reDesignAppBar';
+// @import 'landing/reDesignDaftar';
+// @import 'landing/reDesignFeature';
+// @import 'landing/reDesignHero';
 
 // // Dashboard Page
-// @import 'dashboard/';
+// @import 'dashboard/dashboard-page';
 // @import 'dashboard/';
 
 // // Login-Register Page
-// @import 'loginRegister/';
+@import 'loginRegister/login-register';
 // @import 'loginRegister/';
 
 // // Profile Page
@@ -19,3 +23,8 @@
 // @import 'tips/';
 
 
+:root {
+  --header-height: 4rem; // = 64px
+  --nav-width: 6.25rem; // = 100px
+  --z-fixed: 100;
+}

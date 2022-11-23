@@ -7,30 +7,30 @@ background: #eee;
 }
 
 .head {
- padding-top: 10px;
+  padding-top: 70px;
 }
-.logo {
- height: 90px;
+.logo-login-register {
+ height: 100px;
 }
 
 form {
  width: 100%;
+
 }
 
 .form-control {
  width: 70%;
  justify-content: center;
- margin-left: 120px;
+ margin: 0 auto;
 }
 
 .form-label {
  margin-left: 120px;
 }
 
-.button-login {
- font-family: "Montserrat", sans-serif;
+.button-filled {
  font-weight: 700;
- margin-top: 30px;
+ margin-bottom: 30px;
  line-height: 0;
  width: 200px;
  padding: 20px 30px;
@@ -42,14 +42,15 @@ form {
  background: #42B2FA;
  border-radius: 20px;
  box-shadow: 0px 5px 30px rgba(216, 220, 255, 0.4);
+ padding-left: 2.5rem; 
+ padding-right: 2.5rem;
 }
 
-.button-register {
- font-family: "Montserrat", sans-serif;
+.button-outline {
  font-weight: 700;
- margin-top: 30px;
  line-height: 0;
  width: 200px;
+ margin-bottom: 70px;
  padding: 20px 30px;
  border-radius: 20px;
  border: #42B2FA;
@@ -58,18 +59,34 @@ form {
  text-decoration: none;
  color: black;
  background: white;
-
  box-shadow: 0px 5px 30px rgba(216, 220, 255, 0.4);
+ padding-left: 2.5rem; padding-right: 2.5rem;
 }
 
 .form-input {
  background-color: #A7CCED;
  justify-content: center;
+  margin: auto 0;
+}
+
+.hero-login-register {
+  background: white !important;
+  display: flex;
+  align-items: center;
 }
 
 .h-custom {
- height: calc(100% - 73px);
+ height: 100%;
+ background-color: #A7CCED;
  }
+
+ @media (max-width: 991px) {
+  .hero-login-register {
+    display: none;
+   }
+}
+
+
  @media (max-width: 450px) {
  .h-custom {
  height: 100%;
@@ -83,7 +100,5 @@ form {
  .h-custom .form-label {
   margin-left: 0px;
  }
- .hero {
-  display: none;
- }
+ 
 }
