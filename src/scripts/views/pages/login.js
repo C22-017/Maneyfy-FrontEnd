@@ -1,7 +1,7 @@
 const Login = {
   async render() {
     return `
-  <hero-login></hero-login>
+      <form-login></form-login>
   `;
   },
 

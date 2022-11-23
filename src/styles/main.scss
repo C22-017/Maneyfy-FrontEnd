@@ -1,16 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import '~bootstrap/dist/css/bootstrap.css';
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
 
+@import "propertise/variabels";
+@import "propertise/mixins";
+@import "propertise/helper";
 
-@import 'propertise/variabels';
-@import 'propertise/mixins';
-@import 'propertise/helper';
-
-@import 'pages/loginRegister/login';
-// @import 'components/button';
-// @import 'components/restaurant';
-// @import 'components/footer';
-
-@import 'pages/pages-main';
+@import "pages/pages-main";
 
 
 * {

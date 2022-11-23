@@ -2,19 +2,27 @@
 import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
 
-import './components/hero-login';
+// import './components/side-bar';
+// import './components/top-header';
+// import './components/wallet-list';
+// import './components/hero-landing';
+// import './components/app-bar';
+// import './components/features-maneyfy';
+// import './components/register-now';
+// import './components/skip-link';
+import './components/form-login';
 
 class App {
-  // constructor({
-  //   button, itemDrawers, drawer, content,
-  // }) {
-  //   this._button = button;
-  //   this._itemDrawers = itemDrawers;
-  //   this._drawer = drawer;
-  //   this._content = content;
+//   constructor({
+//     button, itemDrawers, drawer, content,
+//   }) {
+//     this._button = button;
+//     this._itemDrawers = itemDrawers;
+//     this._drawer = drawer;
+//     this._content = content;
 
-  //   this._initialAppShell();
-  // }
+  //     this._initialAppShell();
+  //   }
   constructor({
     content,
   }) {
@@ -26,14 +34,14 @@ class App {
     // this._initialAppShell();
   }
 
-  // _initialAppShell() {
-  //   DrawerInitiator.init({
-  //     button: this._button,
-  //     itemDrawers: this._itemDrawers,
-  //     drawer: this._drawer,
-  //     content: this._content,
-  //   });
-  // }
+  //   _initialAppShell() {
+  //     DrawerInitiator.init({
+  //       button: this._button,
+  //       itemDrawers: this._itemDrawers,
+  //       drawer: this._drawer,
+  //       content: this._content,
+  //     });
+  //   }
 
   async renderPage() {
     const url = UrlParser.parseActiveUrlWithCombiner();
@@ -41,11 +49,11 @@ class App {
     this._content.innerHTML = await page.render();
     await page.afterRender();
 
-    const skipLinkElem = document.querySelector('.skip-link');
-    skipLinkElem.addEventListener('click', (event) => {
-      event.preventDefault();
-      document.querySelector('#mainContent').focus();
-    });
+    // const skipLinkElem = document.querySelector('.skip-link');
+    // skipLinkElem.addEventListener('click', (event) => {
+    //   event.preventDefault();
+    //   document.querySelector('#mainContent').focus();
+    // });
   }
 }
 
