@@ -9,7 +9,7 @@ background: #eee;
 .head {
   padding-top: 70px;
 }
-.logo {
+.logo-login {
  height: 100px;
 }
 
@@ -71,10 +71,10 @@ form {
   margin: auto 0;
 }
 
-.hero {
+.hero-login {
   background: white !important;
   display: flex;
-    align-items: center;
+  align-items: center;
 }
 
 .h-custom {
@@ -83,7 +83,7 @@ form {
  }
 
  @media (max-width: 991px) {
-  .hero {
+  .hero-login {
     display: none;
    }
 }

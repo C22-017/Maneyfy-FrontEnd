@@ -10,13 +10,13 @@ class FormLogin extends HTMLElement {
     <div class="vh-100">
     <div class="container-fluid h-custom">
       <div class="row h-100">
-        <div class="col-lg-6 hero">
+        <div class="col-lg-6 hero-login">
           <img src="${CONFIG.IMAGE_HERO_LOGIN_PATH}" class="img-fluid" alt="img_maneyfy_login">
         </div>
         <div class="col-lg-6 form-input">
           <form>
             <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-center head">
-              <img class="img-fluid logo" src="${CONFIG.IMAGE_BRAND_LOGO_PATH}" alt="">
+              <img class="img-fluid logo-login" src="${CONFIG.IMAGE_BRAND_LOGO_PATH}" alt="">
             </div>
   
             <div class="divider d-flex align-items-center my-4">

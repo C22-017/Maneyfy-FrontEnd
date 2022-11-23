@@ -12,7 +12,7 @@ class AppBar extends HTMLElement {
           <img src="${CONFIG.IMAGE_BRAND_LOGO_PATH}" alt="">
         </a>
         <nav id="navbar" class="navbar">  
-          <a class="getstarted scrollto" href="#/dashboard">Login</a>
+          <a class="getstarted scrollto" href="#/login">Login</a>
         </nav>
       </div>`;
   }
