@@ -11,6 +11,7 @@ import './components/features-maneyfy';
 import './components/register-now';
 import './components/skip-link';
 import './components/form-login';
+import './components/form-register';
 
 class App {
 //   constructor({
