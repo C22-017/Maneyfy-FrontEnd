@@ -9,6 +9,7 @@ const CONFIG = {
   IMAGE_FEATURES_3_PATH: './images/features/features-3.png',
   IMAGE_FEATURES_4_PATH: './images/features/features-4.png',
   IMAGE_REGISTER_NOW_PATH: './images/features/growth.png',
+  IMAGE_HERO_LOGIN_PATH: './images/loginRegister/login.png',
   // ASSETS ICON //
   ICON_SPEND: './icons/spend.png',
   ICON_AMOUNT_WALLET: './icons/amount-wallet.png',

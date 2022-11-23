@@ -10,14 +10,7 @@ import './components/app-bar';
 import './components/features-maneyfy';
 import './components/register-now';
 import './components/skip-link';
-
-// import './components/item-restaurant';
-// import './components/detail-restaurant-info';
-// import './components/item-menu-drink';
-// import './components/item-menu-food';
-// import './components/item-review-resto';
-// import './components/search-restaurant';
-// import './components/favorite-button';
+import './components/form-login';
 
 class App {
 //   constructor({
