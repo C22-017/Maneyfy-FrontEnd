@@ -1,4 +1,5 @@
 import kelolaProfile from '../components/kelolaProfile';
+import profile from '../components/profile';
 
 const Profile = {
   async render() {
@@ -6,17 +7,10 @@ const Profile = {
         <top-header></top-header>
         <side-bar></side-bar>
   
-        <main class="container">
+    <main class="container">
         <h1 class="titlePage mb-5 pt-3">Profil Saya</h1>
 
         <section class="profil mb-5 row">
-            <div class="col-lg-2 col-sm-4 col-5">
-                <img class="img-fluid" src="..//public/images/Ellipse 5.png" alt="">
-            </div>
-            <div class="col-lg-3 col-sm-6 col-7 desc">
-                <p class="name">Fajar Alfiantino</p>
-                <p class="email">asdfgh@jkl.com</p>
-            </div>
         </section>
 
         <section class="kelola row">
@@ -26,6 +20,7 @@ const Profile = {
   },
 
   async afterRender() {
+    profile();
     kelolaProfile();
 
     const showNavbar = (toggleId, iconToggleId, navId, bodyId, headerId) => {
