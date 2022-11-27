@@ -5,7 +5,7 @@ const editProfile = () => {
   btnEdit.innerHTML = `
 <button type="button" class="btn edit" data-bs-toggle="modal"
 data-bs-target="#kelolaProfil">
-    <i class="bi bi-pencil-fill"></i>
+    <span class="iconify" data-icon="oi:pencil"></span>
 </button>
 
 <div class="modal fade" id="kelolaProfil" tabindex="-1" aria-labelledby="exampleModalLabel"
