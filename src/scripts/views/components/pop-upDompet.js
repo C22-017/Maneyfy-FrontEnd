@@ -14,7 +14,7 @@ const dompet = `
                                 <h4 class="modal-title" id="exampleModalLabel">
                                     <img class="logo" src="${CONFIG.IMAGE_LOGO_PATH}" alt=""> Maneyfy
                                 </h4>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                <button type="button" class="btn-close p-3" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
@@ -64,7 +64,7 @@ const dompet = `
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h4 class="modal-title" id="exampleModalLabel">Tambah Kategori Pemasukan</h4>
-                                <button type="button" class="btn-close" data-bs-toggle="modal"
+                                <button type="button" class="btn-close p-3" data-bs-toggle="modal"
                                     data-bs-target="#kelolaDompet"></button>
                             </div>
                             <div class="modal-body">

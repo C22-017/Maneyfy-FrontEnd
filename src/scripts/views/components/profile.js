@@ -11,13 +11,13 @@ const profile = () => {
         <p class="name">Fajar Alfiantino</p>
         <p class="email">asdfgh@jkl.com</p>
     </div>
-    <div class="col-1">
-        ${editProfile}
+    <div class="col-1 btn-edit">
     </div>
 </div>
 
 
     `;
+  editProfile();
 };
 
 export default profile;
