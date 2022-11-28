@@ -1,28 +1,19 @@
 /*--------------------------------------------------------------
 # Counts
 --------------------------------------------------------------*/
-// .counts .count-box {
-//  box-shadow: -10px -5px 40px 0 rgba(0, 0, 0, 0.1);
-//  padding: 30px;
-//  text-align: center;
-//  width: 100%;
-//  background: #fff;
-// }
 
 .counts .count-box-pemasukan {
  box-shadow: -10px -5px 40px 0 rgba(0, 0, 0, 0.1);
- padding: 50px;
+ padding: 30px;
  text-align: center;
- justify-content: center;
  border-radius: 10px;
- align-items: center;
  width: 100%;
  background: #13AD96;
 }
 
 .counts .count-box-saldo {
  box-shadow: -10px -5px 40px 0 rgba(0, 0, 0, 0.1);
- padding: 50px;
+ padding: 30px;
  text-align: center;
  border-radius: 10px;
  width: 100%;
@@ -31,7 +22,7 @@
 
 .counts .count-box-pengeluaran {
  box-shadow: -10px -5px 40px 0 rgba(0, 0, 0, 0.1);
- padding: 50px;
+ padding: 30px;
  text-align: center;
  border-radius: 10px;
  width: 100%;
@@ -40,15 +31,12 @@
 
 .category-icon {
  display: block;
- height: 40px;
  float: left;
+ height: 55px;
  line-height: 0;
  align-items: center;
 }
 
-.category-icon {
- height: 55px;
-}
 
 .purecounter {
  font-size: 30px;
@@ -65,20 +53,29 @@
  padding: 0 0 0 0;
  margin: 0;
  color: #fff;
- font-family: "Roboto", sans-serif;
- font-size: 24px;
+ font-family: "Montserrat", sans-serif;
+ font-size: 20px;
 }
 
-.counts .count-box a {
- font-weight: 600;
- display: block;
- margin-top: 20px;
- color: #7c9995;
- font-size: 15px;
- font-family: "Poppins", sans-serif;
- transition: ease-in-out 0.3s;
+@media (max-width:991px ) {
+ .count-box-pemasukan, .count-box-saldo, .count-box-pengeluaran {
+  margin-bottom: 10px;
+  padding: 0px;
+  text-align: center;
+ }
+
+ .count-box-pemasukan, .count-box-saldo, .count-box-pengeluaran, .purecounter {
+  font-size: 20px;
+  padding-top: 5px;
+  padding-left:10px;
+ }
+
+ .count-box-pemasukan, .count-box-saldo, .count-box-pengeluaran, .category-title{
+  font-size: 16px;
+ }
+
+ .category-icon {
+  height: 45px;
+ }
 }
 
-.counts .count-box a:hover {
- color: #a7bbb8;
-}
