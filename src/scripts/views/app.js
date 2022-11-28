@@ -14,13 +14,13 @@ import './components/form-login';
 import './components/form-register';
 
 class App {
-//   constructor({
-//     button, itemDrawers, drawer, content,
-//   }) {
-//     this._button = button;
-//     this._itemDrawers = itemDrawers;
-//     this._drawer = drawer;
-//     this._content = content;
+  //   constructor({
+  //     button, itemDrawers, drawer, content,
+  //   }) {
+  //     this._button = button;
+  //     this._itemDrawers = itemDrawers;
+  //     this._drawer = drawer;
+  //     this._content = content;
 
   //     this._initialAppShell();
   //   }
@@ -49,6 +49,21 @@ class App {
     const page = routes[url];
     this._content.innerHTML = await page.render();
     await page.afterRender();
+
+    const bodyPd = document.getElementById('body-pd');
+
+    bodyPd.classList.remove('body-pd');
+
+    /*= ==== LINK ACTIVE ===== */
+    // const linkColor = document.querySelectorAll('.nav_link');
+
+    // function colorLink() {
+    //   if (linkColor) {
+    //     linkColor.forEach((l) => l.classList.remove('active'));
+    //     this.classList.add('active');
+    //   }
+    // }
+    // linkColor.forEach((l) => l.addEventListener('click', colorLink));
 
     // const skipLinkElem = document.querySelector('.skip-link');
     // skipLinkElem.addEventListener('click', (event) => {

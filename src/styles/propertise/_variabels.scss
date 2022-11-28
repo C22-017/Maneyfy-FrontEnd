@@ -1,14 +1,13 @@
 $breakpoint: (
-  'small-mobile': 100px, 
-  'mobile': 500px, 
-  'tablet': 650px, 
-  'desktop': 1100px, 
-  'desktop-large': 1600px
+  'small-mobile': 100px,
+  'mobile': 500px,
+  'tablet': 650px,
+  'desktop': 1100px,
+  'desktop-large': 1600px,
 );
 
-
 // COLOR //
-$primary-color: #42B2FA;
+$primary-color: #42b2fa;
 
 $font-color-grey: #404040;
 
@@ -16,14 +15,18 @@ $background-very-light-blue: #eff7ff;
 $background-light-blue: #accbec;
 
 $icon-active: #0093ed;
-$icon-active-background: #D4EEFF;
+$icon-active-background: #d4eeff;
 
-$background-wallet: #709FB9;
+$background-wallet: #709fb9;
 $background-logout: #c75957;
 
 $background-font-income: #3bab96;
+$background-amount-wallet: #779eb8;
 $background-font-outcome: #d56e57;
 
 $background-landing:#EEF7FF;
 
 $background-dropdown-month: #d0e3ee;
+
+// Font //
+$logo-font-size: 1.5rem;

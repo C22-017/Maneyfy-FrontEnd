@@ -1,26 +1,28 @@
-const Dashboard = {
+import kelolaProfile from '../components/kelolaProfile';
+import profile from '../components/profile';
+
+const Profile = {
   async render() {
     return `
-      <top-header></top-header>
-      <side-bar></side-bar>
+        <top-header></top-header>
+        <side-bar></side-bar>
+  
+    <main class="container">
+        <h1 class="titlePage mb-5 pt-3">Profil Saya</h1>
 
-      <main class="main-logged-in container">
-        <h4>Main Components</h4>
-      </main>
+        <section class="profil mb-5 row">
+        </section>
+
+        <section class="kelola row">
+        </section>
+    </main>
     `;
   },
 
   async afterRender() {
-    const bodyPd = document.getElementById('body-pd');
-    bodyPd.classList.remove('body-pd');
-    bodyPd.classList.add('body-logged-in');
-    // try {
-    //   const restaurants = await RestaurantAPIDicoding.getListRestaurant();
+    profile();
+    kelolaProfile();
 
-    //   this._initContentHomePage(restaurants);
-    // } catch (error) {
-    //   console.log(error);
-    // }
     const showNavbar = (toggleId, iconToggleId, navId, bodyId, headerId) => {
       const toggle = document.getElementById(toggleId);
       const iconToggle = document.getElementById(iconToggleId);
@@ -44,19 +46,8 @@ const Dashboard = {
     const tipsLink = document.getElementById('tips-link');
 
     tipsLink.classList.remove('active');
-    dashboardLink.classList.add('active');
+    dashboardLink.classList.remove('active');
   },
-
-  // _initContentHomePage(restaurants) {
-  //   // ExploreRestaurantInitiator.init({
-  //   //   restaurants,
-  //   //   listRestaurantContainer: document.querySelector('.explore-container'),
-  //   // });
-  //   // RecommendedRestaurantInitiator.init({
-  //   //   restaurantsRecommended: restaurants,
-  //   //   listRecommendedContainer: document.querySelector('.recommendation-container'),
-  //   // });
-  // },
 };
 
-export default Dashboard;
+export default Profile;
