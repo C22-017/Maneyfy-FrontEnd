@@ -37,7 +37,7 @@ data-bs-target="#kelolaProfil">
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
                     <div class="d-grid d-md-flex justify-content-md-end">
-                        <button type="submit md-flex justify-content-md-end" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </form>
             </div>
