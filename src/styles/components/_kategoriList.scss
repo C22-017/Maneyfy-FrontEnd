@@ -1,0 +1,84 @@
+/*--------------------------------------------------------------
+# Counts
+--------------------------------------------------------------*/
+// .counts .count-box {
+//  box-shadow: -10px -5px 40px 0 rgba(0, 0, 0, 0.1);
+//  padding: 30px;
+//  text-align: center;
+//  width: 100%;
+//  background: #fff;
+// }
+
+.counts .count-box-pemasukan {
+ box-shadow: -10px -5px 40px 0 rgba(0, 0, 0, 0.1);
+ padding: 50px;
+ text-align: center;
+ justify-content: center;
+ border-radius: 10px;
+ align-items: center;
+ width: 100%;
+ background: #13AD96;
+}
+
+.counts .count-box-saldo {
+ box-shadow: -10px -5px 40px 0 rgba(0, 0, 0, 0.1);
+ padding: 50px;
+ text-align: center;
+ border-radius: 10px;
+ width: 100%;
+ background: #709FB9;
+}
+
+.counts .count-box-pengeluaran {
+ box-shadow: -10px -5px 40px 0 rgba(0, 0, 0, 0.1);
+ padding: 50px;
+ text-align: center;
+ border-radius: 10px;
+ width: 100%;
+ background: #DD6A53;
+}
+
+.category-icon {
+ display: block;
+ height: 40px;
+ float: left;
+ line-height: 0;
+ align-items: center;
+}
+
+.category-icon {
+ height: 55px;
+}
+
+span {
+ font-size: 30px;
+ margin-top: 4px;
+ display: block;
+ font-weight: 700;
+ text-align: left;
+ align-items: center;
+ color: #fff;
+ margin-left: 60px;
+}
+
+p {
+ padding: 0 0 0 0;
+ margin: 0;
+ color: #fff;
+ font-family: "Roboto", sans-serif;
+ font-size: 24px;
+}
+
+.counts .count-box a {
+ font-weight: 600;
+ display: block;
+ margin-top: 20px;
+ color: #7c9995;
+ font-size: 15px;
+ font-family: "Poppins", sans-serif;
+ transition: ease-in-out 0.3s;
+}
+
+.counts .count-box a:hover {
+ color: #a7bbb8;
+}

@@ -4,9 +4,7 @@ const Dashboard = {
       <top-header></top-header>
       <side-bar></side-bar>
 
-      <main>
-        <h4>Main Components</h4>
-      </main>
+      
       
     `;
   },

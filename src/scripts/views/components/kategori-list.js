@@ -5,7 +5,7 @@ class CategoryList extends HTMLElement {
 
   _render() {
     this.innerHTML = `
-     
+      <div></div>
     `;
   }
 }
