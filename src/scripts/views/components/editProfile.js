@@ -36,10 +36,30 @@ data-bs-target="#kelolaProfil">
                         <label for="exampleInputEmail1" class="form-label">Email address</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
-                    <div class="d-grid d-md-flex justify-content-md-end">
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                    <div class="justify-content-between row p-3">             
+                        <button type="submit" class="btn btn-danger col-4" data-bs-toggle="modal"
+                        data-bs-target="#hapusAkun">Hapus Akun</button>
+                        <button type="submit" class="btn btn-primary col-4">Submit</button>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="hapusAkun" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="exampleModalLabel">Hapus Akun</h4>
+          <button type="button" class="btn-close p-3" data-bs-toggle="modal" data-bs-target="#kelolaProfil"></button>
+        </div>
+            <div class="modal-body">
+            <div class="justify-content-between row p-3">             
+            <button type="submit" class="btn btn-primary col-4" data-bs-toggle="modal"
+            data-bs-target="#kelolaProfil">cancel</button>
+            <button type="submit" class="btn btn-danger col-4">Submit</button>
+            </div>
             </div>
         </div>
     </div>

@@ -18,28 +18,30 @@ const dompet = `
       <div class="modal-body">
         <h5>Dompet</h5>
         <ul class="list-group list-group-horizontal">
-          <li class="list-group-item flex-fill">Dompet 1</li>
+          <li class="list-group-item flex-fill">
+          <img class="img-fluid" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">Dompet 1</li>
           <li class="list-group-item">
             <button type="button" class="btn btn-transparent p-2" data-bs-toggle="modal" data-bs-target="#editDompet">
               <iconify-icon icon="material-symbols:edit"></iconify-icon>
             </button>
           </li>
           <li class="list-group-item">
-            <button type="button" class="btn btn-transparent p-2" onclick="console.log('delete')">
-              <iconify-icon icon="mdi:trash"></iconify-icon>
+            <button type="button" class="btn btn-transparent p-2" data-bs-toggle="modal" data-bs-target="#hapusDompet">
+                <iconify-icon icon="mdi:trash"></iconify-icon>
             </button>
           </li>
         </ul>
         <ul class="list-group list-group-horizontal">
-          <li class="list-group-item flex-fill">Dompet 2</li>
+          <li class="list-group-item flex-fill">
+          <img class="img-fluid" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">Dompet 2</li>
           <li class="list-group-item">
             <button type="button" class="btn btn-transparent p-2" data-bs-toggle="modal" data-bs-target="#editDompet">
               <iconify-icon icon="material-symbols:edit"></iconify-icon>
             </button>
           </li>
           <li class="list-group-item">
-            <button type="button" class="btn btn-transparent p-2" onclick="console.log('delete')">
-              <iconify-icon icon="mdi:trash"></iconify-icon>
+            <button type="button" class="btn btn-transparent p-2" data-bs-toggle="modal" data-bs-target="#hapusDompet">
+                <iconify-icon icon="mdi:trash"></iconify-icon>
             </button>
           </li>
         </ul>
@@ -60,7 +62,6 @@ const dompet = `
         <h4 class="modal-title" id="exampleModalLabel">Tambah Dompet</h4>
         <button type="button" class="btn-close p-3" data-bs-toggle="modal" data-bs-target="#kelolaDompet"></button>
       </div>
-      <div class="modal-body">
         <div class="modal-body row gap-4 p-3">
           <div class="wallet col-3 border">
             <button type="button" class="btn btn-transparent edit d-flex" data-bs-toggle="modal"
@@ -78,7 +79,6 @@ const dompet = `
             <button type="submit" class="btn btn-primary">Submit</button>
           </div>
         </div>
-      </div>
     </div>
   </div>
 </div>
@@ -90,7 +90,6 @@ const dompet = `
         <h4 class="modal-title" id="exampleModalLabel">Edit Dompet</h4>
         <button type="button" class="btn-close p-3" data-bs-toggle="modal" data-bs-target="#kelolaDompet"></button>
       </div>
-      <div class="modal-body">
         <div class="modal-body row gap-4">
           <div class="wallet col-3 border">
           <button type="button" class="btn btn-transparent edit d-flex" data-bs-toggle="modal"
@@ -108,7 +107,6 @@ const dompet = `
             <button type="submit" class="btn btn-primary">Submit</button>
           </div>
         </div>
-      </div>
     </div>
   </div>
 </div>
@@ -120,7 +118,6 @@ const dompet = `
         <h4 class="modal-title" id="exampleModalLabel">Pilih Icon Dompet</h4>
         <button type="button" class="btn-close p-3" data-bs-toggle="modal" data-bs-target="#tambahDompet"></button>
       </div>
-      <div class="modal-body">
         <div class="modal-body row gap-1">
           <div class="wallet col-2 border">
             <img class="img-fluid" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
@@ -135,7 +132,6 @@ const dompet = `
             <button type="submit" class="btn btn-primary">Submit</button>
           </div>
         </div>
-      </div>
     </div>
   </div>
 </div>
@@ -147,7 +143,6 @@ const dompet = `
         <h4 class="modal-title" id="exampleModalLabel">Pilih Icon Dompet</h4>
         <button type="button" class="btn-close p-3" data-bs-toggle="modal" data-bs-target="#editDompet"></button>
       </div>
-      <div class="modal-body">
         <div class="modal-body row gap-1">
           <div class="wallet col-2 border">
             <img class="img-fluid" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
@@ -162,10 +157,27 @@ const dompet = `
             <button type="submit" class="btn btn-primary">Submit</button>
           </div>
         </div>
-      </div>
     </div>
   </div>
 </div>
+
+<div class="modal fade" id="hapusDompet" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="exampleModalLabel">Hapus Dompet</h4>
+          <button type="button" class="btn-close p-3" data-bs-toggle="modal" data-bs-target="#kelolaDompet"></button>
+        </div>
+        <div class="modal-body">
+        <div class="justify-content-between row p-3">             
+        <button type="submit" class="btn btn-primary col-4" data-bs-toggle="modal"
+        data-bs-target="#kelolaDompet">cancel</button>
+        <button type="submit" class="btn btn-danger col-4">Submit</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 

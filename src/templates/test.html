@@ -53,7 +53,7 @@
                     </div>
                     <div class="bg-secondary wallet col-6 pe-5">
                         <div class="mb-3">
-                            <label for="exampleInputUsername1" class="form-label">Note</label>
+                            <label for="exampleInputUsername1" class="form-label">Nama Transaksi</label>
                             <input type="text" class="form-control" id="exampleInputUsername1">
                         </div>
                     </div>
@@ -95,45 +95,33 @@
                     <div class="tab-content">
                         <div class="tab-pane active m-3" id="pendapatan" role="tabpanel"
                             aria-labelledby="kategoriPendapatan" tabindex="0">
-                            <div class="modal-body row gap-4 p-3">
-                                <h5>Add Transaction</h5>
-                                <div class="bg-danger wallet col-3">
-                                    <img src="../public/images/logo.png" alt="logo">
-                                    <h5>Dompet</h5>
-                                </div>
-                                <div class="bg-primary wallet col-3">
-                                    <button type="button" class="btn btn-primary edit d-flex" data-bs-toggle="modal"
-                                        data-bs-target="#addKategori">
-                                        <img src="../public/images/logo.png" alt="logo">
-                                        <p>Kategori</p>
-                                    </button>
-                                </div>
-                                <div class="bg-secondary wallet col-3">
-                                    <div class="mb-3">
-                                        <label for="exampleInputUsername1" class="form-label">Ammount</label>
-                                        <input type="number" class="form-control" id="exampleInputUsername1">
+                            <div class="p-3 m-3">
+                                <div class="row">
+                                    <!-- project1 -->
+                                    <div class="col-12 col-lg-3">
+                                        <div class="d-flex flex-column">
+                                            <div class="rounded-3 overflow-hidden mb-3 card">
+                                                <h6>Pengeluaran 1</h6>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="bg-secondary wallet col-3">
-                                    <div class="mb-3">
-                                        <label for="exampleInputUsername1" class="form-label">Date</label>
-                                        <input type="date" class="form-control" id="exampleInputUsername1">
-                                    </div>
-                                </div>
-                                <div class="bg-secondary wallet col-6 pe-5">
-                                    <div class="mb-3">
-                                        <label for="exampleInputUsername1" class="form-label">Note</label>
-                                        <input type="text" class="form-control" id="exampleInputUsername1">
+                                    <!-- project2 -->
+                                    <div class="col-12 col-lg-3">
+                                        <div class="d-flex flex-column">
+                                            <div class="rounded-3 overflow-hidden mb-3 card">
+                                                <h6>Pengeluaran 2</h6>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="d-grid d-md-flex justify-content-md-end">
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <button type="submit" class="btn btn-danger">Submit</button>
                                 </div>
                             </div>
                         </div>
                         <div class="tab-pane m-3" id="pengeluaran" role="tabpanel" aria-labelledby="kategoriPengeluaran"
                             tabindex="0">
-                            <div>
+                            <div class="p-3 m-3">
                                 <div class="row">
                                     <!-- project1 -->
                                     <div class="col-12 col-lg-3">
@@ -161,145 +149,6 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- TESTING 2 -->
-    <button type="button" class="btn btn-primary edit" data-bs-toggle="modal" data-bs-target="#addTransaksi99">
-        <span class="iconify" data-icon="oi:pencil"></span>
-    </button>
-
-    <div class="modal fade" id="addTransaksi99" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content container">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="exampleModalLabel">
-                        <img class="logo img-fluid" src="${CONFIG.IMAGE_LOGO_PATH}" alt=""> Maneyfy
-                    </h4>
-                    <button type="button" class="btn-close p-3" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <h5>Add Transaction</h5>
-                    <!-- Nav tabs -->
-                    <ul class="nav nav-tabs justify-content-center list-porto" id="myTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="kategoriPendapatan99" data-bs-toggle="tab"
-                                data-bs-target="#pendapatan99" type="button" role="tab" aria-controls="pendapatan99"
-                                aria-selected="true">Pendapatan</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="kategoriPengeluaran99" data-bs-toggle="tab"
-                                data-bs-target="#pengeluaran99" type="button" role="tab" aria-controls="pengeluaran99"
-                                aria-selected="false">Pengeluaran</button>
-                        </li>
-                    </ul>
-
-                    <!-- Tab panes -->
-                    <div class="tab-content">
-                        <div class="tab-pane active m-3" id="pendapatan99" role="tabpanel"
-                            aria-labelledby="kategoriPendapatan99" tabindex="0">
-                            <div class="row gap-4 p-3">
-                                <div class="bg-danger wallet col-3">
-                                    <img src="../public/images/logo.png" alt="logo">
-                                    <h5>Dompet</h5>
-                                </div>
-                                <div class="bg-primary wallet col-3">
-                                    <button type="button" class="btn btn-primary edit d-flex" data-bs-toggle="modal"
-                                        data-bs-target="#test">
-                                        <img src="../public/images/logo.png" alt="logo">
-                                        <p>Kategori</p>
-                                    </button>
-                                </div>
-                                <div class="bg-secondary wallet col-3">
-                                    <div class="mb-3">
-                                        <label for="exampleInputUsername1" class="form-label">Ammount</label>
-                                        <input type="number" class="form-control" id="exampleInputUsername1">
-                                    </div>
-                                </div>
-                                <div class="bg-secondary wallet col-3">
-                                    <div class="mb-3">
-                                        <label for="exampleInputUsername1" class="form-label">Date</label>
-                                        <input type="date" class="form-control" id="exampleInputUsername1">
-                                    </div>
-                                </div>
-                                <div class="bg-secondary wallet col-6 pe-5">
-                                    <div class="mb-3">
-                                        <label for="exampleInputUsername1" class="form-label">Note</label>
-                                        <input type="text" class="form-control" id="exampleInputUsername1">
-                                    </div>
-                                </div>
-                                <div class="d-grid d-md-flex justify-content-md-end">
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane m-3" id="pengeluaran99" role="tabpanel"
-                            aria-labelledby="kategoriPengeluaran99" tabindex="0">
-                            <div>
-                                <div class="row">
-                                    <!-- project1 -->
-                                    <div class="col-12 col-lg-3">
-                                        <div class="d-flex flex-column">
-                                            <div class="rounded-3 overflow-hidden mb-3 card">
-                                                <h6>Pengeluaran 1</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- project2 -->
-                                    <div class="col-12 col-lg-3">
-                                        <div class="d-flex flex-column">
-                                            <div class="rounded-3 overflow-hidden mb-3 card">
-                                                <h6>Pengeluaran 2</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-grid d-md-flex justify-content-md-end">
-                                    <button type="submit" class="btn btn-danger">Submit</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="test" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="exampleModalLabel">
-                        <img class="logo img-fluid" src="${CONFIG.IMAGE_LOGO_PATH}" alt=""> Maneyfy
-                    </h4>
-                    <button type="button" class="btn-close p-3" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <h5>Kategori Pengeluaran</h5>
-                    <div class="row">
-                        <!-- project1 -->
-                        <div class="col-12 col-lg-3">
-                            <div class="d-flex flex-column">
-                                <div class="rounded-3 overflow-hidden mb-3 card">
-                                    <h6>Pengeluaran 1</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- project2 -->
-                        <div class="col-12 col-lg-3">
-                            <div class="d-flex flex-column">
-                                <div class="rounded-3 overflow-hidden mb-3 card">
-                                    <h6>Pengeluaran 2</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="d-grid d-md-flex justify-content-md-end">
-                        <button type="submit" class="btn btn-danger">Submit</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     </div>
 
 
