@@ -9,6 +9,11 @@
 
 @import "pages/pages-main";
 
+@import 'components/searchbar';
+@import 'components/btnAddTransaction';
+@import 'components/kategoriList';
+@import 'components/chooseMonth';
+
 * {
   padding: 0;
   margin: 0;

@@ -12,6 +12,8 @@ import './components/register-now';
 import './components/skip-link';
 import './components/form-login';
 import './components/form-register';
+import './components/header-dashboard';
+import './components/kategoriList-dashboard';
 
 class App {
   //   constructor({

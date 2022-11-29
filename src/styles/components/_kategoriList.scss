@@ -1,0 +1,80 @@
+/*--------------------------------------------------------------
+# Counts
+--------------------------------------------------------------*/
+
+.counts .count-box-pemasukan {
+ box-shadow: -10px -5px 40px 0 rgba(0, 0, 0, 0.1);
+ padding: 30px;
+ text-align: center;
+ border-radius: 10px;
+ width: 100%;
+ background: #13AD96;
+}
+
+.counts .count-box-saldo {
+ box-shadow: -10px -5px 40px 0 rgba(0, 0, 0, 0.1);
+ padding: 30px;
+ text-align: center;
+ border-radius: 10px;
+ width: 100%;
+ background: #709FB9;
+}
+
+.counts .count-box-pengeluaran {
+ box-shadow: -10px -5px 40px 0 rgba(0, 0, 0, 0.1);
+ padding: 30px;
+ text-align: center;
+ border-radius: 10px;
+ width: 100%;
+ background: #DD6A53;
+}
+
+.category-icon {
+ display: block;
+ float: left;
+ height: 55px;
+ line-height: 0;
+ align-items: center;
+}
+
+
+.purecounter {
+ font-size: 30px;
+ margin-top: 4px;
+ display: block;
+ font-weight: 700;
+ text-align: left;
+ align-items: center;
+ color: #fff;
+ margin-left: 60px;
+}
+
+.category-title{
+ padding: 0 0 0 0;
+ margin: 0;
+ color: #fff;
+ font-family: "Montserrat", sans-serif;
+ font-size: 20px;
+}
+
+@media (max-width:991px ) {
+ .count-box-pemasukan, .count-box-saldo, .count-box-pengeluaran {
+  margin-bottom: 10px;
+  padding: 0px;
+  text-align: center;
+ }
+
+ .count-box-pemasukan, .count-box-saldo, .count-box-pengeluaran, .purecounter {
+  font-size: 20px;
+  padding-top: 5px;
+  padding-left:10px;
+ }
+
+ .count-box-pemasukan, .count-box-saldo, .count-box-pengeluaran, .category-title{
+  font-size: 16px;
+ }
+
+ .category-icon {
+  height: 45px;
+ }
+}

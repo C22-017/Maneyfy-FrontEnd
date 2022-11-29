@@ -4,8 +4,9 @@ const Dashboard = {
       <top-header></top-header>
       <side-bar></side-bar>
 
-      <main class="main-logged-in container">
-        <h4>Main Components</h4>
+      <main>
+        <head-dashboard></head-dashboard>
+        <list-category></list-category>
       </main>
     `;
   },
