@@ -1,7 +1,7 @@
 import CONFIG from '../../globals/config';
 
 const dompet = `
-<div class="dompet col-12 col-sm-12 col-lg-3 text-center">
+<div class="dompet shadow-sm col-12 col-sm-12 col-lg-3 text-center">
 <button type="button" class="btn titleKelola" data-bs-toggle="modal" data-bs-target="#kelolaDompet">
   Dompet
 </button>
@@ -19,29 +19,29 @@ const dompet = `
         <h5>Dompet</h5>
         <ul class="list-group list-group-horizontal">
           <li class="list-group-item flex-fill">
-          <img class="img-fluid" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">Dompet 1</li>
+          <img class="icon-list" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">Dompet 1</li>
           <li class="list-group-item">
             <button type="button" class="btn btn-transparent p-2" data-bs-toggle="modal" data-bs-target="#editDompet">
-              <iconify-icon icon="material-symbols:edit"></iconify-icon>
+              <iconify-icon icon="material-symbols:edit" class="icon-large text-primary"></iconify-icon>
             </button>
           </li>
           <li class="list-group-item">
             <button type="button" class="btn btn-transparent p-2" data-bs-toggle="modal" data-bs-target="#hapusDompet">
-                <iconify-icon icon="mdi:trash"></iconify-icon>
+                <iconify-icon icon="mdi:trash" class="icon-large text-danger"></iconify-icon>
             </button>
           </li>
         </ul>
         <ul class="list-group list-group-horizontal">
           <li class="list-group-item flex-fill">
-          <img class="img-fluid" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">Dompet 2</li>
+          <img class="icon-list" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">Dompet 2</li>
           <li class="list-group-item">
             <button type="button" class="btn btn-transparent p-2" data-bs-toggle="modal" data-bs-target="#editDompet">
-              <iconify-icon icon="material-symbols:edit"></iconify-icon>
+              <iconify-icon icon="material-symbols:edit" class="icon-large text-primary"></iconify-icon>
             </button>
           </li>
           <li class="list-group-item">
             <button type="button" class="btn btn-transparent p-2" data-bs-toggle="modal" data-bs-target="#hapusDompet">
-                <iconify-icon icon="mdi:trash"></iconify-icon>
+                <iconify-icon icon="mdi:trash" class="icon-large text-danger"></iconify-icon>
             </button>
           </li>
         </ul>
@@ -76,7 +76,7 @@ const dompet = `
             </div>
           </div>
           <div class="d-grid d-md-flex justify-content-md-end">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Tambah</button>
           </div>
         </div>
     </div>
@@ -104,7 +104,7 @@ const dompet = `
             </div>
           </div>
           <div class="d-grid d-md-flex justify-content-md-end">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Simpan</button>
           </div>
         </div>
     </div>
@@ -129,7 +129,7 @@ const dompet = `
             <img class="img-fluid" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
           </div> 
           <div class="d-grid d-md-flex justify-content-md-end">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Pilih</button>
           </div>
         </div>
     </div>
@@ -154,7 +154,7 @@ const dompet = `
             <img class="img-fluid" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
           </div> 
           <div class="d-grid d-md-flex justify-content-md-end">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Pilih</button>
           </div>
         </div>
     </div>
@@ -165,14 +165,14 @@ const dompet = `
     <div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title" id="exampleModalLabel">Hapus Dompet</h4>
+          <h4 class="modal-title" id="exampleModalLabel">Hapus Dompet?</h4>
           <button type="button" class="btn-close p-3" data-bs-toggle="modal" data-bs-target="#kelolaDompet"></button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body modal-confirm">
         <div class="justify-content-between row p-3">             
         <button type="submit" class="btn btn-primary col-4" data-bs-toggle="modal"
-        data-bs-target="#kelolaDompet">cancel</button>
-        <button type="submit" class="btn btn-danger col-4">Submit</button>
+        data-bs-target="#kelolaDompet">Batal</button>
+        <button type="submit" class="btn btn-danger col-4">Hapus</button>
         </div>
         </div>
       </div>

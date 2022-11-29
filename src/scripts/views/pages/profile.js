@@ -10,16 +10,20 @@ const Profile = {
     <main class="container">
         <h1 class="titlePage mb-5 pt-3">Profil Saya</h1>
 
-        <section class="profil mb-5 row">
+        <section class="profil mb-5 row shadow-sm">
         </section>
 
-        <section class="kelola row">
+        <section class="kelola row shadow-sm">
         </section>
     </main>
     `;
   },
 
   async afterRender() {
+    const bodyPd = document.getElementById('body-pd');
+    bodyPd.classList.remove('body-pd');
+    bodyPd.classList.add('body-logged-in');
+
     profile();
     kelolaProfile();
 

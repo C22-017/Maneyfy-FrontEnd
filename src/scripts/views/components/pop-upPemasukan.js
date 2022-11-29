@@ -1,7 +1,7 @@
 import CONFIG from '../../globals/config';
 
 const pemasukan = `
-<div class="pemasukan col-12 col-sm-12 col-lg-3 text-center">
+<div class="pemasukan shadow-sm col-12 col-sm-12 col-lg-3 text-center">
 <button type="button" class="btn titleKelola" data-bs-toggle="modal" data-bs-target="#kelolaKategoriPemasukan">
   Pemasukan
 </button>
@@ -19,29 +19,29 @@ const pemasukan = `
         <h5>Pemasukan</h5>
         <ul class="list-group list-group-horizontal">
           <li class="list-group-item flex-fill">
-          <img class="img-fluid" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">Kategori Pemasukan 1</li>
+          <img class="icon-list" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">Kategori Pemasukan 1</li>
           <li class="list-group-item">
             <button type="button" class="btn btn-transparent p-2" data-bs-toggle="modal" data-bs-target="#editKategoriPemasukan">
-              <iconify-icon icon="material-symbols:edit"></iconify-icon>
+              <iconify-icon icon="material-symbols:edit" class="icon-large text-primary"></iconify-icon>
             </button>
           </li>
           <li class="list-group-item">
             <button type="button" class="btn btn-transparent p-2" data-bs-toggle="modal" data-bs-target="#hapusKategoriPemasukan">
-                <iconify-icon icon="mdi:trash"></iconify-icon>
+                <iconify-icon icon="mdi:trash" class="icon-large text-danger"></iconify-icon>
             </button>
           </li>
         </ul>
         <ul class="list-group list-group-horizontal">
           <li class="list-group-item flex-fill">
-          <img class="img-fluid" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">Kategori Pemasukan 2</li>
+          <img class="icon-list" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">Kategori Pemasukan 2</li>
           <li class="list-group-item">
             <button type="button" class="btn btn-transparent p-2" data-bs-toggle="modal" data-bs-target="#editKategoriPemasukan">
-              <iconify-icon icon="material-symbols:edit"></iconify-icon>
+              <iconify-icon icon="material-symbols:edit" class="icon-large text-primary"></iconify-icon>
             </button>
           </li>
           <li class="list-group-item">
             <button type="button" class="btn btn-transparent p-2" data-bs-toggle="modal" data-bs-target="#hapusKategoriPemasukan">
-                <iconify-icon icon="mdi:trash"></iconify-icon>
+                <iconify-icon icon="mdi:trash" class="icon-large text-danger"></iconify-icon>
             </button>
           </li>
         </ul>
@@ -77,7 +77,7 @@ const pemasukan = `
             </div>
           </div>
           <div class="d-grid d-md-flex justify-content-md-end">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Tambah</button>
           </div>
         </div>
       </div>
@@ -107,7 +107,7 @@ const pemasukan = `
             </div>
           </div>
           <div class="d-grid d-md-flex justify-content-md-end">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Simpan</button>
           </div>
         </div>
       </div>
@@ -134,7 +134,7 @@ const pemasukan = `
             <img class="img-fluid" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
           </div> 
           <div class="d-grid d-md-flex justify-content-md-end">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Pilih</button>
           </div>
         </div>
       </div>
@@ -161,7 +161,7 @@ const pemasukan = `
             <img class="img-fluid" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
           </div> 
           <div class="d-grid d-md-flex justify-content-md-end">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Pilih</button>
           </div>
         </div>
       </div>
@@ -173,14 +173,14 @@ const pemasukan = `
     <div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title" id="exampleModalLabel">Hapus Kategori Pemasukan</h4>
+          <h4 class="modal-title" id="exampleModalLabel">Hapus Kategori Pemasukan?</h4>
           <button type="button" class="btn-close p-3" data-bs-toggle="modal" data-bs-target="#kelolaKategoriPemasukan"></button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body modal-confirm">
         <div class="justify-content-between row p-3">             
         <button type="submit" class="btn btn-primary col-4" data-bs-toggle="modal"
-        data-bs-target="#kelolaKategoriPemasukan">cancel</button>
-        <button type="submit" class="btn btn-danger col-4">Submit</button>
+        data-bs-target="#kelolaKategoriPemasukan">Batal</button>
+        <button type="submit" class="btn btn-danger col-4">Hapus</button>
         </div>
         </div>
       </div>

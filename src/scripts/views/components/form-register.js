@@ -22,20 +22,20 @@ class FormRegister extends HTMLElement {
                 
                 <!-- Email input -->
                 <div class="form-outline mb-4">
-                  <input type="text" id="name" class="form-control form-control-lg"placeholder="Name" />
+                  <input type="text" id="name" class="form-control form-control-lg form-control-login-register"placeholder="Name" />
                 </div>
 
                 <div class="form-outline mb-4">
-                  <input type="email" id="email" class="form-control form-control-lg" placeholder="Email" />
+                  <input type="email" id="email" class="form-control form-control-lg form-control-login-register" placeholder="Email" />
                 </div>
       
                 <!-- Password input -->
                 <div class="form-outline mb-4">
-                  <input type="password" for="typePassword" id="password" class="form-control form-control-lg" placeholder="Password" />
+                  <input type="password" for="typePassword" id="password" class="form-control form-control-lg form-control-login-register" placeholder="Password" />
                 </div>
 
                 <div class="form-outline mb-4">
-                  <input type="password" for="typePassword" id="confirmPassword" class="form-control form-control-lg" placeholder="Konfirmasi Password" />
+                  <input type="password" for="typePassword" id="confirmPassword" class="form-control form-control-lg form-control-login-register" placeholder="Konfirmasi Password" />
                 </div>
                 
                 <div class="text-center mt-1 pt-2 justify-content-center">

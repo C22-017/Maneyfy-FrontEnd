@@ -2,13 +2,14 @@
   position: relative;
   margin: calc(var(--header-height) + 1rem) 0 0 0;
   padding-left: 1rem;
+  padding-right: 1rem;
   background-color: $background-very-light-blue;
   font-size: 1rem;
   transition: 0.5s;
 
   @include media-in(tablet) {
     margin: calc(var(--header-height) + 1rem) 0 0 0;
-    padding-left: calc(var(--nav-width) + 2rem);
+    padding-left: calc(var(--nav-width) + 1rem);
   }
 }
 

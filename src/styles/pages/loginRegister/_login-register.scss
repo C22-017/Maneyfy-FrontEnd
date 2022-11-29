@@ -18,14 +18,10 @@ form {
 
 }
 
-.form-control {
+.form-control-login-register {
  width: 70%;
  justify-content: center;
  margin: 0 auto;
-}
-
-.form-label {
- margin-left: 120px;
 }
 
 .button-filled {
@@ -91,14 +87,11 @@ form {
  .h-custom {
  height: 100%;
  }
- .h-custom .form-control {
+ .h-custom .form-control-login-register {
   margin-left: 0px;
   padding-left: 20px;
   margin-right:5px;
   width: 100%;
- }
- .h-custom .form-label {
-  margin-left: 0px;
  }
  
 }

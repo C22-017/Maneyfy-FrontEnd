@@ -5,8 +5,11 @@ const Register = {
   `;
   },
 
-  // async afterRender() {
-  // },
+  async afterRender() {
+    const bodyPd = document.getElementById('body-pd');
+    bodyPd.classList.remove('body-pd');
+    bodyPd.classList.remove('body-logged-in');
+  },
 
 };
 export default Register;

@@ -5,7 +5,7 @@ const Tips = {
         <side-bar></side-bar>
   
         <main class="container">
-        <h1 class="titlePage mb-3 pt-3">Halaman Tips</h1>
+        <h1 class="titlePage mb-3 pt-3">Tips Mengelola Keuangan</h1>
 
         <div class="image">
           <img src="..//public/images/fitur/Events-pana.png" class="img" alt="">
@@ -215,6 +215,10 @@ const Tips = {
     // } catch (error) {
     //   console.log(error);
     // }
+    const bodyPd = document.getElementById('body-pd');
+    bodyPd.classList.remove('body-pd');
+    bodyPd.classList.add('body-logged-in');
+
     const showNavbar = (toggleId, iconToggleId, navId, bodyId, headerId) => {
       const toggle = document.getElementById(toggleId);
       const iconToggle = document.getElementById(iconToggleId);

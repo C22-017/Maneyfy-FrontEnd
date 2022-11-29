@@ -3,7 +3,7 @@ import CONFIG from '../../globals/config';
 const editProfile = () => {
   const btnEdit = document.querySelector('.btn-edit');
   btnEdit.innerHTML = `
-<button type="button" class="btn edit" data-bs-toggle="modal"
+<button type="button" class="btn edit shadow-sm" data-bs-toggle="modal"
 data-bs-target="#kelolaProfil">
     <span class="iconify" data-icon="oi:pencil"></span>
 </button>
@@ -33,13 +33,13 @@ data-bs-target="#kelolaProfil">
                         <input type="text" class="form-control" id="exampleInputUsername1">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <label for="exampleInputEmail1" class="form-label">Email</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
                     <div class="justify-content-between row p-3">             
                         <button type="submit" class="btn btn-danger col-4" data-bs-toggle="modal"
                         data-bs-target="#hapusAkun">Hapus Akun</button>
-                        <button type="submit" class="btn btn-primary col-4">Submit</button>
+                        <button type="submit" class="btn btn-primary col-4">Simpan</button>
                     </div>
                 </form>
             </div>
@@ -51,14 +51,14 @@ data-bs-target="#kelolaProfil">
     <div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title" id="exampleModalLabel">Hapus Akun</h4>
+          <h4 class="modal-title" id="exampleModalLabel">Hapus Akun?</h4>
           <button type="button" class="btn-close p-3" data-bs-toggle="modal" data-bs-target="#kelolaProfil"></button>
         </div>
-            <div class="modal-body">
+            <div class="modal-body modal-confirm">
             <div class="justify-content-between row p-3">             
             <button type="submit" class="btn btn-primary col-4" data-bs-toggle="modal"
-            data-bs-target="#kelolaProfil">cancel</button>
-            <button type="submit" class="btn btn-danger col-4">Submit</button>
+            data-bs-target="#kelolaProfil">Batal</button>
+            <button type="submit" class="btn btn-danger col-4">Hapus</button>
             </div>
             </div>
         </div>

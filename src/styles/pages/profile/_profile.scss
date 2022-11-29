@@ -67,9 +67,12 @@ body {
     .edit {
       width: 44px;
       height: 44px;
+      background-color: #65ddf7;
+      border-radius: 10px;
       display: flex;
       justify-content: flex-end;
       align-items: center;
+      // margin: auto 0;
       // background-color: aqua;
     }
 
@@ -88,14 +91,15 @@ body {
   margin: 1rem 1rem;
   .titleKelola {
     // color: #ffff;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     font-weight: bold;
     background-color: transparent;
     width: 100%;
-    height: 50px;
+    // height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
+    // color: white;
 
     @include media-in(tablet) {
       font-size: 1.5rem;
@@ -106,6 +110,10 @@ body {
     background-color: $background-font-income;
     padding: 1em;
     border-radius: 20px;
+    transition: 0.3s;
+    &:hover {
+      background-color: #66cabb;
+    }
     .button {
       justify-content: end;
       display: flex;
@@ -115,6 +123,10 @@ body {
     background-color: $background-amount-wallet;
     padding: 1em;
     border-radius: 20px;
+    transition: 0.3s;
+    &:hover {
+      background-color: #93b5c7;
+    }
     .button {
       justify-content: end;
       display: flex;
@@ -124,6 +136,10 @@ body {
     background-color: $background-font-outcome;
     padding: 1em;
     border-radius: 20px;
+    transition: 0.3s;
+    &:hover {
+      background-color: #d19387;
+    }
     .button {
       justify-content: end;
       display: flex;
@@ -148,6 +164,14 @@ body {
       font-size: 3rem;
     }
   }
+}
+
+.modal-confirm {
+  padding: 0 1rem !important;
+}
+
+.icon-list {
+  height: 4rem;
 }
 
 .logo {
