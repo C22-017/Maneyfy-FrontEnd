@@ -1,5 +1,15 @@
-.search {
+.icSearch {
  height: 23px;
+ margin-top: 5px;
+}
+
+.form-search {
+ font-weight: 500;
+ color: black;
+}
+
+.btn-search {
+ height: 50px;
 }
 
 #custom-search-input{
@@ -21,13 +31,13 @@
  border: 0;
  color: #666666;
  padding: 0 8px 0 10px;
- border-left: solid 1px #ccc;
+ // border-left: solid 1px #ccc;
 }
 
 #custom-search-input button:hover{
  border: 0;
  box-shadow: none;
- border-left: solid 1px rgb(68, 68, 68);
+ // border-left: solid 1px rgb(68, 68, 68);
 }
 
 #custom-search-input .glyphicon-search{
