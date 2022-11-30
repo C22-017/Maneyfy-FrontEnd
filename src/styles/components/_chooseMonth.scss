@@ -1,3 +1,7 @@
+.month {
+	margin-top: 50px;
+}
+
 .month .box-month {
  box-shadow: -10px -5px 40px 0 rgba(0, 0, 0, 0.1);
  padding: 30px;
@@ -32,17 +36,6 @@
  align-items: center;
 }
 
-// .purecounter {
-//  font-size: 30px;
-//  margin-top: 4px;
-//  display: block;
-//  font-weight: 700;
-//  text-align: left;
-//  align-items: center;
-//  color: #fff;
-//  margin-left: 60px;
-// }
-
 .button-report {
  font-family: "Montserrat", sans-serif;
  font-weight: 700;
@@ -59,4 +52,44 @@
  background: #42B2FA;
  border-radius: 10px;
  box-shadow: 0px 5px 30px rgba(216, 220, 255, 0.4);
+}
+
+
+@media (max-width:780px ) {
+	.box-main {
+		justify-content: center;
+		margin-top: 0px;
+	}
+	.box-month {
+		justify-content: center;
+		padding: 10px;
+	}
+
+ .box-month p{
+  padding: 0px;
+		font-size: 20px	;
+  text-align: center;
+ }
+
+	.input-month {
+		padding: 10px;
+		height: 50px;
+		width: 50px;
+		font-weight: 300;
+		font-size: 15px;
+	}
+
+ .box-month, .purecounter {
+		font-size: 20px;
+  padding-top: 0px;
+  padding-left:0px;
+ }
+	.button-report {
+		// margin-top: 10px;
+		margin-left: 0px;
+		height: 50px;
+		width: 190px;
+	font-size: 15px;
+		
+	}
 }

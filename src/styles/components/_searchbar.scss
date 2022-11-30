@@ -1,5 +1,5 @@
 .icSearch {
- height: 23px;
+ height: 40px;
  margin-top: 5px;
 }
 
@@ -9,7 +9,15 @@
 }
 
 .btn-search {
- height: 50px;
+ height: 80px;
+}
+
+.searchBar {
+ height: 55px;
+}
+
+.forWidth {
+ width: 300px;
 }
 
 #custom-search-input{
@@ -42,4 +50,21 @@
 
 #custom-search-input .glyphicon-search{
  font-size: 23px;
+}
+
+@media (max-width:991px ) {
+ .searchBar {
+  height: 50px;
+  width: 190px;
+ }
+ .btn-search {
+  height: 20px;
+ }
+ .icSearch {
+  height: 30px;
+  margin-top: 8px;
+ }
+ .forWidth {
+  width: 200px;
+ }
 }
