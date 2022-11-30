@@ -15,38 +15,42 @@ const addTransaksi = `
           </h4>
           <button type="button" class="btn-close p-3" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body text-center">
+        <div class="modal-body text-center tambah-transaksi">
           <h5>Add Transaction</h5>
-          <div class=" row justify-content-center">
-            <div class="bg-danger col-12 col-lg-3 m-1">
-              <img class="img-fluid logo" src="..//public/images/logo.png" alt="logo"> Dompet
+          <div class="row">
+            <div class="form-transaksi col-12 col-lg-3">
+                <div class="pilih-dompet">
+                    <img class="img-fluid logo" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
+                    <span>Dompet</span>
+                </div>
             </div>
-            <div class="bg-primary col-12 col-lg-3 m-1">
-              <button type="button" class="btn btn-primary edit d-flex" data-bs-toggle="modal"
+            <div class="form-transaksi col-12 col-lg-3 align-self-center">
+              <button type="button" class="btn edit d-flex pilih-kategori justify-content-center" data-bs-toggle="modal"
                 data-bs-target="#addKategori">
-                <img class="img-fluid logo" src="..//public/images/logo.png" alt="logo"><span>
+                <img class="img-fluid logo" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
+                <span class="align-self-center">
                   Kategori
                 </span>
               </button>
             </div>
-            <div class="bg-secondary col-12 col-lg-3 m-1">
+            <div class="form-transaksi col-12 col-lg-3">
               <div class="mb-3">
                 <label for="exampleInputUsername1" class="form-label">Ammount</label>
                 <input type="number" class="form-control" id="exampleInputUsername1">
               </div>
             </div>
           </div>
-          <div class="row justify-content-center">
-            <div class="bg-secondary col-12 col-lg-3 m-1">
+          <div class="row">
+            <div class="form-transaksi col-12 col-lg-3">
               <div class="mb-3 input-append date">
                 <label for="tanggalTransaksi" class="form-label">Date</label>
                 <input type="date" class="form-control" id="tanggalTransaksi">
               </div>
             </div>
-            <div class="bg-secondary col-12 col-lg-6 m-1">
+            <div class="large-form col-12 col-lg-6">
               <div class="mb-3">
                 <label for="exampleInputUsername1" class="form-label">Nama Transaksi</label>
-                <input type="text" class="form-control pe-5" id="exampleInputUsername1">
+                <input type="text" class="form-control" id="exampleInputUsername1">
               </div>
             </div>
           </div>
@@ -81,25 +85,36 @@ const addTransaksi = `
             </li>
           </ul>
 
-          <!-- Tab panes -->
           <div class="tab-content">
             <div class="tab-pane active m-3" id="pendapatan" role="tabpanel" aria-labelledby="kategoriPendapatan"
               tabindex="0">
               <div class="p-3 m-3">
                 <div class="row">
-                  <!-- project1 -->
                   <div class="col-12 col-lg-3">
                     <div class="d-flex flex-column">
                       <div class="rounded-3 overflow-hidden mb-3 card">
-                        <h6>Pengeluaran 1</h6>
+                      <div>
+                        <ul class="list-group list-group-horizontal text-center">
+                            <li class="list-group-item flex-fill">
+                            <img class="icon-list" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
+                            <p>Gaji</p>
+                            </li>
+                        </ul>
+                      </div>
                       </div>
                     </div>
                   </div>
-                  <!-- project2 -->
                   <div class="col-12 col-lg-3">
                     <div class="d-flex flex-column">
                       <div class="rounded-3 overflow-hidden mb-3 card">
-                        <h6>Pengeluaran 2</h6>
+                      <div>
+                      <ul class="list-group list-group-horizontal text-center">
+                          <li class="list-group-item flex-fill">
+                          <img class="icon-list" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
+                          <p>Keuntungan Investasi</p>
+                          </li>
+                      </ul>
+                      </div>
                       </div>
                     </div>
                   </div>
@@ -113,7 +128,6 @@ const addTransaksi = `
               tabindex="0">
               <div class="p-3 m-3">
                 <div class="row">
-                  <!-- project1 -->
                   <div class="col-12 col-lg-3">
                     <div class="d-flex flex-column">
                       <div class="rounded-3 overflow-hidden mb-3 card">
@@ -121,7 +135,6 @@ const addTransaksi = `
                       </div>
                     </div>
                   </div>
-                  <!-- project2 -->
                   <div class="col-12 col-lg-3">
                     <div class="d-flex flex-column">
                       <div class="rounded-3 overflow-hidden mb-3 card">

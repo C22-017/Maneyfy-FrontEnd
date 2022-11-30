@@ -13,6 +13,51 @@
   }
 }
 
+.tambah-transaksi {
+  justify-content: center;
+}
+
+.form-transaksi {
+  align-self: center;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 1rem;
+  height: 6rem;
+  margin: 0.7rem;
+  width: 95%;
+  text-align: center;
+
+  @include media-in(desktop) {
+    flex-basis: 30%;
+  }
+}
+
+.pilih-dompet {
+  padding-top: 1rem;
+  align-items: center;
+}
+
+.pilih-kategori {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+
+.large-form {
+  border-width: 1px;
+  height: 6rem;
+  margin: 0.7rem;
+  align-self: center;
+  border-style: solid;
+  border-radius: 1rem;
+  padding-right: 1rem;
+  width: 95%;
+
+  @include media-in(desktop) {
+    flex-basis: 63%;
+  }
+}
+
 .kategori-icon {
   object-fit: cover;
   align-items: center;
