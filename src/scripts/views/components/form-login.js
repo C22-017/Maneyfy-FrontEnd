@@ -14,7 +14,7 @@ class FormLogin extends HTMLElement {
               <img src="${CONFIG.IMAGE_HERO_LOGIN_PATH}" class="img-fluid" alt="img_maneyfy_login">
             </div>
             <div class="col-lg-6 form-input">
-              <form>
+              <form id="login-form">
                 <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-center head">
                   <img class="img-fluid logo-login-register" src="${CONFIG.IMAGE_BRAND_LOGO_PATH}" alt="">
                 </div>
@@ -25,16 +25,16 @@ class FormLogin extends HTMLElement {
                 
                 <!-- Email input -->
                 <div class="form-outline mb-4">
-                  <input type="email" id="form3Example3" class="form-control form-control-lg form-control-login-register" placeholder="Email" />
+                  <input type="email" id="email" name="email" class="form-control form-control-lg form-control-login-register" placeholder="Email" required/>
                 </div>
       
                 <!-- Password input -->
                 <div class="form-outline mb-4">
-                  <input type="password" for="typePassword" id="form3Example4" class="form-control form-control-lg form-control-login-register" placeholder="Password" />
+                  <input type="password" for="typePassword" id="password" name="password" class="form-control form-control-lg form-control-login-register" placeholder="Password" required/>
                 </div>
                 
                 <div class="text-center  mt-1 pt-2 justify-content-center">
-                  <button type="submit" onclick="window.location.href='#/dashboard'" class="btn btn-primary btn-lg button-filled">Login</button>
+                  <button type="submit" class="btn btn-primary btn-lg button-filled">Login</button>
                 </div>
                 
               </form>

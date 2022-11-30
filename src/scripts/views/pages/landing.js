@@ -1,4 +1,11 @@
+import { redirectIfAlreadytLoggedin } from '../../utils/redirect-page';
+import { setupPageUserNotLoggedin } from '../../utils/setup-page';
+
 const Landing = {
+  async beforeRender() {
+    redirectIfAlreadytLoggedin();
+  },
+
   async render() {
     return `
       <header id="header" class="header-landing fixed-top">      
@@ -18,27 +25,11 @@ const Landing = {
   },
 
   async afterRender() {
-    const bodyPd = document.getElementById('body-pd');
-    bodyPd.classList.remove('body-pd');
-    bodyPd.classList.remove('body-logged-in');
-    //   try {
-    //     const restaurants = await RestaurantAPIDicoding.getListRestaurant();
-
-    //     this._initContentHomePage(restaurants);
-    //   } catch (error) {
-    //     console.log(error);
-    //   }
-    // },
-
-  // _initContentHomePage(restaurants) {
-  //   ExploreRestaurantInitiator.init({
-  //     restaurants,
-  //     listRestaurantContainer: document.querySelector('.explore-container'),
-  //   });
-  //   RecommendedRestaurantInitiator.init({
-  //     restaurantsRecommended: restaurants,
-  //     listRecommendedContainer: document.querySelector('.recommendation-container'),
-  //   });
+    try {
+      setupPageUserNotLoggedin();
+    } catch (error) {
+      console.log(error);
+    }
   },
 };
 

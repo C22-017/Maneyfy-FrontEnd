@@ -1,5 +1,6 @@
 const CONFIG = {
-  // BASE_URL: 'https://restaurant-api.dicoding.dev/',
+  BASE_URL: 'http://localhost:9000/api/',
+  STORAGE_KEY: 'MANEYFY_WEBAPPS',
   // ASSETS IMAGE //
   IMAGE_LOGO_PATH: './images/logo.png',
   IMAGE_BRAND_LOGO_PATH: './images/logo-title-black.png',

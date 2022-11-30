@@ -2,6 +2,14 @@
   text-align: center;
 
   img {
-    width: 75%;
+    width: 100%;
+
+    @include media-in(tablet) {
+      width: 75%;
+    }
+
+    @include media-in(desktop) {
+      width: 50%;
+    }
   }
 }

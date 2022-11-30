@@ -11,7 +11,7 @@ class FormRegister extends HTMLElement {
         <div class="container-fluid h-custom">
           <div class="row h-100">
             <div class="col-lg-6 form-input">
-              <form>
+              <form id="register-form" action="">
                 <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-center head">
                   <img class="img-fluid logo-login-register" src="${CONFIG.IMAGE_BRAND_LOGO_PATH}" alt="">
                 </div>
@@ -22,20 +22,20 @@ class FormRegister extends HTMLElement {
                 
                 <!-- Email input -->
                 <div class="form-outline mb-4">
-                  <input type="text" id="name" class="form-control form-control-lg form-control-login-register"placeholder="Name" />
+                  <input type="text" id="name" name="name" class="form-control form-control-lg form-control-login-register" placeholder="Name" required/>
                 </div>
 
                 <div class="form-outline mb-4">
-                  <input type="email" id="email" class="form-control form-control-lg form-control-login-register" placeholder="Email" />
+                  <input type="email" id="email" name="email" class="form-control form-control-lg form-control-login-register" placeholder="Email" required/>
                 </div>
       
                 <!-- Password input -->
                 <div class="form-outline mb-4">
-                  <input type="password" for="typePassword" id="password" class="form-control form-control-lg form-control-login-register" placeholder="Password" />
+                  <input type="password" for="typePassword" id="password" name="password" class="form-control form-control-lg form-control-login-register" placeholder="Password" required/>
                 </div>
 
                 <div class="form-outline mb-4">
-                  <input type="password" for="typePassword" id="confirmPassword" class="form-control form-control-lg form-control-login-register" placeholder="Konfirmasi Password" />
+                  <input type="password" for="typePassword" id="confirmPassword" name="confirmPassword" class="form-control form-control-lg form-control-login-register" placeholder="Konfirmasi Password" required/>
                 </div>
                 
                 <div class="text-center mt-1 pt-2 justify-content-center">

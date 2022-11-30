@@ -1,11 +1,14 @@
 import CONFIG from '../../globals/config';
 
 class TopHeader extends HTMLElement {
-  connectedCallback() {
+  set dataUser(data) {
+    this._dataUser = data;
     this._render();
   }
 
   _render() {
+    const dataUser = this._dataUser;
+
     this.innerHTML = `
       <header class="header shadow-sm" id="header">
         <div class="header-left">
@@ -16,12 +19,12 @@ class TopHeader extends HTMLElement {
         <div class="header-right">
           <div class="dropdown profile-container-ui">
             <button class="dropdown-toggle" type="button" id="dropdownProfile" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <img src="https://i.imgur.com/hczKIze.jpg" alt="" class="profile-picture">
+              <img src="${dataUser.profile_picture}" alt="" class="profile-picture">
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownProfile">
-              <img src="https://i.imgur.com/hczKIze.jpg" alt="" class="profile__image">
-              <p class="profile__name">Tegar Naufal Hanip</p>
-              <p class="profile__email">tegarhanip@gmail.com</p>
+              <img src="${dataUser.profile_picture}" alt="" class="profile__image">
+              <p class="profile__name">${dataUser.name}</p>
+              <p class="profile__email">${dataUser.email}</p>
               <a href="#/profile" class="profile__link">Lihat Profil</a>
             </div>
           </div>

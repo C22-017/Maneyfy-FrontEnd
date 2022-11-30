@@ -25,13 +25,19 @@ class SideBar extends HTMLElement {
               </a>
             </div>
           </div>
-          <button href="#" class="nav_logout">
+          <button id="btnLogout" class="nav_logout">
             <i class='bx bx-log-out bx-rotate-180 large'></i>
             <span class="nav_name">Keluar Akun</span>
           </button>
         </nav>
       </div>
     `;
+
+    const btnLogout = document.querySelector('#btnLogout');
+    btnLogout.addEventListener('click', () => {
+      localStorage.removeItem(CONFIG.STORAGE_KEY);
+      location.replace('#/login');
+    });
   }
 }
 

@@ -1,6 +1,6 @@
 import CONFIG from '../../globals/config';
 
-const editProfile = () => {
+const editProfile = (dataUser) => {
   const btnEdit = document.querySelector('.btn-edit');
   btnEdit.innerHTML = `
 <button type="button" class="btn edit shadow-sm" data-bs-toggle="modal"
@@ -23,18 +23,18 @@ data-bs-target="#kelolaProfil">
                 <form>
                     <div class="mb-3 text-center">
                         <figure class="profile-pic-div">
-                            <img class="img-fluid mb-2 mx-auto d-block" src=".//public/images/Ellipse 5.png" id="photo">
+                            <img class="img-fluid mb-2 mx-auto d-block" src="${dataUser.profile_picture}" id="photo">
                         </figure>
                         <label for="file" class="uploadBtn" hidden>Foto</label>
                         <input type="file" accept="image/*" class="form-control" id="file">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputUsername1" class="form-label">Nama</label>
-                        <input type="text" class="form-control" id="exampleInputUsername1">
+                        <label for="name" class="form-label">Nama</label>
+                        <input type="text" class="form-control" id="name" name="name" value="${dataUser.name}">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" value="${dataUser.email}">
                     </div>
                     <div class="justify-content-between row p-3">             
                         <button type="submit" class="btn btn-danger col-4" data-bs-toggle="modal"
