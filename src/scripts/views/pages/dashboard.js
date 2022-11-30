@@ -7,6 +7,7 @@ const Dashboard = {
       <main>
         <head-dashboard></head-dashboard>
         <list-category></list-category>
+        <choose-month></choose-month>
       </main>
     `;
   },
