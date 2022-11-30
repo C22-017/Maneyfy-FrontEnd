@@ -6,7 +6,7 @@ import Profile from '../views/pages/profile';
 import Register from '../views/pages/register';
 
 const routes = {
-  '/': Landing,
+  '/': Dashboard,
   '/dashboard': Dashboard,
   '/login': Login,
   '/register': Register,

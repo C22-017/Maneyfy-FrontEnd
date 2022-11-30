@@ -13,3 +13,25 @@
   }
 }
 
+.kategori-icon {
+  object-fit: cover;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.nominal {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.detail-desc {
+  .nama-kategori {
+  }
+  .tanggal {
+    font-weight: lighter;
+  }
+  .nama-transaksi {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+}
