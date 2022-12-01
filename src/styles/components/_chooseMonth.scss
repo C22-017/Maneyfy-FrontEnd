@@ -24,8 +24,7 @@
 }
 
 .input-month {
-	display: block;
- float: left;
+	width: 100%;	
 	padding: 10px;
  height: 50px;
 	font-weight: 700;
@@ -39,11 +38,9 @@
 .button-report {
  font-family: "Montserrat", sans-serif;
  font-weight: 700;
-	margin-left: 10px;
  font-size: 18px;
- width: 200px;
+ width: 100%;
 	height: 50px;
- padding: 10px;
  border-radius: 4px;
  transition: 0.5s;
  text-decoration: none;
@@ -55,7 +52,9 @@
 }
 
 
-@media (max-width:780px ) {
+
+
+@media (max-width:900px ) {
 	.box-main {
 		justify-content: center;
 		margin-top: 0px;
@@ -75,22 +74,19 @@
 	.main-month {
 		width: 100%;
 		height: 100%;
-		padding: 28px;
 	}
 	.input-month {
-		padding: 10px;
 		height: 50px;
-		margin-left: 0px;
-		width: 200px;
+		width: 100%;
 		font-weight: 300;
+		margin-bottom: 10px;
+		text-align: center;
 		font-size: 15px;
 	}
 
 	.button-report {
-		margin-top: 20px;
-		margin-left: 0px;	
 		height: 50px;
-		width: 200px;
+		width: 100%;
 		font-size: 15px;
 	}
 }

@@ -25,7 +25,7 @@ class HeaderDashboard extends HTMLElement {
               </div>
             </div>
             <div class="col-3 d-flex justify-content-end">
-              <button type="submit" class="btn btn-primary btn-lg button-add">
+              <button type="submit" class="btn btn-primary btn-lg button-add float">
                 <img class="icAdd" src="${CONFIG.ICON_ADD_TRANSACTION}" alt="icAdd">
                 <p class="tambah">Tambah Transaksi</p>
               </button>

@@ -27,8 +27,37 @@
  margin-top:0px;
 }
 
-@media (max-width:991px ) {
+
+// @media (max-width:1024px ) {
+//  .tambah {
+//   display: none;
+//  }
+//  // .icAdd {
+//  //  height: 50px;
+//  // }
+//  .button-add {
+//   width: 100px;
+//   height: 80px;
+//  }
+// }
+
+
+
+@media (max-width:1207px ) {
  .tambah {
   display: none;
  }
+ .float {
+  position:fixed;
+  width:60px;
+  height:60px;
+  bottom:40px;
+  right:40px;
+  background-color:#42B2FA;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  box-shadow: 2px 2px 3px #999;
+ }
 }
+

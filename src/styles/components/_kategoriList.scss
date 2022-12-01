@@ -30,51 +30,55 @@
 }
 
 .category-icon {
- display: block;
- float: left;
  height: 55px;
- line-height: 0;
- align-items: center;
 }
 
 
 .purecounter {
- font-size: 30px;
+ font-size: 28px;
  margin-top: 4px;
  display: block;
  font-weight: 700;
  text-align: left;
  align-items: center;
  color: #fff;
- margin-left: 60px;
 }
 
 .category-title{
- padding: 0 0 0 0;
  margin: 0;
  color: #fff;
  font-family: "Montserrat", sans-serif;
  font-size: 20px;
 }
 
-@media (max-width:991px ) {
+@media (max-width:766px ) {
  .count-box-pemasukan, .count-box-saldo, .count-box-pengeluaran {
   margin-bottom: 10px;
   padding: 0px;
-  text-align: center;
  }
 
  .count-box-pemasukan, .count-box-saldo, .count-box-pengeluaran, .purecounter {
-  font-size: 20px;
+  font-size: 22px;
   padding-top: 5px;
-  padding-left:10px;
+  // padding-left:20px;
  }
 
  .count-box-pemasukan, .count-box-saldo, .count-box-pengeluaran, .category-title{
   font-size: 16px;
  }
 
+ .count-box-pengeluaran {
+  margin-top: 10px;
+ }
+
  .category-icon {
   height: 45px;
+ }
+}
+
+@media (max-width:1000px) {
+ .count-box-pengeluaran {
+  margin-top: 10px;
+  font-size: 23px;
  }
 }
