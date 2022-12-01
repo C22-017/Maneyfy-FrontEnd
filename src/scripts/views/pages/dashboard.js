@@ -1,16 +1,13 @@
-import addTransaksi from '../components/pop-upAddTransaksi';
-import detailTransaksi from '../components/pop-upDetailTransaksi';
-
 const Dashboard = {
   async render() {
     return `
       <top-header></top-header>
       <side-bar></side-bar>
 
-      <main class="main-logged-in container">
-        <h4>Main Components</h4>
-        ${addTransaksi}
-        ${detailTransaksi}
+      <main>
+        <head-dashboard></head-dashboard>
+        <list-category></list-category>
+        <choose-month></choose-month>
       </main>
     `;
   },

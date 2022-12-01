@@ -1,5 +1,5 @@
 import Dashboard from '../views/pages/dashboard';
-import Landing from '../views/pages/landing';
+// import Landing from '../views/pages/landing';
 import Login from '../views/pages/login';
 import Tips from '../views/pages/tips';
 import Profile from '../views/pages/profile';
