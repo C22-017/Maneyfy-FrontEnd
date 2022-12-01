@@ -1,10 +1,6 @@
 import CONFIG from '../../globals/config';
 
 const detailTransaksi = `
-<button type="button" class="btn btn-primary edit" data-bs-toggle="modal" data-bs-target="#detailTransaksi">
-<span class="iconify" data-icon="oi:pencil"></span>
-</button>
-
 <div class="modal fade" id="detailTransaksi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
   <div class="modal-content container">

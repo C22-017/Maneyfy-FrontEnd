@@ -1,11 +1,6 @@
 import CONFIG from '../../globals/config';
 
 const addTransaksi = `
-<img src="../public/images/logo.png" alt="">
-  <button type="button" class="btn btn-primary edit" data-bs-toggle="modal" data-bs-target="#addTransaksi">
-    <span class="iconify" data-icon="oi:pencil"></span>
-  </button>
-
   <div class="modal fade" id="addTransaksi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content container">

@@ -5,7 +5,7 @@ class ChooseMonth extends HTMLElement {
 
   _render() {
     this.innerHTML = `
-    <section class="month section-bg">
+    <section class="month section-bg mb-3">
       <div class="container">
         <div class="row no-gutters justify-content-center">
 

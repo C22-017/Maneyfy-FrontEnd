@@ -8,6 +8,7 @@ const Dashboard = {
         <head-dashboard></head-dashboard>
         <list-category></list-category>
         <choose-month></choose-month>
+        <history-transaction></history-transaction>
       </main>
     `;
   },

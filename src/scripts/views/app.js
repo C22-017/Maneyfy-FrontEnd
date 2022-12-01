@@ -15,6 +15,7 @@ import './components/form-register';
 import './components/header-dashboard';
 import './components/kategoriList-dashboard';
 import './components/chooseMonth-dashboard';
+import './components/historiTransaksi-dashboard';
 
 class App {
   //   constructor({
@@ -27,9 +28,7 @@ class App {
 
   //     this._initialAppShell();
   //   }
-  constructor({
-    content,
-  }) {
+  constructor({ content }) {
     // this._button = button;
     // this._itemDrawers = itemDrawers;
     // this._drawer = drawer;

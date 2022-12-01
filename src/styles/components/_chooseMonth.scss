@@ -1,96 +1,95 @@
 .month {
-	margin-top: 50px;
+  margin-top: 50px;
 }
 
 .month .box-month {
- box-shadow: -10px -5px 40px 0 rgba(0, 0, 0, 0.1);
- padding: 30px;
- text-align: left;
- border-radius: 10px;
- width: 100%;
- background: #fff;
+  box-shadow: -10px -5px 40px 0 rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: left;
+  border-radius: 10px;
+  width: 100%;
+  background: #fff;
 }
 
 .box-main {
-	width: 500px;
+  width: 500px;
 }
 
 .choose-title {
-	padding: 0 0 0 0;
- margin: 0;
- color: #404040;
- font-family: "Montserrat", sans-serif;
- font-size: 28px;
+  padding: 0 0 0 0;
+  margin: 0;
+  color: #404040;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
 }
 
 .input-month {
-	display: block;
- float: left;
-	padding: 10px;
- height: 50px;
-	font-weight: 700;
-	border-radius: 10px;
-	border: none	;
-	border-color: #fff;
-	background-color: #CDE3EF;
- align-items: center;
+  display: block;
+  float: left;
+  padding: 10px;
+  height: 50px;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  border-color: #fff;
+  background-color: #cde3ef;
+  align-items: center;
 }
 
 .button-report {
- font-family: "Montserrat", sans-serif;
- font-weight: 700;
-	margin-left: 10px;
- font-size: 18px;
- width: 200px;
-	height: 50px;
- padding: 10px;
- border-radius: 4px;
- transition: 0.5s;
- text-decoration: none;
- color: #fff;
- border-style:none;
- background: #42B2FA;
- border-radius: 10px;
- box-shadow: 0px 5px 30px rgba(216, 220, 255, 0.4);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  margin-left: 10px;
+  font-size: 18px;
+  width: 200px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 4px;
+  transition: 0.5s;
+  text-decoration: none;
+  color: #fff;
+  border-style: none;
+  background: #42b2fa;
+  border-radius: 10px;
+  box-shadow: 0px 5px 30px rgba(216, 220, 255, 0.4);
 }
 
+@media (max-width: 780px) {
+  .box-main {
+    justify-content: center;
+    margin-top: 0px;
+  }
 
-@media (max-width:780px ) {
-	.box-main {
-		justify-content: center;
-		margin-top: 0px;
-	}
+  .box-month p {
+    padding: 0px;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+  }
 
- .box-month p{
-  padding: 0px;
-		font-size: 20px	;
-  text-align: center;
-		align-items: center;
- }
+  .box-month {
+    text-align: center;
+  }
 
-	.box-month {
-		text-align: center;
-	}
+  .main-month {
+    width: 100%;
+    height: 100%;
+    padding: 28px;
+  }
+  .input-month {
+    padding: 10px;
+    height: 50px;
+    margin-left: 0px;
+    width: 200px;
+    font-weight: 300;
+    font-size: 15px;
+  }
 
-	.main-month {
-		width: 100%;
-		height: 100%;
-		padding: 28px;
-	}
-	.input-month {
-		padding: 10px;
-		height: 50px;
-		margin-left: 0px;
-		width: 200px;
-		font-weight: 300;
-		font-size: 15px;
-	}
-
-	.button-report {
-		margin-top: 20px;
-		margin-left: 0px;	
-		height: 50px;
-		width: 200px;
-		font-size: 15px;
-	}
+  .button-report {
+    margin-top: 20px;
+    margin-left: 0px;
+    height: 50px;
+    width: 200px;
+    font-size: 15px;
+  }
 }
