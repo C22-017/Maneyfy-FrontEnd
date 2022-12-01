@@ -65,7 +65,10 @@
 }
 
 .kategori-list {
-  height: 8rem;
+  height: 100%;
+  @include media-in(tablet) {
+    height: 8rem;
+  }
 }
 
 .nominal {
