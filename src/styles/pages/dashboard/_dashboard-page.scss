@@ -107,20 +107,27 @@
 .iconTransaksi {
   text-align: center;
   align-content: center;
+  object-fit: cover;
 }
 .list-riwayat {
   .headerTransaksi {
     font-weight: lighter;
-    font-size: 0.5rem;
+    font-size: 0.7rem;
+    @include media-in(tablet) {
+      font-size: 1rem;
+    }
   }
   .mainTransaksi {
     font-weight: bolder;
     font-size: 0.9rem;
+    @include media-in(tablet) {
+      font-size: 1.3rem;
+    }
   }
 }
 
 .riwayat-list {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
-  width: 20rem;
+  width: 100%;
 }

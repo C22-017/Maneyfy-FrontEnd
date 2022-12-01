@@ -16,7 +16,7 @@ class HistoryTransaction extends HTMLElement {
       <div class="text-center">
         <button type="button" class="btn riwayat-list align-item-center" data-bs-toggle="modal" data-bs-target="#detailTransaksi">
           <div class="row list-riwayat justify-content-center">
-          <div class="col-4">
+          <div class="col-3">
           <img class="img-fluid iconTransaksi" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
           </div>
           <div class="col-4">
@@ -31,7 +31,7 @@ class HistoryTransaction extends HTMLElement {
         </button>
         <button type="button" class="btn riwayat-list align-item-center" data-bs-toggle="modal" data-bs-target="#detailTransaksi">
           <div class="row list-riwayat justify-content-center">
-          <div class="col-4">
+          <div class="col-3">
           <img class="img-fluid iconTransaksi" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
           </div>
           <div class="col-4">
