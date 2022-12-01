@@ -116,7 +116,7 @@ const addTransaksi = `
                   </div>
                 </div>
                 <div class="d-grid d-md-flex justify-content-md-end">
-                  <button type="submit" class="btn btn-danger">Submit</button>
+                  <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
               </div>
             </div>
@@ -150,7 +150,7 @@ const addTransaksi = `
                   </div>
                 </div>
                 <div class="d-grid d-md-flex justify-content-md-end">
-                  <button type="submit" class="btn btn-danger">Submit</button>
+                  <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
               </div>
             </div>
