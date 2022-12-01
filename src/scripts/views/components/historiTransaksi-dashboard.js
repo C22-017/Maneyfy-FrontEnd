@@ -19,7 +19,7 @@ class HistoryTransaction extends HTMLElement {
           <div class="col-4">
           <img class="img-fluid iconTransaksi" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
           </div>
-        <div class="col-4">
+          <div class="col-4">
           <p class="headerTransaksi">Makanan & Minuman</p>
           <p class="mainTransaksi">Bayar Makan</p>
           </div>
@@ -28,9 +28,10 @@ class HistoryTransaction extends HTMLElement {
           <p class="mainTransaksi">-Rp.25.000</p>
           </div>
           </div>
-          </button>
-        </div>
-        <div class="col-4">
+        </button>
+        <button type="button" class="btn riwayat-list align-item-center" data-bs-toggle="modal" data-bs-target="#detailTransaksi">
+          <div class="row list-riwayat justify-content-center">
+          <div class="col-4">
           <img class="img-fluid iconTransaksi" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
           </div>
           <div class="col-4">
@@ -41,8 +42,8 @@ class HistoryTransaction extends HTMLElement {
           <p class="headerTransaksi">10 November 2022</p>
           <p class="mainTransaksi">-Rp.25.000</p>
           </div>
-        </div>
-          </button>
+          </div>
+        </button>
       </div>
     </div>
   </section>
