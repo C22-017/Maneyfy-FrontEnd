@@ -71,9 +71,15 @@
   }
 }
 
+.detail-list {
+  border-bottom: 1px solid black;
+}
 .nominal {
   font-weight: bold;
   font-size: 1.5rem;
+  @include media-in(tablet) {
+    font-size: 1.7rem;
+  }
 }
 
 .detail-desc {

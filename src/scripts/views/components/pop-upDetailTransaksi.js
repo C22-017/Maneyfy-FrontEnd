@@ -16,7 +16,7 @@ const detailTransaksi = `
     </div>
     <div class="modal-body justify-content-evenly row gap-4 p-3">
       <h5>Detail Transaction</h5>
-      <div class="col-12 row">
+      <div class="col-12 row detail-list">
         <div class="col-5 align-self-center">
           <img class="img-fluid kategori-icon" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
         </div>
