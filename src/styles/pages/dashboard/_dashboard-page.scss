@@ -113,14 +113,14 @@
   .headerTransaksi {
     font-weight: lighter;
     font-size: 0.7rem;
-    @include media-in(tablet) {
+    @include media-in(desktop) {
       font-size: 1rem;
     }
   }
   .mainTransaksi {
     font-weight: bolder;
     font-size: 0.9rem;
-    @include media-in(tablet) {
+    @include media-in(desktop) {
       font-size: 1.3rem;
     }
   }
