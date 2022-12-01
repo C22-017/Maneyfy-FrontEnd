@@ -14,7 +14,7 @@ class ChooseMonth extends HTMLElement {
 
               <div class="main-month">
                 <p class="choose-title mb-3"><strong>Pilih Bulan</strong></p>
-                <input class="input-month" type="month" id="start" name="start"min="2022-11" value="">
+                <input class="input-month" type="month" id="start" name="start"min="2022-11" placeholder="mmyyyy">
                 
                 <button type="submit" class="btn btn-primary btn-lg button-report">
                 Tampilkan
