@@ -86,35 +86,31 @@ const addTransaksi = `
           </ul>
 
           <div class="tab-content">
-            <div class="tab-pane active m-3" id="pendapatan" role="tabpanel" aria-labelledby="kategoriPendapatan"
+            <div class="tab-pane active" id="pendapatan" role="tabpanel" aria-labelledby="kategoriPendapatan"
               tabindex="0">
-              <div class="p-3 m-3">
-                <div class="row">
-                  <div class="col-12 col-lg-3">
+              <div class="p-3">
+                <div class="row justify-content-center">
+                  <div class="col-12 col-md-5 col-lg-3">
                     <div class="d-flex flex-column">
                       <div class="rounded-3 overflow-hidden mb-3 card">
-                      <div>
-                        <ul class="list-group list-group-horizontal text-center">
+                        <ul class="list-group list-group-horizontal text-center kategori-list">
                             <li class="list-group-item flex-fill">
                             <img class="icon-list" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
                             <p>Gaji</p>
                             </li>
                         </ul>
                       </div>
-                      </div>
                     </div>
                   </div>
-                  <div class="col-12 col-lg-3">
+                  <div class="col-12 col-md-5 col-lg-3">
                     <div class="d-flex flex-column">
                       <div class="rounded-3 overflow-hidden mb-3 card">
-                      <div>
-                      <ul class="list-group list-group-horizontal text-center">
+                      <ul class="list-group list-group-horizontal text-center kategori-list">
                           <li class="list-group-item flex-fill">
                           <img class="icon-list" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
                           <p>Keuntungan Investasi</p>
                           </li>
                       </ul>
-                      </div>
                       </div>
                     </div>
                   </div>
@@ -124,21 +120,31 @@ const addTransaksi = `
                 </div>
               </div>
             </div>
-            <div class="tab-pane m-3" id="pengeluaran" role="tabpanel" aria-labelledby="kategoriPengeluaran"
+            <div class="tab-pane" id="pengeluaran" role="tabpanel" aria-labelledby="kategoriPengeluaran"
               tabindex="0">
-              <div class="p-3 m-3">
-                <div class="row">
-                  <div class="col-12 col-lg-3">
+              <div class="p-3">
+                <div class="row justify-content-center">
+                  <div class="col-12 col-md-5 col-lg-3">
                     <div class="d-flex flex-column">
                       <div class="rounded-3 overflow-hidden mb-3 card">
-                        <h6>Pengeluaran 1</h6>
+                      <ul class="list-group list-group-horizontal text-center kategori-list">
+                        <li class="list-group-item flex-fill">
+                        <img class="icon-list" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
+                        <p>Makan & Minum</p>
+                        </li>
+                      </ul>
                       </div>
                     </div>
                   </div>
-                  <div class="col-12 col-lg-3">
+                  <div class="col-12 col-md-5 col-lg-3">
                     <div class="d-flex flex-column">
                       <div class="rounded-3 overflow-hidden mb-3 card">
-                        <h6>Pengeluaran 2</h6>
+                      <ul class="list-group list-group-horizontal text-center kategori-list">
+                        <li class="list-group-item flex-fill">
+                        <img class="icon-list" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
+                        <p>Transportasi</p>
+                        </li>
+                      </ul>
                       </div>
                     </div>
                   </div>
