@@ -9,7 +9,7 @@ class ChooseMonth extends HTMLElement {
       <div class="container">
         <div class="row no-gutters justify-content-center">
 
-          <div class="col-lg-4 col-md-6 d-md-flex align-items-md-center box-main">
+          <div class="col-lg-4 col-md-6 col-lg-12 d-md-flex align-items-md-center box-main">
             <div class="box-month">
 
               <div class="main-month">

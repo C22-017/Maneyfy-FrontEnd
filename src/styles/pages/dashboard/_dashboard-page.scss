@@ -95,14 +95,32 @@
 }
 
 .riwayat-transaksi {
-  // width: 20rem;
-  justify-content: center;
-  align-items: center;
-  // height: 5rem;
   border: 1px solid black;
   border-radius: 1rem;
+  padding: 1rem;
+  background-color: #fff;
+  @include media-in(tablet) {
+    width: 30rem;
+  }
+}
+
+.iconTransaksi {
+  text-align: center;
+  align-content: center;
+}
+.list-riwayat {
+  .headerTransaksi {
+    font-weight: lighter;
+    font-size: 0.5rem;
+  }
+  .mainTransaksi {
+    font-weight: bolder;
+    font-size: 0.9rem;
+  }
 }
 
 .riwayat-list {
-  width: 100%;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  width: 20rem;
 }
