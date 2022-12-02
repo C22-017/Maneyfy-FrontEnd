@@ -32,8 +32,13 @@
   }
 }
 
+.dompet-pick {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
 .pilih-dompet {
-  padding-top: 1rem;
+  // padding-top: 1rem;
   align-items: center;
 }
 
@@ -41,6 +46,10 @@
   width: 100%;
   height: 100%;
   padding: 1rem;
+  &:focus {
+    border: 2px solid $primary-color;
+    border-radius: 1rem;
+  }
 }
 
 .large-form {

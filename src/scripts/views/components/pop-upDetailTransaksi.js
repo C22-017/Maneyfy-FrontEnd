@@ -72,7 +72,7 @@ const detailTransaksi = `
                     <span>Dompet</span>
                 </div>
             </div>
-            <div class="form-transaksi col-12 col-lg-3 align-self-center">
+            <div class="form-transaksi col-12 col-lg-3 align-self-center dompet-pick">
               <button type="button" class="btn edit d-flex pilih-kategori justify-content-center" data-bs-toggle="modal"
                 data-bs-target="#editKategori">
                 <img class="img-fluid logo" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
