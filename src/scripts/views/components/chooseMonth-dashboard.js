@@ -8,10 +8,8 @@ class ChooseMonth extends HTMLElement {
     <section class="month section-bg">
       <div class="container">
         <div class="row no-gutters justify-content-center">
-
           <div class="col-lg-4 col-md-6 d-md-flex align-items-md-center box-main">
             <div class="box-month">
-
               <div class="main-months">
               <p class="choose-title mb-3 text-center"><strong>Pilih Bulan</strong></p>
               <div class ="row text-center justify-content-center">
@@ -25,10 +23,8 @@ class ChooseMonth extends HTMLElement {
                 </div>
               </div> 
               </div>
-
             </div>
           </div>
-
         </div>  
       </div>
     </section>

@@ -7,7 +7,7 @@ class HeaderDashboard extends HTMLElement {
 
   _render() {
     this.innerHTML = `
-     <section class=" header-main">
+      <section class=" header-main">
         <div class="container ">
           <div class="row">
             <div class="col-9">
@@ -33,7 +33,7 @@ class HeaderDashboard extends HTMLElement {
           </div>
         </div>
       </section>
-   `;
+    `;
   }
 }
 

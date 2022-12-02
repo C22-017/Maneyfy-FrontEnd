@@ -1,8 +1,6 @@
 .icAdd {
  height: 30px;
- // margin-top: 5px;
 }
-
 
 .button-add {
  font-family: "Montserrat", sans-serif;
@@ -27,22 +25,6 @@
  margin-top:0px;
 }
 
-
-// @media (max-width:1024px ) {
-//  .tambah {
-//   display: none;
-//  }
-//  // .icAdd {
-//  //  height: 50px;
-//  // }
-//  .button-add {
-//   width: 100px;
-//   height: 80px;
-//  }
-// }
-
-
-
 @media (max-width:1207px ) {
  .tambah {
   display: none;
@@ -60,4 +42,3 @@
   box-shadow: 2px 2px 3px #999;
  }
 }
-
