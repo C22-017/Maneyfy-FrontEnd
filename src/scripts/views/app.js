@@ -3,7 +3,12 @@ import routes from '../routes/routes';
 
 import './components/side-bar';
 import './components/top-header';
-import './components/wallet-list';
+import './components/item-wallet-header';
+import './components/item-wallet-kelola';
+import './components/item-icon';
+import './components/body-tambah-dompet';
+import './components/body-edit-dompet';
+import './components/body-delete-dompet';
 import './components/hero-landing';
 import './components/app-bar';
 import './components/features-maneyfy';

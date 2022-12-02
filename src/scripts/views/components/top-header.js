@@ -3,11 +3,16 @@ import CONFIG from '../../globals/config';
 class TopHeader extends HTMLElement {
   set dataUser(data) {
     this._dataUser = data;
+  }
+
+  set selectedDompet(dompet) {
+    this._selectedDompet = dompet;
     this._render();
   }
 
   _render() {
     const dataUser = this._dataUser;
+    const dompet = this._selectedDompet;
 
     this.innerHTML = `
       <header class="header shadow-sm" id="header">
@@ -30,9 +35,9 @@ class TopHeader extends HTMLElement {
           </div>
           <div class="dropdown wallet-container">
             <button class="dropdown-toggle" type="button" id="dropdownWallet" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <img src="${CONFIG.ICON_WALLET}" alt="" class="icon-header"><span class="dompet-list"> Dompet 1</span>
+              <img src="${CONFIG.ICON_WALLET}" alt="" class="icon-header"><span class="dompet-list">${dompet.name_dompet}</span>
             </button>
-            <wallet-list class="dropdown-menu" aria-labelledby="dropdownWallet"></wallet-list>
+            <div class="dropdown-menu" id="dompetListHeader" aria-labelledby="dropdownWallet"></div>
           </div>
         </div>
       </header>

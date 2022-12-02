@@ -1,9 +1,11 @@
 import User from '../../services/api/user';
-import ProfileHeaderInitiator from '../../utils/initiators/profile-header-initiator';
+import Dompet from '../../services/api/dompet';
+import HeaderInitiator from '../../utils/initiators/header-initiator';
 import { drawerInitiator } from '../../utils/sidebar-propertise';
 import { getElement } from '../../utils/element';
 import { setupPageUserAlreadyLoggedin } from '../../utils/setup-page';
 import { redirectIfNotLoggedin } from '../../utils/redirect-page';
+import { getDataLocalStorage } from '../../utils/local-storage-utils';
 
 const Dashboard = {
   async beforeRender() {
@@ -28,8 +30,11 @@ const Dashboard = {
       getElement('#tips-link').classList.remove('active');
       getElement('#dashboard-link').classList.add('active');
 
-      const dataUser = await User.getUserData();
-      this._initContentDashboard(dataUser.data);
+      const user = await User.getDataUser();
+      const dompets = await Dompet.getAllDompet();
+      const selectedDompet = await Dompet.getDataDompetById(getDataLocalStorage().dompet_id);
+
+      this._initContentDashboard(user.data, dompets.data, selectedDompet.result);
 
       drawerInitiator(); // Jangan diubah posisinya
     } catch (error) {
@@ -37,9 +42,11 @@ const Dashboard = {
     }
   },
 
-  _initContentDashboard(data) {
-    ProfileHeaderInitiator.init({
-      dataUser: data,
+  _initContentDashboard(user, dompets, selectedDompet) {
+    HeaderInitiator.init({
+      dataUser: user,
+      dompetUser: dompets,
+      selectedDompet,
       element: getElement('top-header'),
     });
   },

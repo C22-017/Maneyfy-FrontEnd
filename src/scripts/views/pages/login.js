@@ -33,7 +33,7 @@ const Login = {
 
         const responseLogin = await Auth.login(inputEmail, inputPassword);
         if (responseLogin.msg === 'Login Success') {
-          saveDataToLocalStorage(1, responseLogin.token);
+          saveDataToLocalStorage(responseLogin.dataDompet[0].id, responseLogin.token);
 
           formLogin.elements.namedItem('email').value = '';
           formLogin.elements.namedItem('password').value = '';

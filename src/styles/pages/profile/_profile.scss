@@ -120,6 +120,10 @@ body {
       justify-content: end;
       display: flex;
     }
+    h5 {
+      margin-bottom: 1.5rem;
+      font-weight: bold;
+    }
   }
   .dompet {
     background-color: $background-amount-wallet;
@@ -132,6 +136,10 @@ body {
     .button {
       justify-content: end;
       display: flex;
+    }
+    h5 {
+      margin-bottom: 1.5rem;
+      font-weight: bold;
     }
   }
   .pengeluaran {
@@ -146,11 +154,15 @@ body {
       justify-content: end;
       display: flex;
     }
+    h5 {
+      margin-bottom: 1.5rem;
+      font-weight: bold;
+    }
   }
   .modal-content {
     background-color: #eef7ff;
   }
-  .like {
+  .btn-add {
     display: flex;
     width: 55px;
     height: 55px;
@@ -172,12 +184,45 @@ body {
   padding: 0 1rem !important;
 }
 
+.label-item {
+  font-weight: 600;
+}
+
+.item-container {
+  text-align: left;
+}
+
+.icon-select {
+  cursor: pointer;
+  transition: 0.3s;
+  &:focus {
+    border: 3px solid rgba(0, 114, 228, 0.705);
+    width: fit-content;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(6, 80, 229, 0.5);
+  }
+}
+
 .icon-list {
-  height: 4rem;
+  height: 3rem;
+  margin-right: 10px;
 }
 
 .logo {
   height: 4rem;
+}
+
+.btn-icon-delete:disabled {
+  background-color: #7b7b7b;
+  .text-danger {
+    color: #000000 !important;
+  }
+}
+
+.icon-image {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
 }
 
 .photo-profile {

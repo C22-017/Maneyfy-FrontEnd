@@ -95,7 +95,8 @@
           grid-area: profile-element;
           width: 50px;
           border-radius: 50%;
-          height: auto;
+          height: 50px;
+          object-fit: cover;
           margin-right: 0.8rem;
         }
 
@@ -126,7 +127,9 @@
 
     .profile-picture {
       width: 45px;
+      height: 45px;
       border-radius: 50%;
+      object-fit: cover;
     }
 
     .wallet-container {
@@ -142,14 +145,9 @@
         border: none;
         cursor: pointer;
         outline: inherit;
-
-        .dompet-list {
-          display: none;
-
-          @include media-in(tablet) {
-            display: contents;
-          }
-        }
+        display: flex;
+        align-items: center;
+        gap: 10px;
       }
 
       .dropdown-menu.show {
@@ -157,20 +155,17 @@
         position: absolute;
         padding: 0.5rem 1rem;
         border-radius: 10px;
+        top: 70px;
         background-color: $background-wallet;
         color: white;
         font-weight: 600;
-
-
-        @include media-in(tablet) {
-          transform: translate3d(-12px, 70px, 0px) !important;
-        }
+        display: static;
 
         &:after {
           content: '';
           position: absolute;
-          top: -30px;
-          right: calc(0% + 3px);
+          top: -29px;
+          right: calc(79%);
           border-top: 15px solid transparent;
           border-right: 15px solid transparent;
           border-bottom: 15px solid $background-wallet;
@@ -180,52 +175,21 @@
         .container {
           display: block;
           position: relative;
-          padding-left: 30px;
           padding-block: 10px;
           cursor: pointer;
           -webkit-user-select: none;
           -moz-user-select: none;
           -ms-user-select: none;
           user-select: none;
-        }
 
-        .container input {
-          position: absolute;
-          opacity: 0;
-          cursor: pointer;
-        }
-
-        .checkmark {
-          position: absolute;
-          top: 11px;
-          left: 0;
-          height: 20px;
-          width: 20px;
-          border: 2px solid white;
-          border-radius: 50%;
-        }
-
-        .container:hover input ~ .checkmark {
-          background-color: #ccc;
-        }
-
-        .checkmark:after {
-          content: '';
-          position: absolute;
-          display: none;
-        }
-
-        .container input:checked ~ .checkmark:after {
-          display: block;
-        }
-
-        .container .checkmark:after {
-          top: 3px;
-          left: 3px;
-          width: 10px;
-          height: 10px;
-          border-radius: 50%;
-          background-color: white;
+          input[name="radio-dompet"] {
+            accent-color: #2f7fff;
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 10px 0 0;
+          }
         }
       }
 

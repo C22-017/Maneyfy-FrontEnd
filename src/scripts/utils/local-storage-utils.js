@@ -14,7 +14,12 @@ const saveDataToLocalStorage = (dompetId, token) => {
   localStorage.setItem(CONFIG.STORAGE_KEY, parsed);
 };
 
+const removeDataLocalStorage = () => {
+  localStorage.removeItem(CONFIG.STORAGE_KEY);
+};
+
 export {
   getDataLocalStorage,
   saveDataToLocalStorage,
+  removeDataLocalStorage,
 };

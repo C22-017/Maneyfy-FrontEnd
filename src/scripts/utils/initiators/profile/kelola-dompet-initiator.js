@@ -1,0 +1,216 @@
+import CONFIG from '../../../globals/config';
+import Dompet from '../../../services/api/dompet';
+import { getElement, getAllElement } from '../../element';
+import { getDataLocalStorage, saveDataToLocalStorage } from '../../local-storage-utils';
+
+const KelolaDompetInitiator = {
+  init({
+    dataUser, dompetUser, selectedDompet, iconDompets,
+  }) {
+    this._dataUser = dataUser;
+    this._dompetUser = dompetUser;
+    this._selectedDompet = selectedDompet;
+    this._iconDompets = iconDompets;
+
+    this._showDompetList();
+    this._showIconDompet();
+  },
+
+  _showDompetList() {
+    try {
+      // Create component item Dompet
+      const elementDompetList = getElement('#list-wallet');
+      elementDompetList.innerHTML = '';
+      this._dompetUser.forEach((dompet) => {
+        const dompetItemKelola = document.createElement('item-wallet-kelola');
+        dompetItemKelola.dataDompet = dompet;
+        elementDompetList.appendChild(dompetItemKelola);
+      });
+
+      this._setupButtonTambahDompet()
+
+      this._setupButtonEditDompet();
+
+      this._setupButtonDeleteDompet();
+    } catch (error) {
+      console.log(error);
+    }
+  },
+
+  _setupButtonTambahDompet() {
+    getElement('.add-dompet').addEventListener('click', () => {
+      const elementIconSelected = getElement('.icon-user-selected-tambah');
+      elementIconSelected.id = 'iconDompetUser';
+
+      if (elementIconSelected.id === 'iconDompetUser') {
+        elementIconSelected.src = CONFIG.IMAGE_LOGO_PATH;
+      }
+
+      this._tambahDompetProcess();
+    });
+  },
+
+
+  _tambahDompetProcess() {
+    getElement('#btnTambahDompet').addEventListener('click', async () => {
+      const elementIconSelected = getElement('.icon-user-selected-tambah');
+      const nameDompet = getElement('#inputNameDompetTambah').value;
+
+      if (nameDompet === '') {
+        alert('Nama Dompet harus diisi');
+        return false;
+      }
+
+      let idIcon;
+      if (elementIconSelected.id === 'iconDompetUser') {
+        idIcon = 1;
+      } else {
+        idIcon = parseInt(elementIconSelected.id.split('-')[1], 10);
+      }
+
+      const responseTambahDompet = await Dompet.createDompet(idIcon, nameDompet);
+
+      if (responseTambahDompet.status === 'success') {
+        alert('Dompet berhasil dibuat');
+        location.reload();
+      } else {
+        alert(responseTambahDompet.msg);
+      }
+    });
+  },
+
+  _setupButtonEditDompet() {
+    // Set data Dompet to field
+    getAllElement('button[name="btnIconEditDompet"]').forEach((element) => {
+      element.addEventListener('click', async () => {
+        const buttonId = parseInt(element.id.split('-')[1], 10); // ('editDompet-#')
+        const dataDompet = await Dompet.getDataDompetById(buttonId);
+
+        const elementBodyEditDompet = getElement('body-edit-dompet');
+        elementBodyEditDompet.dataDompet = dataDompet.result;
+
+        this._editDompetProcess();
+      });
+    });
+  },
+
+  _editDompetProcess() {
+    // save data Dompet to server
+    getAllElement('button[name="btnEditDompet"]').forEach((element1) => {
+      element1.addEventListener('click', async () => {
+        const idDompet = parseInt(element1.id.split('-')[1], 10); // ('btnEditDompet-#')
+
+        const elementIconSelected = getElement('.icon-user-selected-edit');
+        const idIcon = parseInt(elementIconSelected.id.split('-')[1], 10);
+
+        const nameDompet = getElement('#inputNameDompetEdit').value;
+
+        const responseEditDompet = await Dompet.updateDompetById(idDompet, idIcon, nameDompet);
+
+        if (responseEditDompet.msg === 'Data updated successfully') {
+          alert('Dompet berhasil diubah');
+          location.reload();
+        } else {
+          alert(responseEditDompet.msg);
+        }
+      });
+    });
+  },
+
+  _setupButtonDeleteDompet() {
+    getAllElement('button[name="btnIconDeleteDompet"]').forEach(async (element) => {
+      // Check if dompet count < 2
+      const dompets = await Dompet.getAllDompet();
+      if (dompets.data.length === 1) {
+        element.setAttribute('disabled', '');
+      }
+      element.addEventListener('click', async () => {
+        const buttonId = parseInt(element.id.split('-')[1], 10); // ('deleteDompet-#')
+        const dataDompet = await Dompet.getDataDompetById(buttonId);
+
+        const elementBodyDeleteDompet = getElement('body-delete-dompet');
+        elementBodyDeleteDompet.dataDompet = dataDompet.result;
+
+        this._deleteDompetProcess(dompets);
+      });
+    });
+  },
+
+  _deleteDompetProcess(dompets) {
+    getAllElement('button[name="btnDeleteDompet"]').forEach((element1) => {
+      element1.addEventListener('click', async () => {
+        const idDompet = parseInt(element1.id.split('-')[1], 10); // ('btnDeleteDompet-#')
+        const dataDompet1 = await Dompet.deleteDompet(idDompet);
+        const newDompets = await Dompet.getAllDompet();
+
+        // Check if dompet will remove is dompet saved in localstorage ([0])
+        if (getDataLocalStorage().dompet_id === idDompet) {
+          saveDataToLocalStorage(newDompets.data[0].id, getDataLocalStorage().token);
+        }
+
+        if (dataDompet1.msg === 'Dompet berhasil dihapus') {
+          alert('Dompet berhasil dihapus');
+          location.reload();
+        } else {
+          alert(dataDompet1.msg);
+        }
+      });
+    });
+  },
+
+  _showIconDompet() {
+    // Create List Icon
+    const elementIconDompetList = getAllElement('.list-icon-dompet');
+    elementIconDompetList.forEach((element) => {
+      this._iconDompets.forEach((iconDompet) => {
+        const itemIconDompet = document.createElement('item-icon');
+        itemIconDompet.dataIcon = iconDompet;
+        itemIconDompet.classList.add('flex-fill', 'mb-3');
+        element.appendChild(itemIconDompet);
+      });
+    });
+
+    // Add Event Listener for Item Icon
+    getAllElement('.icon-select').forEach((element) => {
+      element.addEventListener('click', async () => {
+        if (element === document.activeElement) {
+          const idIcon = parseInt(element.id.split('-')[1], 10); // ('iconDompet-#')
+
+          // Get Value from Attribute Modal for selection button Pilih Icon 
+          getAllElement('.btnChooseIconDompet').forEach((element) => {
+            element.addEventListener('click', () => {
+              const valueModalTarget = element.getAttribute('data-bs-target')
+              if (valueModalTarget === '#tambahDompet') {
+                this._setNewIconTambah(idIcon);
+              } else if (valueModalTarget === '#editDompet') {
+                this._setNewIconEdit(idIcon);
+              }
+            });
+          });
+        }
+      });
+    });
+  },
+
+  _setNewIconEdit(id) {
+    this._iconDompets.forEach((iconDompet) => {
+      if (iconDompet.id === id) {
+        const iconUserSelected = getElement('.icon-user-selected-edit');
+        iconUserSelected.src = iconDompet.url_icDompet;
+        iconUserSelected.id = `iconDompetUserEdit-${iconDompet.id}`;
+      }
+    });
+  },
+
+  _setNewIconTambah(id) {
+    this._iconDompets.forEach((iconDompet) => {
+      if (iconDompet.id === id) {
+        const iconUserSelected = getElement('.icon-user-selected-tambah');
+        iconUserSelected.src = iconDompet.url_icDompet;
+        iconUserSelected.id = `iconDompetUserTambah-${iconDompet.id}`;
+      }
+    });
+  },
+};
+
+export default KelolaDompetInitiator;

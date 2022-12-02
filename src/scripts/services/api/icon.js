@@ -1,8 +1,8 @@
 import API_ENDPOINT from '../../globals/api-endpoint';
 import { getDataLocalStorage } from '../../utils/local-storage-utils';
 
-class User {
-  static async getDataUser() {
+class Icon {
+  static async getAllIconDompet() {
     const myHeaders = new Headers();
     myHeaders.append('Authorization', `Bearer ${getDataLocalStorage().token}`);
 
@@ -11,41 +11,35 @@ class User {
       headers: myHeaders,
     };
 
-    const response = await fetch(API_ENDPOINT.GET_DATA_USER, requestOptions);
+    const response = await fetch(API_ENDPOINT.GET_ALL_ICON_DOMPET, requestOptions);
     return response.json();
   }
 
-  static async updateDataUser(name, email, file) {
-    const myHeaders = new Headers();
-    myHeaders.append('Authorization', `Bearer ${getDataLocalStorage().token}`);
-
-    const formData = new FormData();
-    formData.append('name', name);
-    formData.append('email', email);
-    formData.append('profile_picture', file);
-
-    const requestOptions = {
-      method: 'PUT',
-      headers: myHeaders,
-      body: formData,
-    };
-
-    const response = await fetch(API_ENDPOINT.UPDATE_DATA_USER, requestOptions);
-    return response.json();
-  }
-
-  static async deleteUser() {
+  static async getAllIconEarning() {
     const myHeaders = new Headers();
     myHeaders.append('Authorization', `Bearer ${getDataLocalStorage().token}`);
 
     const requestOptions = {
-      method: 'DELETE',
+      method: 'GET',
       headers: myHeaders,
     };
 
-    const response = await fetch(API_ENDPOINT.DELETE_USER, requestOptions);
+    const response = await fetch(API_ENDPOINT.GET_ALL_ICON_EARNING, requestOptions);
+    return response.json();
+  }
+
+  static async getAllIconSpending() {
+    const myHeaders = new Headers();
+    myHeaders.append('Authorization', `Bearer ${getDataLocalStorage().token}`);
+
+    const requestOptions = {
+      method: 'GET',
+      headers: myHeaders,
+    };
+
+    const response = await fetch(API_ENDPOINT.GET_ALL_ICON_SPENDING, requestOptions);
     return response.json();
   }
 }
 
-export default User;
+export default Icon;

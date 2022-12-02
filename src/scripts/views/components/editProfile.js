@@ -20,24 +20,24 @@ data-bs-target="#kelolaProfil">
                     aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form>
+                <form id="update-profile-form">
                     <div class="mb-3 text-center">
                         <figure class="profile-pic-div">
                             <img class="img-fluid mb-2 mx-auto d-block" src="${dataUser.profile_picture}" id="photo">
                         </figure>
                         <label for="file" class="uploadBtn" hidden>Foto</label>
-                        <input type="file" accept="image/*" class="form-control" id="file">
+                        <input type="file" accept="image/png, image/jpeg, image/webp" class="form-control" id="file" name="file">
                     </div>
                     <div class="mb-3">
                         <label for="name" class="form-label">Nama</label>
-                        <input type="text" class="form-control" id="name" name="name" value="${dataUser.name}">
+                        <input type="text" class="form-control" id="name" name="name" value="${dataUser.name}" required>
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" value="${dataUser.email}">
+                        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" value="${dataUser.email}" required>
                     </div>
                     <div class="justify-content-between row p-3">             
-                        <button type="submit" class="btn btn-danger col-4" data-bs-toggle="modal"
+                        <button type="button" class="btn btn-danger col-4" data-bs-toggle="modal"
                         data-bs-target="#hapusAkun">Hapus Akun</button>
                         <button type="submit" class="btn btn-primary col-4">Simpan</button>
                     </div>
@@ -56,9 +56,9 @@ data-bs-target="#kelolaProfil">
         </div>
             <div class="modal-body modal-confirm">
             <div class="justify-content-between row p-3">             
-            <button type="submit" class="btn btn-primary col-4" data-bs-toggle="modal"
+            <button type="button" class="btn btn-primary col-4" data-bs-toggle="modal"
             data-bs-target="#kelolaProfil">Batal</button>
-            <button type="submit" class="btn btn-danger col-4">Hapus</button>
+            <button type="button" id="btnDeleteUser" class="btn btn-danger col-4">Hapus</button>
             </div>
             </div>
         </div>
@@ -72,7 +72,6 @@ data-bs-target="#kelolaProfil">
   uploadButton.onchange = () => {
     const reader = new FileReader();
     reader.readAsDataURL(uploadButton.files[0]);
-    console.log(uploadButton.files[0]);
     reader.onload = () => {
       choosenImage.setAttribute('src', reader.result);
     };

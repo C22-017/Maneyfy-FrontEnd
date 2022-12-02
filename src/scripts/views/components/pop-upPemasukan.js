@@ -46,7 +46,7 @@ const pemasukan = `
           </li>
         </ul>
         <div class="button">
-          <button type="button" class="btn like" data-bs-toggle="modal" data-bs-target="#tambahKategoriPemasukan">
+          <button type="button" class="btn btn-add" data-bs-toggle="modal" data-bs-target="#tambahKategoriPemasukan">
             <p class="tambah">+</p>
           </button>
         </div>
