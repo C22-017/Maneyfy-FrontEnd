@@ -23,10 +23,7 @@ class ChooseMonth extends HTMLElement {
                   Tampilkan
                 </button>
                 </div>
-              </div>
-                
-                
-                
+              </div> 
               </div>
 
             </div>
