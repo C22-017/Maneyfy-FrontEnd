@@ -67,29 +67,28 @@ const addTransaksi = `
           <button type="button" class="btn-close p-3" data-bs-toggle="modal" data-bs-target="#addTransaksi"></button>
         </div>
         <div class="modal-body row gap-4 p-3">
-          <h5 class="text-center">Kategori</h5>
+          <h5 class="text-center h5-upsize">Kategori</h5>
           <!-- Nav tabs -->
           <ul class="nav nav-tabs justify-content-center list-porto" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="kategoriPendapatan" data-bs-toggle="tab" data-bs-target="#pendapatan"
+              <button class="nav-link active" id="kategoriPendapatan" data-bs-toggle="tab" data-bs-target="#tambahpendapatanKategori"
                 type="button" role="tab" aria-controls="pendapatan" aria-selected="true">Pendapatan</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="kategoriPengeluaran" data-bs-toggle="tab" data-bs-target="#pengeluaran"
+              <button class="nav-link" id="kategoriPengeluaran" data-bs-toggle="tab" data-bs-target="#tambahpengeluaranKategori"
                 type="button" role="tab" aria-controls="profile" aria-selected="false">Pengeluaran</button>
             </li>
           </ul>
 
           <div class="tab-content">
-            <div class="tab-pane active" id="pendapatan" role="tabpanel" aria-labelledby="kategoriPendapatan"
-              tabindex="0">
+            <div class="tab-pane active" id="tambahpendapatanKategori" role="tabpanel" aria-labelledby="kategoriPendapatan">
               <div class="p-3">
                 <div class="row justify-content-center">
                   <div class="col-12 col-md-5 col-lg-3">
                     <div class="d-flex flex-column">
                       <div class="rounded-3 overflow-hidden mb-3 card">
                         <ul class="list-group list-group-horizontal text-center kategori-list">
-                            <li class="list-group-item flex-fill">
+                            <li class="list-group-item flex-fill item" tabindex="0">
                             <img class="icon-list" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
                             <p>Gaji</p>
                             </li>
@@ -101,7 +100,7 @@ const addTransaksi = `
                     <div class="d-flex flex-column">
                       <div class="rounded-3 overflow-hidden mb-3 card">
                       <ul class="list-group list-group-horizontal text-center kategori-list">
-                          <li class="list-group-item flex-fill">
+                          <li class="list-group-item flex-fill item" tabindex="0">
                           <img class="icon-list" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
                           <p>Keuntungan Investasi</p>
                           </li>
@@ -109,21 +108,33 @@ const addTransaksi = `
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="d-grid d-md-flex justify-content-md-end">
+                  <div class="col-12 col-md-5 col-lg-3">
+                    <div class="d-flex flex-column">
+                      <div class="rounded-3 overflow-hidden mb-3 card">
+                      <ul class="list-group list-group-horizontal text-center kategori-list">
+                          <li class="list-group-item flex-fill item" tabindex="0">
+                          <img class="icon-list" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
+                          <p>Keuntungan Investasi</p>
+                          </li>
+                      </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-grid d-md-flex justify-content-md-end">
                   <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="tab-pane" id="pengeluaran" role="tabpanel" aria-labelledby="kategoriPengeluaran"
-              tabindex="0">
+
+            <div class="tab-pane" id="tambahpengeluaranKategori" role="tabpanel" aria-labelledby="kategoriPengeluaran">
               <div class="p-3">
                 <div class="row justify-content-center">
                   <div class="col-12 col-md-5 col-lg-3">
                     <div class="d-flex flex-column">
                       <div class="rounded-3 overflow-hidden mb-3 card">
                       <ul class="list-group list-group-horizontal text-center kategori-list">
-                        <li class="list-group-item flex-fill">
+                        <li class="list-group-item flex-fill item" tabindex="0">
                         <img class="icon-list" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
                         <p>Makan & Minum</p>
                         </li>
@@ -135,7 +146,7 @@ const addTransaksi = `
                     <div class="d-flex flex-column">
                       <div class="rounded-3 overflow-hidden mb-3 card">
                       <ul class="list-group list-group-horizontal text-center kategori-list">
-                        <li class="list-group-item flex-fill">
+                        <li class="list-group-item flex-fill item" tabindex="0">
                         <img class="icon-list" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
                         <p>Transportasi</p>
                         </li>

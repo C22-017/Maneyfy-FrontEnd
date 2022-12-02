@@ -83,16 +83,16 @@ const detailTransaksi = `
             </div>
             <div class="form-transaksi col-12 col-lg-3">
               <div class="mb-3">
-                <label for="exampleInputUsername1" class="form-label">Ammount</label>
-                <input type="number" class="form-control" id="exampleInputUsername1">
+                <label for="tanggalTambahTransaksi" class="form-label">Ammount</label>
+                <input type="number" class="form-control" id="tanggalTambahTransaksi">
               </div>
             </div>
           </div>
           <div class="row">
             <div class="form-transaksi col-12 col-lg-3">
               <div class="mb-3 input-append date">
-                <label for="tanggalTransaksi" class="form-label">Date</label>
-                <input type="date" class="form-control" id="tanggalTransaksi">
+                <label for="tanggalTransaksi1" class="form-label">Date</label>
+                <input type="date" class="form-control" id="tanggalTransaksi1">
               </div>
             </div>
             <div class="large-form col-12 col-lg-6">
@@ -124,25 +124,24 @@ const detailTransaksi = `
           <!-- Nav tabs -->
           <ul class="nav nav-tabs justify-content-center list-porto" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="kategoriPendapatan" data-bs-toggle="tab" data-bs-target="#pendapatan"
+              <button class="nav-link active" id="kategoriPendapatan" data-bs-toggle="tab" data-bs-target="#editpendapatanKategori"
                 type="button" role="tab" aria-controls="pendapatan" aria-selected="true">Pendapatan</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="kategoriPengeluaran" data-bs-toggle="tab" data-bs-target="#pengeluaran"
+              <button class="nav-link" id="kategoriPengeluaran" data-bs-toggle="tab" data-bs-target="#editpengeluaranKategori"
                 type="button" role="tab" aria-controls="profile" aria-selected="false">Pengeluaran</button>
             </li>
           </ul>
 
           <div class="tab-content">
-            <div class="tab-pane active" id="pendapatan" role="tabpanel" aria-labelledby="kategoriPendapatan"
-              tabindex="0">
+            <div class="tab-pane active" id="editpendapatanKategori" role="tabpanel" aria-labelledby="kategoriPendapatan">
               <div class="p-3">
                 <div class="row justify-content-center">
                   <div class="col-12 col-md-5 col-lg-3">
                     <div class="d-flex flex-column">
                       <div class="rounded-3 overflow-hidden mb-3 card">
                         <ul class="list-group list-group-horizontal text-center kategori-list">
-                            <li class="list-group-item flex-fill">
+                            <li class="list-group-item flex-fill item" tabindex="0">
                             <img class="icon-list" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
                             <p>Gaji</p>
                             </li>
@@ -154,7 +153,7 @@ const detailTransaksi = `
                     <div class="d-flex flex-column">
                       <div class="rounded-3 overflow-hidden mb-3 card">
                       <ul class="list-group list-group-horizontal text-center kategori-list">
-                          <li class="list-group-item flex-fill">
+                          <li class="list-group-item flex-fill item" tabindex="0">
                           <img class="icon-list" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
                           <p>Keuntungan Investasi</p>
                           </li>
@@ -168,15 +167,14 @@ const detailTransaksi = `
                 </div>
               </div>
             </div>
-            <div class="tab-pane" id="pengeluaran" role="tabpanel" aria-labelledby="kategoriPengeluaran"
-              tabindex="0">
+            <div class="tab-pane" id="editpengeluaranKategori" role="tabpanel" aria-labelledby="kategoriPengeluaran">
               <div class="p-3">
                 <div class="row justify-content-center">
                   <div class="col-12 col-md-5 col-lg-3">
                     <div class="d-flex flex-column">
                       <div class="rounded-3 overflow-hidden mb-3 card">
                       <ul class="list-group list-group-horizontal text-center kategori-list">
-                        <li class="list-group-item flex-fill">
+                        <li class="list-group-item flex-fill item" tabindex="0">
                         <img class="icon-list" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
                         <p>Makan & Minum</p>
                         </li>
@@ -188,7 +186,7 @@ const detailTransaksi = `
                     <div class="d-flex flex-column">
                       <div class="rounded-3 overflow-hidden mb-3 card">
                       <ul class="list-group list-group-horizontal text-center kategori-list">
-                        <li class="list-group-item flex-fill">
+                        <li class="list-group-item flex-fill item" tabindex="0">
                         <img class="icon-list" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
                         <p>Transportasi</p>
                         </li>

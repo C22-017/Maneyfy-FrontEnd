@@ -8,7 +8,7 @@ class HistoryTransaction extends HTMLElement {
 
   _render() {
     this.innerHTML = `
-    <section class="d-flex justify-content-center section-bg mb-5">
+    <section class="d-flex justify-content-center section-history mb-5">
     <div class="riwayat-transaksi">
       <h6>Riwayat Transaksi</h6>
       <p>Bulan November</p>
@@ -16,8 +16,8 @@ class HistoryTransaction extends HTMLElement {
       <div class="text-center">
         <button type="button" class="btn riwayat-list align-item-center" data-bs-toggle="modal" data-bs-target="#detailTransaksi">
           <div class="row list-riwayat justify-content-center">
-          <div class="col-3">
-          <img class="img-fluid iconTransaksi" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
+          <div class="col-4 align-self-center">
+          <img class="img iconTransaksi" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
           </div>
           <div class="col-4">
           <p class="headerTransaksi">Makanan & Minuman</p>
@@ -31,8 +31,8 @@ class HistoryTransaction extends HTMLElement {
         </button>
         <button type="button" class="btn riwayat-list align-item-center" data-bs-toggle="modal" data-bs-target="#detailTransaksi">
           <div class="row list-riwayat justify-content-center">
-          <div class="col-3">
-          <img class="img-fluid iconTransaksi" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
+          <div class="col-4 align-self-center">
+          <img class="img iconTransaksi" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
           </div>
           <div class="col-4">
           <p class="headerTransaksi">Makanan & Minuman</p>
