@@ -1,5 +1,4 @@
 import CONFIG from '../../globals/config';
-import addTransaksi from './pop-upAddTransaksi';
 
 class HeaderDashboard extends HTMLElement {
   connectedCallback() {
@@ -8,7 +7,7 @@ class HeaderDashboard extends HTMLElement {
 
   _render() {
     this.innerHTML = `
-     <section class=" header-main">
+      <section class=" header-main">
         <div class="container ">
           <div class="row">
             <div class="col-9">
@@ -26,7 +25,7 @@ class HeaderDashboard extends HTMLElement {
               </div>
             </div>
             <div class="col-3 d-flex justify-content-end">
-              <button type="submit" class="btn btn-primary btn-lg button-add" data-bs-toggle="modal" data-bs-target="#addTransaksi">
+              <button type="submit" class="btn btn-primary btn-lg button-add float">
                 <img class="icAdd" src="${CONFIG.ICON_ADD_TRANSACTION}" alt="icAdd">
                 <p class="tambah">Tambah Transaksi</p>
               </button>
@@ -34,9 +33,7 @@ class HeaderDashboard extends HTMLElement {
           </div>
         </div>
       </section>
-
-      ${addTransaksi}
-   `;
+    `;
   }
 }
 
