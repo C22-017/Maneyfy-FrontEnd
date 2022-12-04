@@ -9,9 +9,9 @@ class ItemCategoryEarningKelola extends HTMLElement {
 
     this.innerHTML = `
       <ul class="list-group list-group-horizontal">
-        <li class="list-group-item flex-fill item-container">
-          <img class="icon-list" src="${categoryEarning.IconEarning.url_icEarning}" alt="logo">
-          <span class="label-item">${categoryEarning.categoryName_earning}</span>
+        <li class="list-group-item d-flex flex-fill item-container flex-row align-items-center">
+          <div><img class="icon-list" src="${categoryEarning.IconEarning.url_icEarning}" alt="logo"></div>
+          <div><span class="label-item">${categoryEarning.categoryName_earning}</span></div>
         </li>
         <li class="list-group-item">
           <button type="button" name="btnIconEditEarning" class="btn btn-transparent p-2" id="editEarning-${categoryEarning.id}" data-bs-toggle="modal" data-bs-target="#editKategoriPemasukan">

@@ -9,9 +9,9 @@ class ItemWalletKelola extends HTMLElement {
 
     this.innerHTML = `
       <ul class="list-group list-group-horizontal">
-        <li class="list-group-item flex-fill item-container">
-          <img class="icon-list" src="${dompet.IconDompet.url_icDompet}" alt="logo">
-          <span class="label-item">${dompet.name_dompet}</span>
+        <li class="list-group-item d-flex flex-fill item-container flex-row align-items-center">
+          <div><img class="icon-list" src="${dompet.IconDompet.url_icDompet}" alt="logo"></div>
+          <div><span class="label-item">${dompet.name_dompet}</span></div>
         </li>
         <li class="list-group-item">
           <button type="button" name="btnIconEditDompet" class="btn btn-transparent p-2" id="editDompet-${dompet.id}" data-bs-toggle="modal" data-bs-target="#editDompet">

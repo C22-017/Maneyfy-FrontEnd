@@ -10,19 +10,16 @@ const dompet = `
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title" id="exampleModalLabel">
-                <img class="logo" src="${CONFIG.IMAGE_LOGO_PATH}" alt=""> Maneyfy
-              </h4>
+              <h4 class="modal-title" id="exampleModalLabel">Kelola Dompet</h4>
               <button type="button" class="btn-close p-3" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <h5>Dompet</h5>
               <div id="list-wallet"></div>
-              <div class="button">
-                <button type="button" class="btn btn-add add-dompet" data-bs-toggle="modal" data-bs-target="#tambahDompet">
-                  <p class="tambah">+</p>
-                </button>
-              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-add add-dompet" data-bs-toggle="modal" data-bs-target="#tambahDompet">
+                <p class="tambah">+</p>
+              </button>
             </div>
           </div>
         </div>
@@ -61,6 +58,8 @@ const dompet = `
             </div>
             <div class="modal-body row gap-1">
               <div class="d-flex flex-wrap list-icon-dompet"></div>
+            </div>
+            <div class="modal-footer">
               <div class="d-grid d-md-flex justify-content-md-end">
                 <button type="button" class="btn btn-primary btnChooseIconDompet" data-bs-toggle="modal" data-bs-target="#tambahDompet">Pilih</button>
               </div>
@@ -78,6 +77,8 @@ const dompet = `
             </div>
             <div class="modal-body row gap-1">
               <div class="d-flex flex-wrap list-icon-dompet"></div>
+            </div>
+            <div class="modal-footer">
               <div class="d-grid d-md-flex justify-content-md-end">
                 <button type="button" class="btn btn-primary btnChooseIconDompet" data-bs-toggle="modal" data-bs-target="#editDompet">Pilih</button>
               </div>

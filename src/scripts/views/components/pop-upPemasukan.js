@@ -3,26 +3,23 @@ import CONFIG from '../../globals/config';
 const pemasukan = `
     <div class="pemasukan shadow-sm col-12 col-sm-12 col-lg-3 text-center">
       <button type="button" class="btn titleKelola" data-bs-toggle="modal" data-bs-target="#kelolaKategoriPemasukan">
-        Pemasukan
+        Kelola Pemasukan
       </button>
 
       <div class="modal fade" id="kelolaKategoriPemasukan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title" id="exampleModalLabel">
-                <img class="logo" src="${CONFIG.IMAGE_LOGO_PATH}" alt=""> Maneyfy
-              </h4>
+              <h4 class="modal-title" id="exampleModalLabel">Kelola Kategori Pemasukan</h4>
               <button type="button" class="btn-close p-3" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <h5>Pemasukan</h5>
               <div id="list-category-earning"></div>       
-              <div class="button">
-                <button type="button" class="btn btn-add add-earning" data-bs-toggle="modal" data-bs-target="#tambahKategoriPemasukan">
-                  <p class="tambah">+</p>
-                </button>
-              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-add add-earning" data-bs-toggle="modal" data-bs-target="#tambahKategoriPemasukan">
+                <p class="tambah">+</p>
+              </button>
             </div>
           </div>
         </div>
@@ -60,7 +57,9 @@ const pemasukan = `
               <button type="button" class="btn-close p-3" data-bs-toggle="modal" data-bs-target="#tambahKategoriPemasukan"></button>
             </div>
             <div class="modal-body row gap-1">
-              <div class="grid-icon-list list-icon-earning"></div>  
+              <div class="grid-icon-list list-icon-earning"></div>
+            </div>
+            <div class="modal-footer">
               <div class="d-grid d-md-flex justify-content-md-end">
                 <button type="button" class="btn btn-primary btnChooseIconEarning" data-bs-toggle="modal" data-bs-target="#tambahKategoriPemasukan">Pilih</button>
               </div>
@@ -78,6 +77,8 @@ const pemasukan = `
             </div>
             <div class="modal-body row gap-1">
               <div class="grid-icon-list list-icon-earning"></div>   
+            </div>
+            <div class="modal-footer">
               <div class="d-grid d-md-flex justify-content-md-end">
                 <button type="button" class="btn btn-primary btnChooseIconEarning" data-bs-toggle="modal" data-bs-target="#editKategoriPemasukan">Pilih</button>
               </div>

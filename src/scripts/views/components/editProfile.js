@@ -14,7 +14,7 @@ data-bs-target="#kelolaProfil">
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="exampleModalLabel">
-                    <img class="logo img-fluid" src="${CONFIG.IMAGE_LOGO_PATH}" alt=""> Maneyfy
+                    Ubah Profil
                 </h4>
                 <button type="button" class="btn-close p-3" data-bs-dismiss="modal"
                     aria-label="Close"></button>
@@ -36,12 +36,12 @@ data-bs-target="#kelolaProfil">
                         <label for="email" class="form-label">Email</label>
                         <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" value="${dataUser.email}" required>
                     </div>
-                    <div class="justify-content-between row p-3">             
-                        <button type="button" class="btn btn-danger col-4" data-bs-toggle="modal"
-                        data-bs-target="#hapusAkun">Hapus Akun</button>
-                        <button type="submit" class="btn btn-primary col-4">Simpan</button>
-                    </div>
                 </form>
+            </div>
+            <div class="modal-footer justify-content-between">
+                <button type="button" class="btn btn-danger col-4" data-bs-toggle="modal"
+                data-bs-target="#hapusAkun">Hapus Akun</button>
+                <button type="submit" class="btn btn-primary col-4">Simpan</button>
             </div>
         </div>
     </div>

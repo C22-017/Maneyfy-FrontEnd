@@ -9,9 +9,9 @@ class ItemCategorySpendingKelola extends HTMLElement {
 
     this.innerHTML = `
       <ul class="list-group list-group-horizontal">
-        <li class="list-group-item flex-fill item-container">
-          <img class="icon-list" src="${categorySpending.IconSpending.url_icSpending}" alt="logo">
-          <span class="label-item">${categorySpending.categoryName_spending}</span>
+        <li class="list-group-item d-flex flex-fill item-container flex-row align-items-center">
+          <div><img class="icon-list" src="${categorySpending.IconSpending.url_icSpending}" alt="logo"></div>
+          <div><span class="label-item">${categorySpending.categoryName_spending}</span></div>
         </li>
         <li class="list-group-item">
           <button type="button" name="btnIconEditSpending" class="btn btn-transparent p-2" id="editSpending-${categorySpending.id}" data-bs-toggle="modal" data-bs-target="#editKategoriPengeluaran">
