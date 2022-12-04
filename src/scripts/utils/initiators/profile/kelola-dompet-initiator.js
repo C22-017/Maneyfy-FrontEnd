@@ -39,21 +39,24 @@ const KelolaDompetInitiator = {
 
   _setupButtonTambahDompet() {
     getElement('.add-dompet').addEventListener('click', () => {
-      const elementIconSelected = getElement('.icon-user-selected-tambah');
-      elementIconSelected.id = 'iconDompetUser';
+      const elementsIconSelected = getAllElement('.icon-user-selected-tambah');
+      elementsIconSelected.forEach((element) => {
+        if (element.getAttribute('alt') === 'pilih icon dompet') {
+          element.id = 'iconDompetUser';
 
-      if (elementIconSelected.id === 'iconDompetUser') {
-        elementIconSelected.src = CONFIG.IMAGE_LOGO_PATH;
-      }
+          if (element.id === 'iconDompetUser') {
+            element.src = CONFIG.IMAGE_LOGO_PATH;
+          }
 
-      this._tambahDompetProcess();
+          this._tambahDompetProcess(element);
+        }
+      });
     });
   },
 
 
-  _tambahDompetProcess() {
+  _tambahDompetProcess(element) {
     getElement('#btnTambahDompet').addEventListener('click', async () => {
-      const elementIconSelected = getElement('.icon-user-selected-tambah');
       const nameDompet = getElement('#inputNameDompetTambah').value;
 
       if (nameDompet === '') {
@@ -62,10 +65,10 @@ const KelolaDompetInitiator = {
       }
 
       let idIcon;
-      if (elementIconSelected.id === 'iconDompetUser') {
+      if (element.id === 'iconDompetUser') {
         idIcon = 1;
       } else {
-        idIcon = parseInt(elementIconSelected.id.split('-')[1], 10);
+        idIcon = parseInt(element.id.split('-')[1], 10);
       }
 
       const responseTambahDompet = await Dompet.createDompet(idIcon, nameDompet);
@@ -96,23 +99,33 @@ const KelolaDompetInitiator = {
 
   _editDompetProcess() {
     // save data Dompet to server
-    getAllElement('button[name="btnEditDompet"]').forEach((element1) => {
-      element1.addEventListener('click', async () => {
-        const idDompet = parseInt(element1.id.split('-')[1], 10); // ('btnEditDompet-#')
+    getAllElement('button[name="btnEditDompet"]').forEach((element) => {
 
-        const elementIconSelected = getElement('.icon-user-selected-edit');
-        const idIcon = parseInt(elementIconSelected.id.split('-')[1], 10);
+      element.addEventListener('click', async () => {
+        const elementIconSelected = getAllElement('.icon-user-selected-edit');
 
-        const nameDompet = getElement('#inputNameDompetEdit').value;
+        elementIconSelected.forEach(async (elementIcon) => {
+          if (elementIcon.getAttribute('alt') === 'pilih icon dompet') {
+            const idDompet = parseInt(element.id.split('-')[1], 10); // ('btnEditDompet-#')
 
-        const responseEditDompet = await Dompet.updateDompetById(idDompet, idIcon, nameDompet);
+            const idIcon = parseInt(elementIcon.id.split('-')[1], 10);
+            const nameDompet = getElement('#inputNameDompetEdit').value;
 
-        if (responseEditDompet.msg === 'Data updated successfully') {
-          alert('Dompet berhasil diubah');
-          location.reload();
-        } else {
-          alert(responseEditDompet.msg);
-        }
+            const data = {
+              icDompetId: idIcon,
+              categoryNameDompet: nameDompet,
+            };
+
+            const responseEditDompet = await Dompet.updateDompetById(idDompet, data);
+
+            if (responseEditDompet.msg === 'Data updated successfully') {
+              alert('Dompet berhasil diubah');
+              location.reload();
+            } else {
+              alert(responseEditDompet.msg);
+            }
+          }
+        });
       });
     });
   },
@@ -165,7 +178,7 @@ const KelolaDompetInitiator = {
       this._iconDompets.forEach((iconDompet) => {
         const itemIconDompet = document.createElement('item-icon');
         itemIconDompet.dataIcon = iconDompet;
-        itemIconDompet.classList.add('flex-fill', 'mb-3');
+        itemIconDompet.classList.add('m-1');
         element.appendChild(itemIconDompet);
       });
     });
@@ -174,7 +187,7 @@ const KelolaDompetInitiator = {
     getAllElement('.icon-select').forEach((element) => {
       element.addEventListener('click', async () => {
         if (element === document.activeElement) {
-          const idIcon = parseInt(element.id.split('-')[1], 10); // ('iconDompet-#')
+          const idIcon = parseInt(element.id.split('-')[1], 10); // ('icon-#')
 
           // Get Value from Attribute Modal for selection button Pilih Icon 
           getAllElement('.btnChooseIconDompet').forEach((element) => {
@@ -195,9 +208,13 @@ const KelolaDompetInitiator = {
   _setNewIconEdit(id) {
     this._iconDompets.forEach((iconDompet) => {
       if (iconDompet.id === id) {
-        const iconUserSelected = getElement('.icon-user-selected-edit');
-        iconUserSelected.src = iconDompet.url_icDompet;
-        iconUserSelected.id = `iconDompetUserEdit-${iconDompet.id}`;
+        const iconUserSelected = getAllElement('.icon-user-selected-edit');
+        iconUserSelected.forEach((element) => {
+          if (element.getAttribute('alt') === 'pilih icon dompet') {
+            element.src = iconDompet.url_icDompet;
+            element.id = `iconDompetUserEdit-${iconDompet.id}`;
+          }
+        });
       }
     });
   },
@@ -205,9 +222,13 @@ const KelolaDompetInitiator = {
   _setNewIconTambah(id) {
     this._iconDompets.forEach((iconDompet) => {
       if (iconDompet.id === id) {
-        const iconUserSelected = getElement('.icon-user-selected-tambah');
-        iconUserSelected.src = iconDompet.url_icDompet;
-        iconUserSelected.id = `iconDompetUserTambah-${iconDompet.id}`;
+        const iconUserSelected = getAllElement('.icon-user-selected-tambah');
+        iconUserSelected.forEach((element) => {
+          if (element.getAttribute('alt') === 'pilih icon dompet') {
+            element.src = iconDompet.url_icDompet;
+            element.id = `iconDompetUserTambah-${iconDompet.id}`;
+          }
+        });
       }
     });
   },

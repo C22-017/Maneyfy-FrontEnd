@@ -182,6 +182,11 @@ body {
 
 .modal-confirm {
   padding: 0 1rem !important;
+  text-align: center;
+}
+
+.btn-close {
+  border: 1px solid black;
 }
 
 .label-item {
@@ -220,9 +225,20 @@ body {
 }
 
 .icon-image {
-  height: 5rem;
-  width: 5rem;
+  height: 5.2rem;
+  width: 5.2rem;
   border-radius: 50%;
+}
+
+.grid-icon-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(85px, 1fr));
+  gap: 10px;
+  padding-bottom: 1rem;
+
+  item-icon {
+    justify-self: center;
+  }
 }
 
 .photo-profile {

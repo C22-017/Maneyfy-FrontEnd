@@ -9,10 +9,10 @@ class BodyEditDompet extends HTMLElement {
 
     this.innerHTML = `
       <div class="modal-body row gap-4">
-        <div class="wallet col-3 border">
+        <div class="col-3 border">
           <button type="button" class="btn btn-transparent edit d-flex" data-bs-toggle="modal"
             data-bs-target="#iconEditDompet">
-            <img class="img-fluid rounded icon-user-selected-edit" id="iconDompetUserEdit-${dompet.icDompet_id}" src="${dompet.IconDompet.url_icDompet}" alt="logo">
+            <img class="img-fluid rounded icon-user-selected-edit" id="iconDompetUserEdit-${dompet.icDompet_id}" src="${dompet.IconDompet.url_icDompet}" alt="pilih icon dompet">
           </button>
         </div>
         <div class="col-8 border">

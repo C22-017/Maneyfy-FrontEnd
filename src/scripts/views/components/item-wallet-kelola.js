@@ -14,7 +14,7 @@ class ItemWalletKelola extends HTMLElement {
           <span class="label-item">${dompet.name_dompet}</span>
         </li>
         <li class="list-group-item">
-          <button type="button" name="btnIconEditDompet" class="btn btn-transparent p-2" id="editDompet-${dompet.id}" name="btnE" data-bs-toggle="modal" data-bs-target="#editDompet">
+          <button type="button" name="btnIconEditDompet" class="btn btn-transparent p-2" id="editDompet-${dompet.id}" data-bs-toggle="modal" data-bs-target="#editDompet">
             <iconify-icon icon="material-symbols:edit" class="icon-large text-primary"></iconify-icon>
           </button>
         </li>

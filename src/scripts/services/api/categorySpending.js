@@ -18,13 +18,12 @@ class CategorySpending {
   static async createCategorySpending(data) {
     const myHeaders = new Headers();
     myHeaders.append('Authorization', `Bearer ${getDataLocalStorage().token}`);
-    // myHeaders.append('Content-Type', 'application/x-www-form-urlencoded');
 
     const { icSpendingId, categoryNameSpending } = data;
 
     const urlencoded = new URLSearchParams();
     urlencoded.append('icSpending_id', icSpendingId);
-    urlencoded.append('categoryName_Spending', categoryNameSpending);
+    urlencoded.append('categoryName_spending', categoryNameSpending);
 
     const requestOptions = {
       method: 'POST',
@@ -55,7 +54,6 @@ class CategorySpending {
   static async updateCategorySpendingById(id, data) {
     const myHeaders = new Headers();
     myHeaders.append('Authorization', `Bearer ${getDataLocalStorage().token}`);
-    // myHeaders.append('Content-Type', 'application/x-www-form-urlencoded');
 
     const { icSpendingId, categoryNameSpending } = data;
 
@@ -76,13 +74,17 @@ class CategorySpending {
     return response.json();
   }
 
-  static async deleteCategorySpendingById(id) {
+  static async deleteCategorySpendingById(id, typeTransaction) {
     const myHeaders = new Headers();
     myHeaders.append('Authorization', `Bearer ${getDataLocalStorage().token}`);
+
+    const urlencoded = new URLSearchParams();
+    urlencoded.append('typeTransaction', typeTransaction);
 
     const requestOptions = {
       method: 'DELETE',
       headers: myHeaders,
+      body: urlencoded,
     };
 
     const response = await fetch(

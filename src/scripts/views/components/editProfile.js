@@ -48,18 +48,19 @@ data-bs-target="#kelolaProfil">
 </div>
 
 <div class="modal fade" id="hapusAkun" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title" id="exampleModalLabel">Hapus Akun?</h4>
           <button type="button" class="btn-close p-3" data-bs-toggle="modal" data-bs-target="#kelolaProfil"></button>
         </div>
             <div class="modal-body modal-confirm">
-            <div class="justify-content-between row p-3">             
-            <button type="button" class="btn btn-primary col-4" data-bs-toggle="modal"
-            data-bs-target="#kelolaProfil">Batal</button>
-            <button type="button" id="btnDeleteUser" class="btn btn-danger col-4">Hapus</button>
-            </div>
+              <span>Tindakan ini akan menghapus data kamu dari database, termasuk Transaksi yang sudah ditambahkan sebelumnya</span>
+              <div class="justify-content-between row p-3">             
+                <button type="button" class="btn btn-primary col-4" data-bs-toggle="modal"
+                data-bs-target="#kelolaProfil">Batal</button>
+                <button type="button" id="btnDeleteUser" class="btn btn-danger col-4">Hapus</button>
+              </div>
             </div>
         </div>
     </div>

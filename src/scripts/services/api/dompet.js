@@ -18,7 +18,6 @@ class Dompet {
   static async createDompet(icDompetId, nameDompet) {
     const myHeaders = new Headers();
     myHeaders.append('Authorization', `Bearer ${getDataLocalStorage().token}`);
-    // myHeaders.append('Content-Type', 'application/x-www-form-urlencoded');
 
     const urlencoded = new URLSearchParams();
     urlencoded.append('icDompet_id', icDompetId);
@@ -50,14 +49,15 @@ class Dompet {
     return response.json();
   }
 
-  static async updateDompetById(id, icDompetId, nameDompet) {
+  static async updateDompetById(id, data) {
     const myHeaders = new Headers();
     myHeaders.append('Authorization', `Bearer ${getDataLocalStorage().token}`);
-    // myHeaders.append('Content-Type', 'application/x-www-form-urlencoded');
+
+    const { icDompetId, categoryNameDompet } = data;
 
     const urlencoded = new URLSearchParams();
     urlencoded.append('icDompet_id', icDompetId);
-    urlencoded.append('name_dompet', nameDompet);
+    urlencoded.append('name_dompet', categoryNameDompet);
 
     const requestOptions = {
       method: 'PUT',

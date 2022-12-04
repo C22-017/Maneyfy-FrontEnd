@@ -6,10 +6,10 @@ class BodyTambahDompet extends HTMLElement {
   _render() {
     this.innerHTML = `
       <div class="modal-body row gap-4 p-3">
-        <div class="wallet col-3 border">
+        <div class="col-3 border">
           <button type="button" class="btn btn-transparent edit d-flex" data-bs-toggle="modal"
             data-bs-target="#iconTambahDompet">
-            <img class="img-fluid rounded icon-user-selected-tambah" alt="logo">
+            <img class="img-fluid rounded icon-user-selected-tambah" alt="pilih icon dompet">
           </button>
         </div>
         <div class="col-8 border">

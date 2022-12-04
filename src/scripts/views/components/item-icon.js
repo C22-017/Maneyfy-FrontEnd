@@ -8,10 +8,20 @@ class ItemIcon extends HTMLElement {
     const icon = this._dataicon;
 
     this.innerHTML = `
-      <div class="col-2 icon-select" id="iconDompet-${icon.id}" tabindex="0">
-        <img class="icon-image" src="${icon.url_icDompet}" alt="logo">
+      <div class="col-2 icon-select" id="icon-${icon.id}" tabindex="0">
+        <img class="icon-image" src="${this._urlIconSelector(icon)}" alt="logo">
       </div>
     `;
+  }
+
+  _urlIconSelector(icon) {
+    if (icon.url_icDompet) {
+      return icon.url_icDompet;
+    } else if (icon.url_icEarning) {
+      return icon.url_icEarning;
+    } else {
+      return icon.url_icSpending
+    }
   }
 }
 

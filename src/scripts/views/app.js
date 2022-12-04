@@ -3,12 +3,25 @@ import routes from '../routes/routes';
 
 import './components/side-bar';
 import './components/top-header';
-import './components/item-wallet-header';
-import './components/item-wallet-kelola';
 import './components/item-icon';
+import './components/item-wallet-header';
+
 import './components/body-tambah-dompet';
 import './components/body-edit-dompet';
 import './components/body-delete-dompet';
+
+import './components/body-tambah-earning';
+import './components/body-edit-earning';
+import './components/body-delete-earning';
+
+import './components/body-tambah-spending';
+import './components/body-edit-spending';
+import './components/body-delete-spending';
+
+import './components/item-wallet-kelola';
+import './components/item-earning-kelola';
+import './components/item-spending-kelola';
+
 import './components/hero-landing';
 import './components/app-bar';
 import './components/features-maneyfy';

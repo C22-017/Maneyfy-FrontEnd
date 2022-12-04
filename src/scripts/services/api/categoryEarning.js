@@ -18,7 +18,6 @@ class CategoryEarning {
   static async createCategoryEarning(data) {
     const myHeaders = new Headers();
     myHeaders.append('Authorization', `Bearer ${getDataLocalStorage().token}`);
-    // myHeaders.append('Content-Type', 'application/x-www-form-urlencoded');
 
     const { icEarningId, categoryNameEarning } = data;
 
@@ -55,7 +54,6 @@ class CategoryEarning {
   static async updateCategoryEarningById(id, data) {
     const myHeaders = new Headers();
     myHeaders.append('Authorization', `Bearer ${getDataLocalStorage().token}`);
-    // myHeaders.append('Content-Type', 'application/x-www-form-urlencoded');
 
     const { icEarningId, categoryNameEarning } = data;
 
@@ -76,13 +74,17 @@ class CategoryEarning {
     return response.json();
   }
 
-  static async deleteCategoryEarningById(id) {
+  static async deleteCategoryEarningById(id, typeTransaction) {
     const myHeaders = new Headers();
     myHeaders.append('Authorization', `Bearer ${getDataLocalStorage().token}`);
+
+    const urlencoded = new URLSearchParams();
+    urlencoded.append('typeTransaction', typeTransaction);
 
     const requestOptions = {
       method: 'DELETE',
       headers: myHeaders,
+      body: urlencoded,
     };
 
     const response = await fetch(

@@ -9,6 +9,7 @@ class BodyDeleteDompet extends HTMLElement {
 
     this.innerHTML = `
       <div class="modal-body modal-confirm">
+        <span>Semua transaksi yang termasuk pada dompet ini juga akan dihapus</span>
         <div class="justify-content-between row p-3">
           <button type="button" class="btn btn-primary col-4" data-bs-toggle="modal"
             data-bs-target="#kelolaDompet">Batal</button>

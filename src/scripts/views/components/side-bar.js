@@ -34,13 +34,14 @@ class SideBar extends HTMLElement {
       </div>
       
       <div class="modal fade" id="keluarAkun" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
               <h4 class="modal-title" id="exampleModalLabel">Keluar Akun?</h4>
               <button type="button" class="btn-close p-3" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body modal-confirm">
+              <span>Kamu akan diarahkan ke halaman Login untuk masuk kembali ke akunmu</span>
               <div class="justify-content-between row p-3">
                 <button type="button" class="btn btn-primary col-4" data-bs-dismiss="modal" aria-label="Close">Batal</button>
                 <button type="button" id="btnLogout" class="btn btn-danger col-4">Keluar</button>
