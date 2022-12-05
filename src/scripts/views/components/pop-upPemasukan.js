@@ -18,7 +18,7 @@ const pemasukan = `
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-add add-earning" data-bs-toggle="modal" data-bs-target="#tambahKategoriPemasukan">
-                <p class="tambah">+</p>
+                <p>+</p>
               </button>
             </div>
           </div>

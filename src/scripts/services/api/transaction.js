@@ -2,23 +2,20 @@ import API_ENDPOINT from '../../globals/api-endpoint';
 import { getDataLocalStorage } from '../../utils/local-storage-utils';
 
 class Transaction {
-  static async getAllTransaction(id, dataParams) {
+  static async getAllTransaction(dataParams) {
     const myHeaders = new Headers();
     myHeaders.append('Authorization', `Bearer ${getDataLocalStorage().token}`);
 
-    const { month, year } = dataParams;
+    const { idDompet, month, year } = dataParams;
 
     const urlIncludeParams = new URL(API_ENDPOINT.CREATE_AND_GET_ALL_TRANSACTION);
     urlIncludeParams.searchParams.append('month', month);
     urlIncludeParams.searchParams.append('year', year);
-
-    const urlencoded = new URLSearchParams();
-    urlencoded.append('dompet_id', id);
+    urlIncludeParams.searchParams.append('idDompet', idDompet);
 
     const requestOptions = {
       method: 'GET',
       headers: myHeaders,
-      body: urlencoded,
     };
 
     const response = await fetch(urlIncludeParams, requestOptions);
@@ -79,6 +76,7 @@ class Transaction {
       amountTransaction, nameTransaction, dateTransaction,
     } = data;
 
+
     const urlencoded = new URLSearchParams();
     urlencoded.append('type_transaction', typeTransaction);
     urlencoded.append('categoryTransaction_id', categoryTransactionId);
@@ -94,7 +92,7 @@ class Transaction {
     };
 
     const response = await fetch(
-      API_ENDPOINT.GET_UPDATE_DELETE_DATA_DOMPET_BY_ID(id),
+      API_ENDPOINT.GET_UPDATE_DELETE_TRANSACTION_BY_ID(id),
       requestOptions,
     );
     return response.json();

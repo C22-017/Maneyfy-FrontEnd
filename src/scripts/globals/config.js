@@ -12,11 +12,12 @@ const CONFIG = {
   IMAGE_FEATURES_3_PATH: './images/features/features-3.png',
   IMAGE_FEATURES_4_PATH: './images/features/features-4.png',
   IMAGE_REGISTER_NOW_PATH: './images/features/growth.png',
+  IMAGE_DATA_NOT_FOUND: './images/data-not-found.png',
   // ASSETS ICON //
   ICON_ADD_TRANSACTION: './icons/add.png',
   ICON_SEARCH: './icons/search.png',
   ICON_SPEND: './icons/spend.png',
-  ICON_AMOUNT_WALLET: './icons/amount-wallet.png',
+  ICON_WALLET_USER: './icons/wallet-user.png',
   ICON_WALLET: './icons/wallet.png',
   ICON_LOGOUT: './icons/logout.png',
   ICON_INCOME: './icons/income.png',

@@ -22,7 +22,7 @@ class BodyEditSpending extends HTMLElement {
           </div>
         </div>
         <div class="d-grid d-md-flex justify-content-md-end">
-        <button type="button" name="btnEditSpending" id="btnEditSpending-${categorySpending.id}" class="btn btn-primary">Simpan</button>
+          <button type="button" name="btnEditSpending" id="btnEditSpending-${categorySpending.id}" class="btn btn-primary">Simpan</button>
         </div>
       </div>
     `;

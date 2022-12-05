@@ -19,7 +19,7 @@ const pengeluaran = `
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-add add-spending" data-bs-toggle="modal" data-bs-target="#tambahKategoriPengeluaran">
-                <p class="tambah">+</p>
+                <p>+</p>
               </button>
             </div>
           </div>

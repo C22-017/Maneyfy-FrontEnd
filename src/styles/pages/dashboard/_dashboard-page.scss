@@ -37,8 +37,13 @@
   padding-right: 0 !important;
 }
 
-.pilih-dompet {
-  padding: 1rem;
+.icon-add-edit-transaction {
+  height: 3.5rem;
+}
+
+.label-dompet {
+  text-align: left;
+  flex-basis: max-content;
 }
 
 .pilih-kategori {
@@ -67,6 +72,7 @@
 }
 
 .kategori-icon {
+  max-width: 80%;
   object-fit: cover;
   align-items: center;
   border-radius: 50%;
@@ -74,6 +80,14 @@
 
 .kategori-list {
   height: 100%;
+  .icon-list-dashboard {
+    height: 3rem;
+  }
+  p {
+    margin-bottom: 0;
+    margin-top: 8px;
+  }
+
   @include media-in(tablet) {
     height: 8rem;
   }
@@ -84,7 +98,10 @@
 }
 .nominal {
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  @include media-in(mobile) {
+    font-size: 1.5rem;
+  }
   @include media-in(tablet) {
     font-size: 1.7rem;
   }
@@ -92,20 +109,33 @@
 
 .detail-desc {
   .nama-kategori {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    @include media-in(mobile) {
+      font-size: 1.1rem;
+    }
   }
   .tanggal {
-    font-weight: lighter;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    @include media-in(mobile) {
+      font-size: 1rem;
+    }
   }
   .nama-transaksi {
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    @include media-in(mobile) {
+      font-size: 1.5rem;
+    }
   }
 }
 
 .riwayat-transaksi {
-  border: 1px solid black;
+  box-shadow: -10px -5px 40px 0 rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: #fff;
   @include media-in(tablet) {
     width: 50rem;
@@ -113,7 +143,7 @@
 }
 
 .section-history {
-  margin: 1rem;
+  margin-top: 2rem;
 }
 
 .iconTransaksi {
@@ -121,23 +151,33 @@
   align-content: center;
   align-self: center;
   object-fit: cover;
-  width: 5rem;
+  width: 3rem;
 
+  @include media-in(mobile) {
+    width: 4rem;
+  }
   @include media-in(tablet) {
-    width: 7rem;
+    width: 5rem;
   }
 }
 .list-riwayat {
   .headerTransaksi {
-    font-weight: lighter;
+    margin-bottom: 0;
     font-size: 0.7rem;
+    @include media-in(mobile) {
+      font-size: 0.9rem;
+    }
     @include media-in(desktop) {
-      font-size: 1rem;
+      font-size: 1.1rem;
     }
   }
   .mainTransaksi {
-    font-weight: bolder;
+    margin-bottom: 0;
+    font-weight: 600;
     font-size: 0.9rem;
+    @include media-in(mobile) {
+      font-size: 1.1rem;
+    }
     @include media-in(desktop) {
       font-size: 1.3rem;
     }
@@ -155,8 +195,29 @@ h5-upsize {
 }
 
 .item {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  
   &:focus {
-    // background-color: $primary-color;
     border: 2px solid $primary-color;
+  }
+}
+
+.color-earning {
+  color: $background-font-income;
+}
+
+.color-spending {
+  color: $background-font-outcome;
+}
+
+.img-transaction-not-found {
+  width: 15rem;
+  @include media-in(mobile) {
+    width: 20rem;
   }
 }

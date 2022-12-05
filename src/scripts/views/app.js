@@ -5,6 +5,7 @@ import './components/side-bar';
 import './components/top-header';
 import './components/item-icon';
 import './components/item-wallet-header';
+import './components/item-category';
 
 import './components/body-tambah-dompet';
 import './components/body-edit-dompet';
@@ -35,6 +36,14 @@ import './components/header-dashboard';
 import './components/kategoriList-dashboard';
 import './components/chooseMonth-dashboard';
 import './components/historiTransaksi-dashboard';
+
+import './components/body-detail-transaction';
+import './components/body-delete-transaction';
+import './components/body-edit-transaction';
+import './components/body-add-transaction';
+
+import './components/item-history-transaction';
+
 
 class App {
   constructor({

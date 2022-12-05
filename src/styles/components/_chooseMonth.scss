@@ -20,7 +20,18 @@
   margin: 0;
   color: #404040;
   font-family: 'Montserrat', sans-serif;
-  font-size: 28px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.history-title {
+  color: #404040;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.description-wallet {
+  margin-bottom: 1.5rem;
 }
 
 .input-month {
@@ -55,6 +66,10 @@
   .box-main {
     justify-content: center;
     margin-top: 0px;
+  }
+
+  .history-title {
+    font-size: 20px;
   }
 
   .box-month p {

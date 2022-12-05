@@ -35,7 +35,7 @@ class TopHeader extends HTMLElement {
           </div>
           <div class="dropdown wallet-container">
             <button class="dropdown-toggle" type="button" id="dropdownWallet" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <img src="${CONFIG.ICON_WALLET}" alt="" class="icon-header"><span class="dompet-list">${dompet.name_dompet}</span>
+              <img src="${CONFIG.ICON_WALLET_USER}" alt="" class="icon-header"><span class="dompet-list">${dompet.name_dompet}</span>
             </button>
             <div class="dropdown-menu" id="dompetListHeader" aria-labelledby="dropdownWallet"></div>
           </div>

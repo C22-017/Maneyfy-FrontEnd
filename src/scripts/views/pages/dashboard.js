@@ -1,6 +1,9 @@
 import User from '../../services/api/user';
 import Dompet from '../../services/api/dompet';
 import HeaderInitiator from '../../utils/initiators/header-initiator';
+import TransactionInitiator from '../../utils/initiators/dashboard/transaction-initiator';
+import CategoryEarning from '../../services/api/categoryEarning';
+import CategorySpending from '../../services/api/categorySpending';
 import { drawerInitiator } from '../../utils/sidebar-propertise';
 import { getElement } from '../../utils/element';
 import { setupPageUserAlreadyLoggedin } from '../../utils/setup-page';
@@ -37,20 +40,40 @@ const Dashboard = {
       const dompets = await Dompet.getAllDompet();
       const selectedDompet = await Dompet.getDataDompetById(getDataLocalStorage().dompet_id);
 
-      this._initContentDashboard(user.data, dompets.data, selectedDompet.result);
+      const categoryEarnings = await CategoryEarning.getAllCategoryEarning();
+      const categorySpendings = await CategorySpending.getAllCategorySpending();
 
-      drawerInitiator(); // Jangan diubah posisinya
+      getElement('history-transaction').dompetSelected = selectedDompet.result;
+
+      this._initContentDashboard({
+        user: user.data,
+        dompets: dompets.data,
+        selectedDompet: selectedDompet.result,
+        categoryEarnings: categoryEarnings.data,
+        categorySpendings: categorySpendings.data,
+      });
+
+      drawerInitiator();
     } catch (error) {
       console.log(error);
     }
   },
 
-  _initContentDashboard(user, dompets, selectedDompet) {
+  _initContentDashboard({
+    user, dompets, selectedDompet,
+    categoryEarnings, categorySpendings,
+  }) {
     HeaderInitiator.init({
       dataUser: user,
       dompetUser: dompets,
       selectedDompet,
       element: getElement('top-header'),
+    });
+    TransactionInitiator.init({
+      selectedDompet,
+      categoryEarnings,
+      categorySpendings,
+      element: getElement('list-category'),
     });
   },
 };

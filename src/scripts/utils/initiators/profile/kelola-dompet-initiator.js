@@ -144,12 +144,12 @@ const KelolaDompetInitiator = {
         const elementBodyDeleteDompet = getElement('body-delete-dompet');
         elementBodyDeleteDompet.dataDompet = dataDompet.result;
 
-        this._deleteDompetProcess(dompets);
+        this._deleteDompetProcess();
       });
     });
   },
 
-  _deleteDompetProcess(dompets) {
+  _deleteDompetProcess() {
     getAllElement('button[name="btnDeleteDompet"]').forEach((element1) => {
       element1.addEventListener('click', async () => {
         const idDompet = parseInt(element1.id.split('-')[1], 10); // ('btnDeleteDompet-#')

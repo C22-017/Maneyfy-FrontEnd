@@ -1,53 +1,23 @@
-import CONFIG from '../../globals/config';
 import detailTransaksi from './pop-upDetailTransaksi';
 
 class HistoryTransaction extends HTMLElement {
-  connectedCallback() {
+  set dompetSelected(dompet) {
+    this._dompetSelected = dompet;
     this._render();
   }
 
   _render() {
-    this.innerHTML = `
-    <section class="d-flex justify-content-center section-history mb-5">
-    <div class="riwayat-transaksi">
-      <h6>Riwayat Transaksi</h6>
-      <p>Bulan November</p>
+    const dompet = this._dompetSelected;
 
-      <div class="text-center">
-        <button type="button" class="btn riwayat-list align-item-center" data-bs-toggle="modal" data-bs-target="#detailTransaksi">
-          <div class="row list-riwayat justify-content-center">
-          <div class="col-4 align-self-center">
-          <img class="img iconTransaksi" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
-          </div>
-          <div class="col-4">
-          <p class="headerTransaksi">Makanan & Minuman</p>
-          <p class="mainTransaksi">Bayar Makan</p>
-          </div>
-          <div class="col-4">
-          <p class="headerTransaksi">10 November 2022</p>
-          <p class="mainTransaksi">-Rp.25.000</p>
-          </div>
-          </div>
-        </button>
-        <button type="button" class="btn riwayat-list align-item-center" data-bs-toggle="modal" data-bs-target="#detailTransaksi">
-          <div class="row list-riwayat justify-content-center">
-          <div class="col-4 align-self-center">
-          <img class="img iconTransaksi" src="${CONFIG.IMAGE_LOGO_PATH}" alt="logo">
-          </div>
-          <div class="col-4">
-          <p class="headerTransaksi">Makanan & Minuman</p>
-          <p class="mainTransaksi">Bayar Makan</p>
-          </div>
-          <div class="col-4">
-          <p class="headerTransaksi">10 November 2022</p>
-          <p class="mainTransaksi">-Rp.25.000</p>
-          </div>
-          </div>
-        </button>
-      </div>
-    </div>
-  </section>
-  ${detailTransaksi}
+    this.innerHTML = `
+      <section class="container d-flex justify-content-center section-history mb-5">
+        <div class="riwayat-transaksi">
+          <p class="history-title mb-1">Riwayat Transaksi</p>
+          <p class="description-wallet">Berdasarkan dompet <b>${dompet.name_dompet}</b></p>
+          <div class="text-center" id="list-history-transaction"></div>
+        </div>
+      </section>
+      ${detailTransaksi}
   `;
   }
 }

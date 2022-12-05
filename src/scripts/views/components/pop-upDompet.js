@@ -18,7 +18,7 @@ const dompet = `
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-add add-dompet" data-bs-toggle="modal" data-bs-target="#tambahDompet">
-                <p class="tambah">+</p>
+                <p>+</p>
               </button>
             </div>
           </div>
@@ -57,7 +57,7 @@ const dompet = `
               <button type="button" class="btn-close p-3" data-bs-toggle="modal" data-bs-target="#tambahDompet"></button>
             </div>
             <div class="modal-body row gap-1">
-              <div class="d-flex flex-wrap list-icon-dompet"></div>
+              <div class="grid-icon-list list-icon-dompet"></div>
             </div>
             <div class="modal-footer">
               <div class="d-grid d-md-flex justify-content-md-end">
@@ -76,7 +76,7 @@ const dompet = `
               <button type="button" class="btn-close p-3" data-bs-toggle="modal" data-bs-target="#editDompet"></button>
             </div>
             <div class="modal-body row gap-1">
-              <div class="d-flex flex-wrap list-icon-dompet"></div>
+              <div class="grid-icon-list list-icon-dompet"></div>
             </div>
             <div class="modal-footer">
               <div class="d-grid d-md-flex justify-content-md-end">
