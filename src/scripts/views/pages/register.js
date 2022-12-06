@@ -2,6 +2,7 @@ import Auth from '../../services/api/auth';
 import { getElement } from '../../utils/element';
 import { redirectIfAlreadytLoggedin } from '../../utils/redirect-page';
 import { setupPageUserNotLoggedin } from '../../utils/setup-page';
+import { setupToggleShowPasswordRegister } from '../../utils/show-password';
 import { showLoading, hideLoading } from '../../utils/initiators/spinner-initiator';
 
 const Register = {
@@ -21,6 +22,7 @@ const Register = {
       setupPageUserNotLoggedin();
 
       const formRegister = getElement('#register-form');
+      setupToggleShowPasswordRegister(formRegister);
 
       formRegister.addEventListener('submit', async (e) => {
         e.preventDefault();

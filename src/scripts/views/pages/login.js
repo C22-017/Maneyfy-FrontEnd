@@ -3,6 +3,7 @@ import { getElement } from '../../utils/element';
 import { saveDataToLocalStorage } from '../../utils/local-storage-utils';
 import { redirectIfAlreadytLoggedin } from '../../utils/redirect-page';
 import { setupPageUserNotLoggedin } from '../../utils/setup-page';
+import { setupToggleShowPasswordLogin } from '../../utils/show-password';
 import { showLoading, hideLoading } from '../../utils/initiators/spinner-initiator';
 
 const Login = {
@@ -22,6 +23,7 @@ const Login = {
       setupPageUserNotLoggedin();
 
       const formLogin = getElement('#login-form');
+      setupToggleShowPasswordLogin(formLogin);
 
       formLogin.addEventListener('submit', async (e) => {
         e.preventDefault();

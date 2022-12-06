@@ -30,7 +30,14 @@ class FormLogin extends HTMLElement {
       
                 <!-- Password input -->
                 <div class="form-outline mb-4">
-                  <input type="password" for="typePassword" id="password" name="password" class="form-control form-control-lg form-control-login-register" placeholder="Password" required/>
+                  <div class="input-group form-control-login-register">
+                    <input type="password" for="typePassword" id="password" name="password" class="form-control form-control-lg" placeholder="Password" minlength="8" required/>
+                    <div class="input-group-append">
+                      <span class="input-group-text togglePassword" id="toggleShowPwLogin" tabindex="0">
+                        <i class='bx bxs-show' id="icon-show-password"></i>
+                      </span>
+                    </div>
+                  </div>
                 </div>
                 
                 <div class="text-center  mt-1 pt-2 justify-content-center">
