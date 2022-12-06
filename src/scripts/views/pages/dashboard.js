@@ -9,7 +9,7 @@ import { getElement } from '../../utils/element';
 import { setupPageUserAlreadyLoggedin } from '../../utils/setup-page';
 import { redirectIfNotLoggedin } from '../../utils/redirect-page';
 import { getDataLocalStorage } from '../../utils/local-storage-utils';
-import { showLoading, hideLoading } from '../../utils/initiators/spinner-initiator';
+import { showLoading } from '../../utils/initiators/spinner-initiator';
 
 const Dashboard = {
   async beforeRender() {

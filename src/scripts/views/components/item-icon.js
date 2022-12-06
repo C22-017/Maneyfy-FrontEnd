@@ -20,7 +20,7 @@ class ItemIcon extends HTMLElement {
     } else if (icon.url_icEarning) {
       return icon.url_icEarning;
     } else {
-      return icon.url_icSpending
+      return icon.url_icSpending;
     }
   }
 }

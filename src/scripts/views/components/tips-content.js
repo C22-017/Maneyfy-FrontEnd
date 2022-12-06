@@ -1,4 +1,4 @@
-import CONFIG from "../../globals/config";
+import CONFIG from '../../globals/config';
 
 class TipsContent extends HTMLElement {
   connectedCallback() {

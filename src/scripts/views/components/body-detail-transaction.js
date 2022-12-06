@@ -8,7 +8,10 @@ class BodyDetailTransaction extends HTMLElement {
 
   _render() {
     const transaction = this._transaction;
-    const { name, date, urlIcon, category, amount, colorTextAmountClass } = transactionFormated(transaction);
+    const {
+      name, date, urlIcon, category,
+      amount, colorTextAmountClass,
+    } = transactionFormated(transaction);
 
     this.innerHTML = `
       <div class="col-12 row detail-list pb-3">

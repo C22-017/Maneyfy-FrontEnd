@@ -5,7 +5,10 @@ const transactionFormated = (transaction) => {
   const name = transaction.name_transaction;
   const date = formattingDateFromServer(transaction.date_transaction);
 
-  let urlIcon, category, amount, colorTextAmountClass;
+  let urlIcon;
+  let category;
+  let amount;
+  let colorTextAmountClass;
 
   if (transaction.type_transaction === 'earning') {
     urlIcon = transaction.CategoryEarning.IconEarning.url_icEarning;
@@ -29,6 +32,6 @@ const transactionFormated = (transaction) => {
   };
 
   return data;
-}
+};
 
 export { transactionFormated };

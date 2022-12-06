@@ -27,5 +27,9 @@
       "no-plusplus": 0,
       "no-await-in-loop": 0,
       "camelcase": "off",
+      "no-else-return": 0,
+      "prefer-destructuring": "off",
+      "no-param-reassign": "off",
+      "no-lonely-if": "off"
     }
 }

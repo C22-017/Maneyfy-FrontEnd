@@ -1,5 +1,3 @@
-import CONFIG from '../../globals/config';
-
 const pemasukan = `
     <div class="pemasukan shadow-sm col-12 col-sm-12 col-lg-3 text-center">
       <button type="button" class="btn titleKelola btn-icon-focus" data-bs-toggle="modal" data-bs-target="#kelolaKategoriPemasukan">

@@ -17,7 +17,6 @@ import { setupPageUserAlreadyLoggedin } from '../../utils/setup-page';
 import { getDataLocalStorage } from '../../utils/local-storage-utils';
 import { showLoading, hideLoading } from '../../utils/initiators/spinner-initiator';
 
-
 const Profile = {
   async beforeRender() {
     redirectIfNotLoggedin();
@@ -60,7 +59,6 @@ const Profile = {
 
       const categorySpendings = await CategorySpending.getAllCategorySpending();
       const iconSpendings = await Icon.getAllIconSpending();
-
 
       // Jangan diubah posisinya //
       profile(user.data);

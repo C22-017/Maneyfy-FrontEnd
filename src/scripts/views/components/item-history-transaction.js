@@ -8,7 +8,10 @@ class ItemHistoryTransaction extends HTMLElement {
 
   _render() {
     const transaction = this._transactions;
-    const { name, date, urlIcon, category, amount, colorTextAmountClass } = transactionFormated(transaction);
+    const {
+      name, date, urlIcon, category,
+      amount, colorTextAmountClass,
+    } = transactionFormated(transaction);
 
     this.innerHTML = `
       <button type="button" id="transaction-${transaction.id}" class="btn riwayat-list align-item-center py-3 px-1" data-bs-toggle="modal"

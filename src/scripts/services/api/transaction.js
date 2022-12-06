@@ -25,7 +25,6 @@ class Transaction {
   static async createTransaction(data) {
     const myHeaders = new Headers();
     myHeaders.append('Authorization', `Bearer ${getDataLocalStorage().token}`);
-    // myHeaders.append('Content-Type', 'application/x-www-form-urlencoded');
 
     const {
       typeTransaction, categoryTransactionId, dompetId,
@@ -75,7 +74,6 @@ class Transaction {
       typeTransaction, categoryTransactionId, dompetId,
       amountTransaction, nameTransaction, dateTransaction,
     } = data;
-
 
     const urlencoded = new URLSearchParams();
     urlencoded.append('type_transaction', typeTransaction);

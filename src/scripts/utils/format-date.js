@@ -1,21 +1,15 @@
-const convertNumTo2Digit = (number) => {
-  return number.toString().padStart(2, '0');
-}
+const convertNumTo2Digit = (number) => number.toString().padStart(2, '0');
 
-const getDateFormated = (date = new Date()) => {
-  return [
-    date.getFullYear(),
-    convertNumTo2Digit(date.getMonth() + 1),
-    convertNumTo2Digit(date.getDate()),
-  ].join('-');
-}
+const getDateFormated = (date = new Date()) => [
+  date.getFullYear(),
+  convertNumTo2Digit(date.getMonth() + 1),
+  convertNumTo2Digit(date.getDate()),
+].join('-');
 
-const getMonthYearFormated = (date = new Date()) => {
-  return [
-    date.getFullYear(),
-    convertNumTo2Digit(date.getMonth() + 1),
-  ].join('-');
-}
+const getMonthYearFormated = (date = new Date()) => [
+  date.getFullYear(),
+  convertNumTo2Digit(date.getMonth() + 1),
+].join('-');
 
 const formattingDateFromServer = (date) => {
   const dateSplited = date.split('T')[0];
@@ -38,9 +32,10 @@ const formattingDateFromServer = (date) => {
     case 9: monthFormated = 'Oktober'; break;
     case 10: monthFormated = 'November'; break;
     case 11: monthFormated = 'Desember'; break;
+    default: monthFormated = 'Undefined';
   }
 
   return `${dateValue} ${monthFormated} ${yearValue}`;
-}
+};
 
 export { getDateFormated, getMonthYearFormated, formattingDateFromServer };

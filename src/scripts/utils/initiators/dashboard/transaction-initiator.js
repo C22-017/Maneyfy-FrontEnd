@@ -3,7 +3,6 @@ import Transaction from '../../../services/api/transaction';
 import { getElement, getAllElement } from '../../element';
 import { showLoading, hideLoading } from '../spinner-initiator';
 
-
 const TransactionInitiator = {
   init({
     selectedDompet, categoryEarnings, categorySpendings, element,
@@ -27,7 +26,7 @@ const TransactionInitiator = {
       idDompet: this._selectedDompet.id,
       month: new Date(valueMonthSelected).getMonth() + 1,
       year: new Date(valueMonthSelected).getFullYear(),
-    }
+    };
 
     return dataParams;
   },
@@ -47,7 +46,9 @@ const TransactionInitiator = {
       const amountValue = getElement('#amountAddTransaction').value;
       const dateValue = getElement('#dateAddTransaction').value;
       const nameValue = getElement('#nameAddTransaction').value;
-      let idCategory, typeTransaction;
+
+      let idCategory;
+      let typeTransaction;
 
       if (!idBtnAddCategory) {
         alert('Kamu harus memilih kategori terlebih dahulu');
@@ -79,7 +80,7 @@ const TransactionInitiator = {
         amountTransaction: amountValue,
         nameTransaction: nameValue,
         dateTransaction: dateValue,
-      }
+      };
 
       showLoading();
       const responseAddTransaction = await Transaction.createTransaction(data);
@@ -168,11 +169,10 @@ const TransactionInitiator = {
           elementDeleteTransaction.transaction = responseTransaction.result;
           hideLoading();
 
-
           this._setupBtnEditTransaction(responseTransaction.result, elementEditTransaction);
           this._setupUpdateTransaction(responseTransaction.result);
           this._setupBtnDeleteTransaction();
-        })
+        });
       });
     } catch (error) {
       console.log(error);
@@ -327,7 +327,9 @@ const TransactionInitiator = {
       const dateValue = getElement('#dateEditTransaction').value;
       const nameValue = getElement('#nameEditTransaction').value;
       const idBtnEditCategory = getElement('.edit-category').id;
-      let idCategory, typeTransaction;
+
+      let idCategory;
+      let typeTransaction;
 
       if (amountValue === '') {
         alert('Nominal transaksi harus diisi');
@@ -342,7 +344,6 @@ const TransactionInitiator = {
       if (!idBtnEditCategory) {
         idCategory = transaction.categoryTransaction_id;
         typeTransaction = transaction.type_transaction;
-
       } else {
         const idIdentifier = idBtnEditCategory.split('-')[0];
         idCategory = idBtnEditCategory.split('-')[1];
@@ -360,17 +361,17 @@ const TransactionInitiator = {
         amountTransaction: amountValue,
         nameTransaction: nameValue,
         dateTransaction: dateValue,
-      }
+      };
 
       showLoading();
-      const responseUpdateTransaction = await Transaction.updateTransactionById(transaction.id, dataUpdated);
+      const responseUpdate = await Transaction.updateTransactionById(transaction.id, dataUpdated);
       hideLoading();
 
-      if (responseUpdateTransaction.msg === 'Data updated successfully') {
+      if (responseUpdate.msg === 'Data updated successfully') {
         alert('Data Transaksi berhasil diubah');
         location.reload();
       } else {
-        alert(responseUpdateTransaction.msg);
+        alert(responseUpdate.msg);
       }
     });
   },

@@ -1,5 +1,3 @@
-import CONFIG from '../../globals/config';
-
 const editProfile = (dataUser) => {
   const btnEdit = document.querySelector('.btn-edit');
   btnEdit.innerHTML = `

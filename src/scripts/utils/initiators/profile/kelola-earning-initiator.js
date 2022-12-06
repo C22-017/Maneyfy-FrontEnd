@@ -26,7 +26,7 @@ const KelolaEarningInitiator = {
         elementEarningList.appendChild(earningItemKelola);
       });
 
-      this._setupButtonTambahEarning()
+      this._setupButtonTambahEarning();
 
       this._setupButtonEditEarning();
 
@@ -52,7 +52,6 @@ const KelolaEarningInitiator = {
       });
     });
   },
-
 
   _tambahEarningProcess(element) {
     getElement('#btnTambahEarning').addEventListener('click', async () => {
@@ -109,13 +108,12 @@ const KelolaEarningInitiator = {
   _editEarningProcess() {
     // save data Earning to server
     getAllElement('button[name="btnEditEarning"]').forEach((element) => {
-
       element.addEventListener('click', async () => {
         const elementIconSelected = getAllElement('.icon-user-selected-edit');
 
         elementIconSelected.forEach(async (elementIcon) => {
           if (elementIcon.getAttribute('alt') === 'pilih icon earning') {
-            const idCategoryEarning = parseInt(element.id.split('-')[1], 10); // ('btnEditEarning-#')
+            const idCategory = parseInt(element.id.split('-')[1], 10); // ('btnEditEarning-#')
 
             const idIcon = parseInt(elementIcon.id.split('-')[1], 10);
             const nameEarning = getElement('#inputNameEarningEdit').value;
@@ -131,14 +129,14 @@ const KelolaEarningInitiator = {
             };
 
             showLoading();
-            const responseEditEarning = await CategoryEarning.updateCategoryEarningById(idCategoryEarning, data);
+            const responseEdit = await CategoryEarning.updateCategoryEarningById(idCategory, data);
             hideLoading();
 
-            if (responseEditEarning.msg === 'Data updated successfully') {
+            if (responseEdit.msg === 'Data updated successfully') {
               alert('Kategori Pemasukan berhasil diubah');
               location.reload();
             } else {
-              alert(responseEditEarning.msg);
+              alert(responseEdit.msg);
             }
           }
         });
@@ -174,16 +172,16 @@ const KelolaEarningInitiator = {
     getAllElement('button[name="btnDeleteEarning"]').forEach((element) => {
       element.addEventListener('click', async () => {
         showLoading();
-        const idCategoryEarning = parseInt(element.id.split('-')[1], 10); // ('btnDeleteEarning-#')
+        const idCategory = parseInt(element.id.split('-')[1], 10); // ('btnDeleteEarning-#')
         const typeCategory = 'earning';
-        const responseDeleteCategory = await CategoryEarning.deleteCategoryEarningById(idCategoryEarning, typeCategory);
+        const respons = await CategoryEarning.deleteCategoryEarningById(idCategory, typeCategory);
         hideLoading();
 
-        if (responseDeleteCategory.msg === 'Category Earning berhasil dihapus') {
+        if (respons.msg === 'Category Earning berhasil dihapus') {
           alert('Kategori Pemasukan berhasil dihapus');
           location.reload();
         } else {
-          alert(responseDeleteCategory.msg);
+          alert(respons.msg);
         }
       });
     });
@@ -196,7 +194,6 @@ const KelolaEarningInitiator = {
       this._iconEarnings.forEach((iconEarning) => {
         const itemIconEarning = document.createElement('item-icon');
         itemIconEarning.dataIcon = iconEarning;
-        // itemIconEarning.classList.add('m-1');
         element.appendChild(itemIconEarning);
       });
     });
@@ -207,10 +204,10 @@ const KelolaEarningInitiator = {
         if (element === document.activeElement) {
           const idIcon = parseInt(element.id.split('-')[1], 10); // ('icon-#')
 
-          // Get Value from Attribute Modal for selection button Pilih Icon 
-          getAllElement('.btnChooseIconEarning').forEach((element) => {
-            element.addEventListener('click', () => {
-              const valueModalTarget = element.getAttribute('data-bs-target')
+          // Get Value from Attribute Modal for selection button Pilih Icon
+          getAllElement('.btnChooseIconEarning').forEach((elementButton) => {
+            elementButton.addEventListener('click', () => {
+              const valueModalTarget = elementButton.getAttribute('data-bs-target');
               if (valueModalTarget === '#tambahKategoriPemasukan') {
                 this._setNewIconTambah(idIcon);
               } else if (valueModalTarget === '#editKategoriPemasukan') {

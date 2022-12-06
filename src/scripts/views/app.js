@@ -45,7 +45,6 @@ import './components/body-add-transaction';
 
 import './components/item-history-transaction';
 
-
 class App {
   constructor({
     content,
@@ -69,9 +68,6 @@ class App {
     await page.beforeRender();
     this._content.innerHTML = await page.render();
     await page.afterRender();
-
-    // const bodyPd = document.getElementById('body-pd');
-    // bodyPd.classList.remove('body-pd');
   }
 }
 

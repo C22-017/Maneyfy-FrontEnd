@@ -1,5 +1,3 @@
-import CONFIG from '../../globals/config';
-
 const detailTransaksi = `
     <div class="modal fade" id="detailTransaksi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">

@@ -26,7 +26,7 @@ const KelolaSpendingInitiator = {
         elementSpendingList.appendChild(spendingItemKelola);
       });
 
-      this._setupButtonTambahSpending()
+      this._setupButtonTambahSpending();
 
       this._setupButtonEditSpending();
 
@@ -52,7 +52,6 @@ const KelolaSpendingInitiator = {
       });
     });
   },
-
 
   _tambahSpendingProcess(element) {
     getElement('#btnTambahSpending').addEventListener('click', async () => {
@@ -109,13 +108,12 @@ const KelolaSpendingInitiator = {
   _editSpendingProcess() {
     // save data Spending to server
     getAllElement('button[name="btnEditSpending"]').forEach((element) => {
-
       element.addEventListener('click', async () => {
         const elementIconSelected = getAllElement('.icon-user-selected-edit');
 
         elementIconSelected.forEach(async (elementIcon) => {
           if (elementIcon.getAttribute('alt') === 'pilih icon spending') {
-            const idCategorySpending = parseInt(element.id.split('-')[1], 10); // ('btnEditSpending-#')
+            const idCategory = parseInt(element.id.split('-')[1], 10); // ('btnEditSpending-#')
 
             const idIcon = parseInt(elementIcon.id.split('-')[1], 10);
             const nameSpending = getElement('#inputNameSpendingEdit').value;
@@ -130,18 +128,17 @@ const KelolaSpendingInitiator = {
               categoryNameSpending: nameSpending,
             };
             console.log(nameSpending);
-            console.log(idCategorySpending);
-
+            console.log(idCategory);
 
             showLoading();
-            const responseEditSpending = await CategorySpending.updateCategorySpendingById(idCategorySpending, data);
+            const responsEdit = await CategorySpending.updateCategorySpendingById(idCategory, data);
             hideLoading();
 
-            if (responseEditSpending.msg === 'Data updated successfully') {
+            if (responsEdit.msg === 'Data updated successfully') {
               alert('Kategori Pengeluaran berhasil diubah');
               location.reload();
             } else {
-              alert(responseEditSpending.msg);
+              alert(responsEdit.msg);
             }
           }
         });
@@ -177,16 +174,16 @@ const KelolaSpendingInitiator = {
     getAllElement('button[name="btnDeleteSpending"]').forEach((element) => {
       element.addEventListener('click', async () => {
         showLoading();
-        const idCategorySpending = parseInt(element.id.split('-')[1], 10); // ('btnDeleteSpending-#')
+        const idCategory = parseInt(element.id.split('-')[1], 10); // ('btnDeleteSpending-#')
         const typeCategory = 'spending';
-        const responseDeleteCategory = await CategorySpending.deleteCategorySpendingById(idCategorySpending, typeCategory);
+        const respons = await CategorySpending.deleteCategorySpendingById(idCategory, typeCategory);
         hideLoading();
 
-        if (responseDeleteCategory.msg === 'Category Spending berhasil dihapus') {
+        if (respons.msg === 'Category Spending berhasil dihapus') {
           alert('Kategori Pengeluaran berhasil dihapus');
           location.reload();
         } else {
-          alert(responseDeleteCategory.msg);
+          alert(respons.msg);
         }
       });
     });
@@ -199,7 +196,6 @@ const KelolaSpendingInitiator = {
       this._iconSpendings.forEach((iconSpending) => {
         const itemIconSpending = document.createElement('item-icon');
         itemIconSpending.dataIcon = iconSpending;
-        // itemIconSpending.classList.add('m-1');
         element.appendChild(itemIconSpending);
       });
     });
@@ -210,10 +206,10 @@ const KelolaSpendingInitiator = {
         if (element === document.activeElement) {
           const idIcon = parseInt(element.id.split('-')[1], 10); // ('icon-#')
 
-          // Get Value from Attribute Modal for selection button Pilih Icon 
-          getAllElement('.btnChooseIconSpending').forEach((element) => {
-            element.addEventListener('click', () => {
-              const valueModalTarget = element.getAttribute('data-bs-target')
+          // Get Value from Attribute Modal for selection button Pilih Icon
+          getAllElement('.btnChooseIconSpending').forEach((elementButton) => {
+            elementButton.addEventListener('click', () => {
+              const valueModalTarget = elementButton.getAttribute('data-bs-target');
               if (valueModalTarget === '#tambahKategoriPengeluaran') {
                 this._setNewIconTambah(idIcon);
               } else if (valueModalTarget === '#editKategoriPengeluaran') {

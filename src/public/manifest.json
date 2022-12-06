@@ -7,6 +7,7 @@
   "background_color": "#eff7ff",
   "display": "standalone",
   "orientation": "portrait",
+  "start_url": "/",
   "icons": [
     {
       "src": "icons/manifest/icon-72x72.png",

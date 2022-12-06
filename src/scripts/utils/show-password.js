@@ -30,7 +30,7 @@ const setupToggleShowPasswordRegister = (formRegister) => {
       elementIconConfirmPassword.classList.add('bxs-show');
     }
   });
-}
+};
 
 const setupToggleShowPasswordLogin = (formLogin) => {
   const inputPassword = formLogin.elements.namedItem('password');
@@ -47,6 +47,6 @@ const setupToggleShowPasswordLogin = (formLogin) => {
       elementIcon.classList.add('bxs-show');
     }
   });
-}
+};
 
 export { setupToggleShowPasswordRegister, setupToggleShowPasswordLogin };

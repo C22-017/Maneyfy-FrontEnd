@@ -28,7 +28,7 @@ const KelolaDompetInitiator = {
         elementDompetList.appendChild(dompetItemKelola);
       });
 
-      this._setupButtonTambahDompet()
+      this._setupButtonTambahDompet();
 
       this._setupButtonEditDompet();
 
@@ -54,7 +54,6 @@ const KelolaDompetInitiator = {
       });
     });
   },
-
 
   _tambahDompetProcess(element) {
     getElement('#btnTambahDompet').addEventListener('click', async () => {
@@ -106,7 +105,6 @@ const KelolaDompetInitiator = {
   _editDompetProcess() {
     // save data Dompet to server
     getAllElement('button[name="btnEditDompet"]').forEach((element) => {
-
       element.addEventListener('click', async () => {
         const elementIconSelected = getAllElement('.icon-user-selected-edit');
 
@@ -209,10 +207,10 @@ const KelolaDompetInitiator = {
         if (element === document.activeElement) {
           const idIcon = parseInt(element.id.split('-')[1], 10); // ('icon-#')
 
-          // Get Value from Attribute Modal for selection button Pilih Icon 
-          getAllElement('.btnChooseIconDompet').forEach((element) => {
-            element.addEventListener('click', () => {
-              const valueModalTarget = element.getAttribute('data-bs-target')
+          // Get Value from Attribute Modal for selection button Pilih Icon
+          getAllElement('.btnChooseIconDompet').forEach((elementButton) => {
+            elementButton.addEventListener('click', () => {
+              const valueModalTarget = elementButton.getAttribute('data-bs-target');
               if (valueModalTarget === '#tambahDompet') {
                 this._setNewIconTambah(idIcon);
               } else if (valueModalTarget === '#editDompet') {
