@@ -26,13 +26,13 @@ const Profile = {
         <top-header></top-header>
         <side-bar></side-bar>
   
-        <main class="container">
-            <h1 class="titlePage mb-5 pt-3">Profil Saya</h1>
+        <main class="container px-0">
+            <h1 class="titlePage mb-4 pt-3">Profil Saya</h1>
 
-            <section class="profil mb-5 row shadow-sm">
+            <section class="profil mb-4 d-flex w-100 justify-content-center shadow-sm">
             </section>
 
-            <section class="kelola row shadow-sm">
+            <section class="kelola row shadow-sm mx-0">
             </section>
         </main>
     `;
@@ -55,8 +55,6 @@ const Profile = {
 
       const categorySpendings = await CategorySpending.getAllCategorySpending();
       const iconSpendings = await Icon.getAllIconSpending();
-
-
 
       // Jangan diubah posisinya //
       profile(user.data);

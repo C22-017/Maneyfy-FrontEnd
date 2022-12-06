@@ -1,5 +1,6 @@
 @import '../components/header-side-bar';
-// // Landing Page
+
+// Landing Page
 @import 'landing/footer';
 @import 'landing/reDesignAppBar';
 @import 'landing/reDesignDaftar';
@@ -8,18 +9,16 @@
 
 // Dashboard Page
 @import 'dashboard/dashboard-page';
-@import 'tips/tips-page';
 
-// // Login-Register Page
+// Login-Register Page
 @import 'loginRegister/login-register';
 
-// // Profile Page
+// Profile Page
 @import 'profile/profile';
-// @import 'profile/';
 
-// // Tips Page
-// @import 'tips/';
-// @import 'tips/';
+// Tips Page
+@import 'tips/tips-page';
+
 
 :root {
   --header-height: 4rem; // = 64px

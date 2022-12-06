@@ -6,7 +6,6 @@ body {
   background-color: $background-very-light-blue;
 }
 .titlePage {
-  margin: 0 1rem;
   font-weight: bold;
 }
 
@@ -14,14 +13,13 @@ body {
   background-color: #ffff;
   align-items: center;
   padding: 0.8rem;
-  padding-top: 6rem;
+  padding-top: 7rem;
   border-radius: 35px;
   background-image: url('/src/public/images/backgroundProfil.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 12rem;
-  margin: 0 1rem;
 
   @include media-in(mobile) {
     height: 15rem;
@@ -33,12 +31,22 @@ body {
 
   @include media-in(desktop) {
     height: 18rem;
-    margin: 0 1.2rem;
+    // padding: 0.8rem 1.5rem;
   }
 
   .foto {
-    text-align: center;
+    // text-align: center;
     justify-content: center;
+  }
+
+  .edit {
+    width: 44px;
+    height: 44px;
+    background-color: #65ddf7;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
 
   .desc {
@@ -71,15 +79,7 @@ body {
         font-size: 1.4rem;
       }
     }
-    .edit {
-      width: 44px;
-      height: 44px;
-      background-color: #65ddf7;
-      border-radius: 10px;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-    }
+    
 
     @include media-in(desktop) {
       padding-top: 3rem;
@@ -90,10 +90,9 @@ body {
 .kelola {
   padding: 1.7rem 1rem;
   background-color: #ffff;
-  gap: 30px;
+  gap: 1.5rem;
   justify-content: center;
   border-radius: 35px;
-  margin: 1rem 1rem;
   .titleKelola {
     font-size: 1.2rem;
     font-weight: bold;
@@ -243,10 +242,15 @@ body {
 }
 
 .photo-profile {
-  height: 5rem;
-  width: 5rem;
+  height: 3rem;
+  width: 3rem;
   border-radius: 50%;
   object-fit: cover;
+
+  @include media-in(mobile) {
+    height: 5rem;
+    width: 5rem;
+  }
 
   @include media-in(tablet) {
     height: 7rem;
@@ -254,8 +258,8 @@ body {
   }
 
   @include media-in(desktop) {
-    height: 10rem;
-    width: 10rem;
+    height: 9rem;
+    width: 9rem;
   }
 }
 
