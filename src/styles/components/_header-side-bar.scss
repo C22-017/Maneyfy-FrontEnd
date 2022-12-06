@@ -78,7 +78,8 @@
         grid-template-areas:
           'profile-element name-element'
           'profile-element date-element'
-          'content-element content-element';
+          'content-element content-element'
+          'logout-element logout-element';
 
         &:after {
           content: '';
@@ -121,6 +122,21 @@
           font-weight: bold;
           color: $primary-color;
         }
+        .logout-content {
+          grid-area: logout-element;
+          text-align: center;
+          .logout__link {
+            border: none;
+            font-weight: bold;
+            color: #ffff;
+            background-color: $background-logout;
+            border-radius: 1rem;
+            width: 100%;
+            padding: 0.3rem;
+            display: flex;
+            justify-content: center;
+          }
+        }
       }
     }
 
@@ -160,7 +176,6 @@
         background-color: $background-wallet;
         color: white;
         font-weight: 600;
-
 
         @include media-in(tablet) {
           transform: translate3d(-12px, 70px, 0px) !important;

@@ -23,6 +23,12 @@ class TopHeader extends HTMLElement {
               <p class="profile__name">Tegar Naufal Hanip</p>
               <p class="profile__email">tegarhanip@gmail.com</p>
               <a href="#/profile" class="profile__link">Lihat Profil</a>
+              <div class="logout-content">
+                <button href="#" class="logout__link">
+                  <i class='bx bx-log-out bx-rotate-180 large'></i>
+                  <span class="logout_name">Keluar Akun</span>
+                </button>
+              </div>
             </div>
           </div>
           <div class="dropdown wallet-container">
