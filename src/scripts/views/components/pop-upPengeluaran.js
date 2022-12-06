@@ -2,7 +2,7 @@ import CONFIG from '../../globals/config';
 
 const pengeluaran = `
     <div class="pengeluaran shadow-sm col-12 col-sm-12 col-lg-3 text-center">
-      <button type="button" class="btn titleKelola" data-bs-toggle="modal" data-bs-target="#kelolaKategoriPengeluaran">
+      <button type="button" class="btn titleKelola btn-icon-focus" data-bs-toggle="modal" data-bs-target="#kelolaKategoriPengeluaran">
         Kelola Pengeluaran
       </button>
 
@@ -18,7 +18,7 @@ const pengeluaran = `
               <div id="list-category-spending"></div>         
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-add add-spending" data-bs-toggle="modal" data-bs-target="#tambahKategoriPengeluaran">
+              <button type="button" class="btn btn-add add-spending btn-icon-focus" data-bs-toggle="modal" data-bs-target="#tambahKategoriPengeluaran">
                 <p>+</p>
               </button>
             </div>
@@ -33,7 +33,12 @@ const pengeluaran = `
               <h4 class="modal-title" id="exampleModalLabel">Tambah Kategori Pengeluaran</h4>
               <button type="button" class="btn-close p-3" data-bs-toggle="modal" data-bs-target="#kelolaKategoriPengeluaran"></button>
             </div>
-            <body-tambah-spending></body-tambah-spending>     
+            <body-tambah-spending></body-tambah-spending>
+            <div class="modal-footer p-3">
+              <div class="d-grid w-100 d-md-flex justify-content-md-end">
+                <button type="button" id="btnTambahSpending" class="btn btn-primary">Tambah</button>
+              </div>
+            </div>     
           </div>
         </div>
       </div>

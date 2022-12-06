@@ -2,7 +2,7 @@ import CONFIG from '../../globals/config';
 
 const dompet = `
     <div class="dompet shadow-sm col-12 col-sm-12 col-lg-3 text-center">
-      <button type="button" class="btn titleKelola" data-bs-toggle="modal" data-bs-target="#kelolaDompet">
+      <button type="button" class="btn titleKelola btn-icon-focus" data-bs-toggle="modal" data-bs-target="#kelolaDompet">
         Dompet
       </button>
 
@@ -17,7 +17,7 @@ const dompet = `
               <div id="list-wallet"></div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-add add-dompet" data-bs-toggle="modal" data-bs-target="#tambahDompet">
+              <button type="button" class="btn btn-add add-dompet btn-icon-focus" data-bs-toggle="modal" data-bs-target="#tambahDompet">
                 <p>+</p>
               </button>
             </div>
@@ -33,6 +33,11 @@ const dompet = `
               <button type="button" class="btn-close p-3" data-bs-toggle="modal" data-bs-target="#kelolaDompet"></button>
             </div>
             <body-tambah-dompet></body-tambah-dompet>
+            <div class="modal-footer p-3">
+              <div class="d-grid w-100 d-md-flex justify-content-md-end">
+                <button type="button" id="btnTambahDompet" class="btn btn-primary">Tambah</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

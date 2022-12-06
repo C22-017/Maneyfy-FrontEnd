@@ -233,6 +233,15 @@ body {
   }
 }
 
+.icon-selected {
+  width: 3rem;
+  height: 3rem;
+  @include media-in(small-mobile) {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
 .logo {
   height: 4rem;
 }
@@ -292,4 +301,11 @@ body {
   width: 10rem;
   border-radius: 50%;
   object-fit: cover;
+}
+
+.btn-icon-focus {
+  &:focus {
+    border: 3px solid rgba(0, 114, 228, 0.705);
+    box-shadow: 0 4px 8px 0 rgba(6, 80, 229, 0.5);
+  }
 }

@@ -1,3 +1,5 @@
+import CONFIG from "../../globals/config";
+
 class TipsContent extends HTMLElement {
   connectedCallback() {
     this._render();
@@ -8,7 +10,7 @@ class TipsContent extends HTMLElement {
       <h1 class="titlePage mb-3 pt-3">Tips Mengelola Keuangan</h1>
 
       <div class="image">
-        <img src="..//public/images/fitur/Events-pana.png" class="img" alt="">
+        <img src="${CONFIG.IMAGE_TIPS_ILUSTRATION}" class="img" alt="Ilustrasi Tips">
       </div>
       
       <div class="accordion mb-3" id="accordionPanelsStayOpenExample">

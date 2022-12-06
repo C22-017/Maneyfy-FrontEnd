@@ -14,6 +14,7 @@ const CONFIG = {
   IMAGE_FEATURES_4_PATH: './images/features/features-4.png',
   IMAGE_REGISTER_NOW_PATH: './images/features/growth.png',
   IMAGE_DATA_NOT_FOUND: './images/data-not-found.png',
+  IMAGE_TIPS_ILUSTRATION: './images/fitur/Events-pana.png',
   // ASSETS ICON //
   ICON_ADD_TRANSACTION: './icons/add.png',
   ICON_SEARCH: './icons/search.png',

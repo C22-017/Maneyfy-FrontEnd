@@ -59,7 +59,7 @@ class CategorySpending {
 
     const urlencoded = new URLSearchParams();
     urlencoded.append('icSpending_id', icSpendingId);
-    urlencoded.append('categoryName_Spending', categoryNameSpending);
+    urlencoded.append('categoryName_spending', categoryNameSpending);
 
     const requestOptions = {
       method: 'PUT',

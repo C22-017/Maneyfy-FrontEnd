@@ -77,7 +77,7 @@
         grid-template-columns: auto 2fr;
         grid-template-areas:
           'profile-element name-element'
-          'profile-element date-element'
+          'profile-element email-element'
           'content-element content-element';
 
         &:after {
@@ -109,7 +109,7 @@
 
         .profile__email {
           font-size: 0.8rem;
-          grid-area: date-element;
+          grid-area: email-element;
           align-self: start;
           margin: 0;
           margin-top: 4px;

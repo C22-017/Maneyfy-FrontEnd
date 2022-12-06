@@ -14,12 +14,12 @@ class ItemCategorySpendingKelola extends HTMLElement {
           <div><span class="label-item">${categorySpending.categoryName_spending}</span></div>
         </li>
         <li class="list-group-item padding-icon-kelola">
-          <button type="button" name="btnIconEditSpending" class="btn btn-transparent p-2" id="editSpending-${categorySpending.id}" data-bs-toggle="modal" data-bs-target="#editKategoriPengeluaran">
+          <button type="button" name="btnIconEditSpending" class="btn btn-transparent p-2 btn-icon-focus" id="editSpending-${categorySpending.id}" data-bs-toggle="modal" data-bs-target="#editKategoriPengeluaran">
             <iconify-icon icon="material-symbols:edit" class="icon-large text-primary"></iconify-icon>
           </button>
         </li>
         <li class="list-group-item padding-icon-kelola">
-          <button type="button" name="btnIconDeleteSpending" class="btn btn-icon-delete p-2" id="deleteSpending-${categorySpending.id}" data-bs-toggle="modal" data-bs-target="#hapusKategoriPengeluaran">
+          <button type="button" name="btnIconDeleteSpending" class="btn btn-icon-delete p-2 btn-icon-focus" id="deleteSpending-${categorySpending.id}" data-bs-toggle="modal" data-bs-target="#hapusKategoriPengeluaran">
             <iconify-icon icon="mdi:trash" class="icon-large text-danger"></iconify-icon>
           </button>
         </li>

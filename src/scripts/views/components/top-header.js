@@ -17,13 +17,13 @@ class TopHeader extends HTMLElement {
     this.innerHTML = `
       <header class="header shadow-sm" id="header">
         <div class="header-left">
-          <button id="header-toggle">
+          <button id="header-toggle" class="btn-icon-focus">
             <i class='bx bx-menu large' id="icon-toggle"></i>
           </button>
         </div>
         <div class="header-right">
           <div class="dropdown profile-container-ui">
-            <button class="dropdown-toggle" type="button" id="dropdownProfile" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button class="dropdown-toggle btn-icon-focus" type="button" id="dropdownProfile" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <img src="${dataUser.profile_picture}" alt="" class="profile-picture">
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownProfile">
@@ -34,7 +34,7 @@ class TopHeader extends HTMLElement {
             </div>
           </div>
           <div class="dropdown wallet-container">
-            <button class="dropdown-toggle" type="button" id="dropdownWallet" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button class="dropdown-toggle btn-icon-focus" type="button" id="dropdownWallet" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <img src="${CONFIG.ICON_WALLET_USER}" alt="" class="icon-header"><span class="dompet-list">${dompet.name_dompet}</span>
             </button>
             <div class="dropdown-menu" id="dompetListHeader" aria-labelledby="dropdownWallet"></div>
