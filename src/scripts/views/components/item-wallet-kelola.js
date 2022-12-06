@@ -13,12 +13,12 @@ class ItemWalletKelola extends HTMLElement {
           <div><img class="icon-list" src="${dompet.IconDompet.url_icDompet}" alt="logo"></div>
           <div><span class="label-item">${dompet.name_dompet}</span></div>
         </li>
-        <li class="list-group-item">
+        <li class="list-group-item padding-icon-kelola">
           <button type="button" name="btnIconEditDompet" class="btn btn-transparent p-2" id="editDompet-${dompet.id}" data-bs-toggle="modal" data-bs-target="#editDompet">
             <iconify-icon icon="material-symbols:edit" class="icon-large text-primary"></iconify-icon>
           </button>
         </li>
-        <li class="list-group-item">
+        <li class="list-group-item padding-icon-kelola">
           <button type="button" name="btnIconDeleteDompet" class="btn p-2 btn-icon-delete" id="deleteDompet-${dompet.id}" data-bs-toggle="modal" data-bs-target="#hapusDompet">
             <iconify-icon icon="mdi:trash" class="icon-large text-danger"></iconify-icon>
           </button>

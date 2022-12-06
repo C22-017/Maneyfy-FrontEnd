@@ -191,6 +191,13 @@ body {
 
 .label-item {
   font-weight: 600;
+  font-size: 0.8rem;
+  @include media-in(mobile) {
+    font-size: 0.9rem;
+  }
+  @include media-in(mobile) {
+    font-size: 1rem;
+  }
 }
 
 .item-container {
@@ -208,9 +215,22 @@ body {
   }
 }
 
+.padding-icon-kelola {
+  padding: 0;
+  @include media-in(mobile) {
+    padding: 0.5rem;
+  }
+}
+
 .icon-list {
-  height: 3rem;
+  height: 2rem;
   margin-right: 10px;
+  @include media-in(small-mobile) {
+    height: 2.5rem;
+  }
+  @include media-in(mobile) {
+    height: 3rem;
+  }
 }
 
 .logo {
