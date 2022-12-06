@@ -1,7 +1,7 @@
 const editProfile = (dataUser) => {
   const btnEdit = document.querySelector('.btn-edit');
   btnEdit.innerHTML = `
-    <button type="button" class="btn edit shadow-sm btn-icon-focus" data-bs-toggle="modal" data-bs-target="#kelolaProfil">
+    <button type="button" class="btn edit shadow-sm" data-bs-toggle="modal" data-bs-target="#kelolaProfil">
       <span class="iconify" data-icon="oi:pencil"></span>
     </button>
 

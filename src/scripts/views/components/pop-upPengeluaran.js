@@ -1,6 +1,6 @@
 const pengeluaran = `
     <div class="pengeluaran shadow-sm col-12 col-sm-12 col-lg-3 text-center">
-      <button type="button" class="btn titleKelola btn-icon-focus" data-bs-toggle="modal" data-bs-target="#kelolaKategoriPengeluaran">
+      <button type="button" class="btn titleKelola" data-bs-toggle="modal" data-bs-target="#kelolaKategoriPengeluaran">
         Kelola Pengeluaran
       </button>
 

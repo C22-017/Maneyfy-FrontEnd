@@ -69,7 +69,7 @@
         min-width: 16rem; // antisipasi jika nama atau email user pendek
         top: 70px;
         border: 2px solid $primary-color;
-        padding: 1rem 1rem 0.5rem 1rem;
+        padding: 1rem;
         border-radius: 10px;
         box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
 
@@ -78,7 +78,8 @@
         grid-template-areas:
           'profile-element name-element'
           'profile-element email-element'
-          'content-element content-element';
+          'content-element content-element'
+          'logout-element logout-element';
 
         &:after {
           content: '';
@@ -121,6 +122,22 @@
           text-align: center;
           font-weight: bold;
           color: $primary-color;
+        }
+
+        .logout-content {
+          grid-area: logout-element;
+          text-align: center;
+          .logout__link {
+            border: none;
+            font-weight: bold;
+            color: #ffff;
+            background-color: $background-logout;
+            border-radius: 1rem;
+            width: 100%;
+            padding: 0.7rem;
+            display: flex;
+            justify-content: center;
+          }
         }
       }
     }
