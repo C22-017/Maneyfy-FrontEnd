@@ -10,7 +10,7 @@ class HistoryTransaction extends HTMLElement {
     const dompet = this._dompetSelected;
 
     this.innerHTML = `
-      <section class="container d-flex justify-content-center section-history mb-5">
+      <section class="container d-flex justify-content-center section-history mb-5 px-0">
         <div class="riwayat-transaksi">
           <p class="history-title mb-1">Riwayat Transaksi</p>
           <p class="description-wallet">Berdasarkan dompet <b>${dompet.name_dompet}</b></p>

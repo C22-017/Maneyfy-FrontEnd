@@ -1,6 +1,7 @@
 import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
 
+import './components/spinner-element';
 import './components/side-bar';
 import './components/top-header';
 import './components/item-icon';

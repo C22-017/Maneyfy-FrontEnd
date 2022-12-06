@@ -10,7 +10,7 @@ class ChooseMonth extends HTMLElement {
       <section class="month section-bg">
         <div class="container">
           <div class="row no-gutters justify-content-center">
-            <div class="col-lg-4 col-md-6 d-md-flex align-items-md-center box-main">
+            <div class="col-lg-4 col-md-6 d-md-flex align-items-md-center box-main px-0">
               <div class="box-month">
                 <div class="main-months">
                   <p class="choose-title mb-3 text-center">Pilih Bulan</p>

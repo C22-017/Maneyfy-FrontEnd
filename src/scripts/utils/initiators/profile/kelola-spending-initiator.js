@@ -1,6 +1,7 @@
 import CONFIG from '../../../globals/config';
 import CategorySpending from '../../../services/api/categorySpending';
 import { getElement, getAllElement } from '../../element';
+import { showLoading, hideLoading } from '../spinner-initiator';
 
 const KelolaSpendingInitiator = {
   init({
@@ -58,7 +59,7 @@ const KelolaSpendingInitiator = {
       const nameSpending = getElement('#inputNameSpendingTambah').value;
 
       if (nameSpending === '') {
-        alert('Nama Spending harus diisi');
+        alert('Nama kategori pengeluaran harus diisi');
         return false;
       }
 
@@ -74,10 +75,12 @@ const KelolaSpendingInitiator = {
         categoryNameSpending: nameSpending,
       };
 
+      showLoading();
       const responseTambahSpending = await CategorySpending.createCategorySpending(data);
+      hideLoading();
 
       if (responseTambahSpending.status === 'success') {
-        alert('Spending berhasil dibuat');
+        alert('Kategori Pengeluaran berhasil dibuat');
         location.reload();
       } else {
         alert(responseTambahSpending.msg);
@@ -90,10 +93,13 @@ const KelolaSpendingInitiator = {
     getAllElement('button[name="btnIconEditSpending"]').forEach((element) => {
       element.addEventListener('click', async () => {
         const buttonId = parseInt(element.id.split('-')[1], 10); // ('editSpending-#')
+
+        showLoading();
         const dataSpending = await CategorySpending.getCategorySpendingById(buttonId);
 
         const elementBodyEditSpending = getElement('body-edit-spending');
         elementBodyEditSpending.dataCategorySpending = dataSpending.result;
+        hideLoading();
 
         this._editSpendingProcess();
       });
@@ -114,12 +120,19 @@ const KelolaSpendingInitiator = {
             const idIcon = parseInt(elementIcon.id.split('-')[1], 10);
             const nameSpending = getElement('#inputNameSpendingEdit').value;
 
+            if (nameSpending === '') {
+              alert('Nama kategori pengeluaran harus diisi');
+              return false;
+            }
+
             const data = {
               icSpendingId: idIcon,
               categoryNameSpending: nameSpending,
             };
 
+            showLoading();
             const responseEditSpending = await CategorySpending.updateCategorySpendingById(idCategorySpending, data);
+            hideLoading();
 
             if (responseEditSpending.msg === 'Data updated successfully') {
               alert('Kategori Pengeluaran berhasil diubah');
@@ -136,16 +149,21 @@ const KelolaSpendingInitiator = {
   _setupButtonDeleteSpending() {
     getAllElement('button[name="btnIconDeleteSpending"]').forEach(async (element) => {
       // Check if spending count < 2
+      showLoading();
       const spendings = await CategorySpending.getAllCategorySpending();
+      hideLoading();
+
       if (spendings.data.length === 1) {
         element.setAttribute('disabled', '');
       }
       element.addEventListener('click', async () => {
         const buttonId = parseInt(element.id.split('-')[1], 10); // ('deleteSpending-#')
+        showLoading();
         const dataSpending = await CategorySpending.getCategorySpendingById(buttonId);
-        console.log(dataSpending);
+
         const elementBodyDeleteSpending = getElement('body-delete-spending');
         elementBodyDeleteSpending.dataCategorySpending = dataSpending.result;
+        hideLoading();
 
         this._deleteSpendingProcess();
       });
@@ -155,9 +173,11 @@ const KelolaSpendingInitiator = {
   _deleteSpendingProcess() {
     getAllElement('button[name="btnDeleteSpending"]').forEach((element) => {
       element.addEventListener('click', async () => {
+        showLoading();
         const idCategorySpending = parseInt(element.id.split('-')[1], 10); // ('btnDeleteSpending-#')
         const typeCategory = 'spending';
         const responseDeleteCategory = await CategorySpending.deleteCategorySpendingById(idCategorySpending, typeCategory);
+        hideLoading();
 
         if (responseDeleteCategory.msg === 'Category Spending berhasil dihapus') {
           alert('Kategori Pengeluaran berhasil dihapus');

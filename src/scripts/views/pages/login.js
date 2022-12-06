@@ -3,6 +3,7 @@ import { getElement } from '../../utils/element';
 import { saveDataToLocalStorage } from '../../utils/local-storage-utils';
 import { redirectIfAlreadytLoggedin } from '../../utils/redirect-page';
 import { setupPageUserNotLoggedin } from '../../utils/setup-page';
+import { showLoading, hideLoading } from '../../utils/initiators/spinner-initiator';
 
 const Login = {
   async beforeRender() {
@@ -12,6 +13,7 @@ const Login = {
   async render() {
     return `
       <form-login></form-login>
+      <spinner-element></spinner-element>
   `;
   },
 
@@ -31,7 +33,10 @@ const Login = {
           return false;
         }
 
+        showLoading();
         const responseLogin = await Auth.login(inputEmail, inputPassword);
+        hideLoading();
+
         if (responseLogin.msg === 'Login Success') {
           saveDataToLocalStorage(responseLogin.dataDompet[0].id, responseLogin.token);
 

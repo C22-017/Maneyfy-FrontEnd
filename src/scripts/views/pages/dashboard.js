@@ -9,6 +9,7 @@ import { getElement } from '../../utils/element';
 import { setupPageUserAlreadyLoggedin } from '../../utils/setup-page';
 import { redirectIfNotLoggedin } from '../../utils/redirect-page';
 import { getDataLocalStorage } from '../../utils/local-storage-utils';
+import { showLoading, hideLoading } from '../../utils/initiators/spinner-initiator';
 
 const Dashboard = {
   async beforeRender() {
@@ -26,11 +27,14 @@ const Dashboard = {
         <choose-month></choose-month>
         <history-transaction></history-transaction>
       </main>
+
+      <spinner-element></spinner-element>
     `;
   },
 
   async afterRender() {
     try {
+      showLoading();
       setupPageUserAlreadyLoggedin();
 
       getElement('#tips-link').classList.remove('active');
@@ -54,6 +58,7 @@ const Dashboard = {
       });
 
       drawerInitiator();
+      // hideLoading();
     } catch (error) {
       console.log(error);
     }

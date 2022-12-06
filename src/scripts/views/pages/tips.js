@@ -6,6 +6,7 @@ import { getElement } from '../../utils/element';
 import { redirectIfNotLoggedin } from '../../utils/redirect-page';
 import { setupPageUserAlreadyLoggedin } from '../../utils/setup-page';
 import { getDataLocalStorage } from '../../utils/local-storage-utils';
+import { showLoading, hideLoading } from '../../utils/initiators/spinner-initiator';
 
 const Tips = {
   async beforeRender() {
@@ -17,9 +18,11 @@ const Tips = {
         <top-header></top-header>
         <side-bar></side-bar>
   
-        <main class="container">
+        <main class="container px-0">
           <tips-content></tips-content>
         </main>
+
+        <spinner-element></spinner-element>
     `;
   },
 
@@ -30,6 +33,7 @@ const Tips = {
       getElement('#dashboard-link').classList.remove('active');
       getElement('#tips-link').classList.add('active');
 
+      showLoading();
       const user = await User.getDataUser();
       const dompets = await Dompet.getAllDompet();
       const selectedDompet = await Dompet.getDataDompetById(getDataLocalStorage().dompet_id);
@@ -37,6 +41,7 @@ const Tips = {
       this._initContentTips(user.data, dompets.data, selectedDompet.result);
 
       drawerInitiator(); // Jangan diubah posisinya
+      hideLoading();
     } catch (error) {
       console.log(error);
     }

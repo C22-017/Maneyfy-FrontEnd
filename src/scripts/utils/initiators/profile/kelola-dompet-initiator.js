@@ -2,6 +2,7 @@ import CONFIG from '../../../globals/config';
 import Dompet from '../../../services/api/dompet';
 import { getElement, getAllElement } from '../../element';
 import { getDataLocalStorage, saveDataToLocalStorage } from '../../local-storage-utils';
+import { showLoading, hideLoading } from '../spinner-initiator';
 
 const KelolaDompetInitiator = {
   init({
@@ -60,7 +61,7 @@ const KelolaDompetInitiator = {
       const nameDompet = getElement('#inputNameDompetTambah').value;
 
       if (nameDompet === '') {
-        alert('Nama Dompet harus diisi');
+        alert('Nama dompet harus diisi');
         return false;
       }
 
@@ -71,7 +72,9 @@ const KelolaDompetInitiator = {
         idIcon = parseInt(element.id.split('-')[1], 10);
       }
 
+      showLoading();
       const responseTambahDompet = await Dompet.createDompet(idIcon, nameDompet);
+      hideLoading();
 
       if (responseTambahDompet.status === 'success') {
         alert('Dompet berhasil dibuat');
@@ -87,10 +90,13 @@ const KelolaDompetInitiator = {
     getAllElement('button[name="btnIconEditDompet"]').forEach((element) => {
       element.addEventListener('click', async () => {
         const buttonId = parseInt(element.id.split('-')[1], 10); // ('editDompet-#')
+
+        showLoading();
         const dataDompet = await Dompet.getDataDompetById(buttonId);
 
         const elementBodyEditDompet = getElement('body-edit-dompet');
         elementBodyEditDompet.dataDompet = dataDompet.result;
+        hideLoading();
 
         this._editDompetProcess();
       });
@@ -111,12 +117,19 @@ const KelolaDompetInitiator = {
             const idIcon = parseInt(elementIcon.id.split('-')[1], 10);
             const nameDompet = getElement('#inputNameDompetEdit').value;
 
+            if (nameDompet === '') {
+              alert('Nama dompet harus diisi');
+              return false;
+            }
+
             const data = {
               icDompetId: idIcon,
               categoryNameDompet: nameDompet,
             };
 
+            showLoading();
             const responseEditDompet = await Dompet.updateDompetById(idDompet, data);
+            hideLoading();
 
             if (responseEditDompet.msg === 'Data updated successfully') {
               alert('Dompet berhasil diubah');
@@ -133,16 +146,21 @@ const KelolaDompetInitiator = {
   _setupButtonDeleteDompet() {
     getAllElement('button[name="btnIconDeleteDompet"]').forEach(async (element) => {
       // Check if dompet count < 2
+      showLoading();
       const dompets = await Dompet.getAllDompet();
+      hideLoading();
+
       if (dompets.data.length === 1) {
         element.setAttribute('disabled', '');
       }
       element.addEventListener('click', async () => {
         const buttonId = parseInt(element.id.split('-')[1], 10); // ('deleteDompet-#')
+        showLoading();
         const dataDompet = await Dompet.getDataDompetById(buttonId);
 
         const elementBodyDeleteDompet = getElement('body-delete-dompet');
         elementBodyDeleteDompet.dataDompet = dataDompet.result;
+        hideLoading();
 
         this._deleteDompetProcess();
       });
@@ -152,6 +170,7 @@ const KelolaDompetInitiator = {
   _deleteDompetProcess() {
     getAllElement('button[name="btnDeleteDompet"]').forEach((element1) => {
       element1.addEventListener('click', async () => {
+        showLoading();
         const idDompet = parseInt(element1.id.split('-')[1], 10); // ('btnDeleteDompet-#')
         const dataDompet1 = await Dompet.deleteDompet(idDompet);
         const newDompets = await Dompet.getAllDompet();
@@ -160,6 +179,7 @@ const KelolaDompetInitiator = {
         if (getDataLocalStorage().dompet_id === idDompet) {
           saveDataToLocalStorage(newDompets.data[0].id, getDataLocalStorage().token);
         }
+        hideLoading();
 
         if (dataDompet1.msg === 'Dompet berhasil dihapus') {
           alert('Dompet berhasil dihapus');

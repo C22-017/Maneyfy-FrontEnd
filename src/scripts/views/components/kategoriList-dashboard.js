@@ -33,7 +33,7 @@ class CategoryListDashboard extends HTMLElement {
                 <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter text-center">${rupiahFormat(selectedDompet.amount)}</span>
               </div>
             </div>
-            <div class="col-lg-4 col-md-12 d-md-flex align-items-md-stretch ">
+            <div class="col-lg-4 col-md-12 d-md-flex align-items-md-stretch">
               <div class="count-box-pengeluaran text-center justify-content-center">
                 <p class="category-title text-center"><strong>Pengeluaran</strong></p>
                 <div class="justify-content-center text-center">

@@ -15,6 +15,8 @@ import { getElement } from '../../utils/element';
 import { redirectIfNotLoggedin } from '../../utils/redirect-page';
 import { setupPageUserAlreadyLoggedin } from '../../utils/setup-page';
 import { getDataLocalStorage } from '../../utils/local-storage-utils';
+import { showLoading, hideLoading } from '../../utils/initiators/spinner-initiator';
+
 
 const Profile = {
   async beforeRender() {
@@ -35,6 +37,8 @@ const Profile = {
             <section class="kelola row shadow-sm mx-0">
             </section>
         </main>
+
+        <spinner-element></spinner-element>
     `;
   },
 
@@ -45,6 +49,7 @@ const Profile = {
       getElement('#dashboard-link').classList.remove('active');
       getElement('#tips-link').classList.remove('active');
 
+      showLoading();
       const user = await User.getDataUser();
       const dompets = await Dompet.getAllDompet();
       const selectedDompet = await Dompet.getDataDompetById(getDataLocalStorage().dompet_id);
@@ -55,6 +60,7 @@ const Profile = {
 
       const categorySpendings = await CategorySpending.getAllCategorySpending();
       const iconSpendings = await Icon.getAllIconSpending();
+
 
       // Jangan diubah posisinya //
       profile(user.data);
@@ -72,6 +78,7 @@ const Profile = {
       });
 
       drawerInitiator();
+      hideLoading();
       // Jangan diubah posisinya //
     } catch (error) {
       console.log(error);

@@ -2,6 +2,7 @@ import Auth from '../../services/api/auth';
 import { getElement } from '../../utils/element';
 import { redirectIfAlreadytLoggedin } from '../../utils/redirect-page';
 import { setupPageUserNotLoggedin } from '../../utils/setup-page';
+import { showLoading, hideLoading } from '../../utils/initiators/spinner-initiator';
 
 const Register = {
   async beforeRender() {
@@ -11,6 +12,7 @@ const Register = {
   async render() {
     return `
       <form-register></form-register>
+      <spinner-element></spinner-element>
   `;
   },
 
@@ -42,7 +44,10 @@ const Register = {
           return false;
         }
 
+        showLoading();
         const responseRegister = await Auth.register(inputName, inputEmail, inputPassword);
+        hideLoading();
+
         if (responseRegister.msg === 'User created successfully') {
           alert('Register akun berhasil. Silahkan login');
 

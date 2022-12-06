@@ -1,5 +1,6 @@
 import { removeDataLocalStorage } from '../../local-storage-utils';
 import User from '../../../services/api/user';
+import { showLoading, hideLoading } from '../spinner-initiator';
 
 const EditProfileInitiator = {
   init({
@@ -28,7 +29,10 @@ const EditProfileInitiator = {
         const { profile_picture } = this._user;
         const file = (!inputFile) ? profile_picture : inputFile;
 
+        showLoading();
         const responseUpdateUser = await User.updateDataUser(inputName, inputEmail, file);
+        hideLoading();
+
         if (responseUpdateUser.msg === 'Data updated successfully') {
           alert('Profil akun berhasil diperbaharui');
           location.reload();
@@ -44,7 +48,10 @@ const EditProfileInitiator = {
   _deleteProfileProcess() {
     try {
       document.querySelector('#btnDeleteUser').addEventListener('click', async () => {
+        showLoading();
         const responseDelete = await User.deleteUser();
+        hideLoading();
+
         if (responseDelete.msg === 'User berhasil dihapus') {
           alert('Anda telah menghapus akun. Silahkan daftar kembali.');
           removeDataLocalStorage();

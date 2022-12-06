@@ -135,11 +135,9 @@
 .riwayat-transaksi {
   box-shadow: -10px -5px 40px 0 rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
-  padding: 1.5rem;
+  padding: 1.5rem 1rem;
+  width: 50rem;
   background-color: #fff;
-  @include media-in(tablet) {
-    width: 50rem;
-  }
 }
 
 .section-history {

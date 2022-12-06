@@ -1,6 +1,8 @@
 import CONFIG from '../../../globals/config';
 import Transaction from '../../../services/api/transaction';
 import { getElement, getAllElement } from '../../element';
+import { showLoading, hideLoading } from '../spinner-initiator';
+
 
 const TransactionInitiator = {
   init({
@@ -79,7 +81,9 @@ const TransactionInitiator = {
         dateTransaction: dateValue,
       }
 
+      showLoading();
       const responseAddTransaction = await Transaction.createTransaction(data);
+      hideLoading();
 
       if (responseAddTransaction.status === 'success') {
         alert('Transaksi berhasil ditambahkan');
@@ -94,7 +98,9 @@ const TransactionInitiator = {
     try {
       const dataParams = this._getValueFromInputMonthSelected();
 
+      showLoading();
       const transactionResult = await Transaction.getAllTransaction(dataParams);
+
       this._element.transactionByMonth = transactionResult;
       this._element.selectedDompet = this._selectedDompet;
     } catch (error) {
@@ -120,6 +126,7 @@ const TransactionInitiator = {
 
       const dataParams = this._getValueFromInputMonthSelected();
       const transactionResult = await Transaction.getAllTransaction(dataParams);
+      hideLoading();
 
       if (transactionResult.data.length === 0) {
         listHistoryElement.innerHTML = `
@@ -146,18 +153,24 @@ const TransactionInitiator = {
       itemsHistory.forEach((itemElement) => {
         itemElement.addEventListener('click', async () => {
           const idTransaction = parseInt(itemElement.id.split('-')[1], [10]);
+
+          showLoading();
           const responseTransaction = await Transaction.getDetailTransactionById(idTransaction);
+
           const elementDetailTransaction = getElement('body-detail-transaction');
           elementDetailTransaction.transaction = responseTransaction.result;
 
           const elementEditTransaction = getElement('body-edit-transaction');
           elementEditTransaction.dompetSelected = this._selectedDompet;
           elementEditTransaction.transaction = responseTransaction.result;
-          this._setupBtnEditTransaction(responseTransaction.result, elementEditTransaction);
-          this._setupUpdateTransaction(responseTransaction.result);
 
           const elementDeleteTransaction = getElement('body-delete-transaction');
           elementDeleteTransaction.transaction = responseTransaction.result;
+          hideLoading();
+
+
+          this._setupBtnEditTransaction(responseTransaction.result, elementEditTransaction);
+          this._setupUpdateTransaction(responseTransaction.result);
           this._setupBtnDeleteTransaction();
         })
       });
@@ -176,7 +189,11 @@ const TransactionInitiator = {
     const elementBtnDelete = getElement('.btnDeleteTransaction');
     elementBtnDelete.addEventListener('click', async () => {
       const idTransaction = parseInt(elementBtnDelete.id.split('-')[1], [10]);
+
+      showLoading();
       const responseDelete = await Transaction.deleteTransactionById(idTransaction);
+      hideLoading();
+
       if (responseDelete.msg === 'Transaction berhasil dihapus') {
         alert('Transaksi berhasil dihapus');
         location.reload();
@@ -345,7 +362,9 @@ const TransactionInitiator = {
         dateTransaction: dateValue,
       }
 
+      showLoading();
       const responseUpdateTransaction = await Transaction.updateTransactionById(transaction.id, dataUpdated);
+      hideLoading();
 
       if (responseUpdateTransaction.msg === 'Data updated successfully') {
         alert('Data Transaksi berhasil diubah');

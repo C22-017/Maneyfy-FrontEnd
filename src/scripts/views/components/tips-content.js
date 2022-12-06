@@ -16,7 +16,7 @@ class TipsContent extends HTMLElement {
           <h2 class="accordion-header" id="panelsStayOpen-headingOne">
             <button class="accordion-button" type="button" data-bs-toggle="collapse"
               data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-              1. Membedakan Keuangan Bisnis dengan Keuangan Pribadi
+              <b>1. Membedakan Keuangan Bisnis dengan Keuangan Pribadi</b>
             </button>
           </h2>
           <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
@@ -39,7 +39,7 @@ class TipsContent extends HTMLElement {
           <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-              2. Menentukan Anggaran dan Skala Prioritas Keuangan Bisnis
+              <b>2. Menentukan Anggaran dan Skala Prioritas Keuangan Bisnis</b>
             </button>
           </h2>
           <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
@@ -65,7 +65,7 @@ class TipsContent extends HTMLElement {
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
               aria-controls="panelsStayOpen-collapseThree">
-              3. Membatasi Resiko Hutang
+              <b>3. Membatasi Resiko Hutang</b>
             </button>
           </h2>
           <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
@@ -91,7 +91,7 @@ class TipsContent extends HTMLElement {
           <h2 class="accordion-header" id="panelsStayOpen-headingFour">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
-              4. Membuat Laporan Arus Kas (Cash Flow) Secara Berkala
+              <b>4. Membuat Laporan Arus Kas (Cash Flow) Secara Berkala</b>
             </button>
           </h2>
           <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
@@ -121,7 +121,7 @@ class TipsContent extends HTMLElement {
           <h2 class="accordion-header" id="panelsStayOpen-headingFive">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
-              5. Mengirim Tagihan dengan Tepat Waktu
+              <b>5. Mengirim Tagihan dengan Tepat Waktu</b>
             </button>
           </h2>
           <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse"
@@ -150,7 +150,7 @@ class TipsContent extends HTMLElement {
           <h2 class="accordion-header" id="panelsStayOpen-headingSix">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
-              6. Lakukan Monitoring Secara Berkala
+              <b>6. Lakukan Monitoring Secara Berkala</b>
             </button>
           </h2>
           <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse"
@@ -171,7 +171,7 @@ class TipsContent extends HTMLElement {
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false"
               aria-controls="panelsStayOpen-collapseSeven">
-              7. Gunakan Teknologi dalam Membuat Pembukuan Keuangan
+              <b>7. Gunakan Teknologi dalam Membuat Pembukuan Keuangan</b>
             </button>
           </h2>
           <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse"

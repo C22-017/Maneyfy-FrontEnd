@@ -1,6 +1,7 @@
 import CONFIG from '../../../globals/config';
 import CategoryEarning from '../../../services/api/categoryEarning';
 import { getElement, getAllElement } from '../../element';
+import { showLoading, hideLoading } from '../spinner-initiator';
 
 const KelolaEarningInitiator = {
   init({
@@ -58,7 +59,7 @@ const KelolaEarningInitiator = {
       const nameEarning = getElement('#inputNameEarningTambah').value;
 
       if (nameEarning === '') {
-        alert('Nama Earning harus diisi');
+        alert('Nama kategori pemasukan harus diisi');
         return false;
       }
 
@@ -74,10 +75,12 @@ const KelolaEarningInitiator = {
         categoryNameEarning: nameEarning,
       };
 
+      showLoading();
       const responseTambahEarning = await CategoryEarning.createCategoryEarning(data);
+      hideLoading();
 
       if (responseTambahEarning.status === 'success') {
-        alert('Earning berhasil dibuat');
+        alert('Kategori Pemasukan berhasil dibuat');
         location.reload();
       } else {
         alert(responseTambahEarning.msg);
@@ -90,10 +93,13 @@ const KelolaEarningInitiator = {
     getAllElement('button[name="btnIconEditEarning"]').forEach((element) => {
       element.addEventListener('click', async () => {
         const buttonId = parseInt(element.id.split('-')[1], 10); // ('editEarning-#')
+
+        showLoading();
         const dataEarning = await CategoryEarning.getCategoryEarningById(buttonId);
 
         const elementBodyEditEarning = getElement('body-edit-earning');
         elementBodyEditEarning.dataCategoryEarning = dataEarning.result;
+        hideLoading();
 
         this._editEarningProcess();
       });
@@ -114,12 +120,19 @@ const KelolaEarningInitiator = {
             const idIcon = parseInt(elementIcon.id.split('-')[1], 10);
             const nameEarning = getElement('#inputNameEarningEdit').value;
 
+            if (nameEarning === '') {
+              alert('Nama kategori pemasukan harus diisi');
+              return false;
+            }
+
             const data = {
               icEarningId: idIcon,
               categoryNameEarning: nameEarning,
             };
 
+            showLoading();
             const responseEditEarning = await CategoryEarning.updateCategoryEarningById(idCategoryEarning, data);
+            hideLoading();
 
             if (responseEditEarning.msg === 'Data updated successfully') {
               alert('Kategori Pemasukan berhasil diubah');
@@ -136,16 +149,21 @@ const KelolaEarningInitiator = {
   _setupButtonDeleteEarning() {
     getAllElement('button[name="btnIconDeleteEarning"]').forEach(async (element) => {
       // Check if earning count < 2
+      showLoading();
       const earnings = await CategoryEarning.getAllCategoryEarning();
+      hideLoading();
+
       if (earnings.data.length === 1) {
         element.setAttribute('disabled', '');
       }
       element.addEventListener('click', async () => {
         const buttonId = parseInt(element.id.split('-')[1], 10); // ('deleteEarning-#')
+        showLoading();
         const dataEarning = await CategoryEarning.getCategoryEarningById(buttonId);
-        console.log(dataEarning);
+
         const elementBodyDeleteEarning = getElement('body-delete-earning');
         elementBodyDeleteEarning.dataCategoryEarning = dataEarning.result;
+        hideLoading();
 
         this._deleteEarningProcess();
       });
@@ -155,9 +173,11 @@ const KelolaEarningInitiator = {
   _deleteEarningProcess() {
     getAllElement('button[name="btnDeleteEarning"]').forEach((element) => {
       element.addEventListener('click', async () => {
+        showLoading();
         const idCategoryEarning = parseInt(element.id.split('-')[1], 10); // ('btnDeleteEarning-#')
         const typeCategory = 'earning';
         const responseDeleteCategory = await CategoryEarning.deleteCategoryEarningById(idCategoryEarning, typeCategory);
+        hideLoading();
 
         if (responseDeleteCategory.msg === 'Category Earning berhasil dihapus') {
           alert('Kategori Pemasukan berhasil dihapus');
