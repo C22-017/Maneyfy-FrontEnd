@@ -1,5 +1,5 @@
 import CONFIG from '../../globals/config';
-import { rupiahFormat } from '../../utils/format-currency-idr';
+import { rupiahFormat, formattingRupiahToInput } from '../../utils/format-currency-idr';
 import { getDateFormated } from '../../utils/format-date';
 
 class BodyAddTransaction extends HTMLElement {
@@ -35,7 +35,7 @@ class BodyAddTransaction extends HTMLElement {
               <div class="input-group-prepend">
                 <span class="input-group-text">Rp</span>
               </div>
-              <input type="number" class="form-control" id="amountAddTransaction" placeholder="100.000" min="500" max="1000000000">
+              <input type="text" pattern="\\d*" class="form-control" id="amountAddTransaction" placeholder="100.000" min="500" max="1000000000">
             </div>
           </div>
         </div>
@@ -55,6 +55,11 @@ class BodyAddTransaction extends HTMLElement {
         </div>
       </div>
     `;
+
+    const elementAmount = document.querySelector('#amountAddTransaction');
+    elementAmount.addEventListener('keyup', () => {
+      elementAmount.value = formattingRupiahToInput(elementAmount.value);
+    });
   }
 }
 

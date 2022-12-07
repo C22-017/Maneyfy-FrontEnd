@@ -127,8 +127,6 @@ const KelolaSpendingInitiator = {
               icSpendingId: idIcon,
               categoryNameSpending: nameSpending,
             };
-            console.log(nameSpending);
-            console.log(idCategory);
 
             showLoading();
             const responsEdit = await CategorySpending.updateCategorySpendingById(idCategory, data);

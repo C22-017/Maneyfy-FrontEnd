@@ -15,12 +15,12 @@ class ItemCategoryEarningKelola extends HTMLElement {
         </li>
         <li class="list-group-item padding-icon-kelola">
           <button type="button" name="btnIconEditEarning" class="btn btn-transparent p-2 btn-icon-focus" id="editEarning-${categoryEarning.id}" data-bs-toggle="modal" data-bs-target="#editKategoriPemasukan">
-            <iconify-icon icon="material-symbols:edit" class="icon-large text-primary"></iconify-icon>
+            <iconify-icon icon="material-symbols:edit" class="icon-large color-primary"></iconify-icon>
           </button>
         </li>
         <li class="list-group-item padding-icon-kelola">
           <button type="button" name="btnIconDeleteEarning" class="btn btn-icon-delete p-2 btn-icon-focus" id="deleteEarning-${categoryEarning.id}" data-bs-toggle="modal" data-bs-target="#hapusKategoriPemasukan">
-            <iconify-icon icon="mdi:trash" class="icon-large text-danger"></iconify-icon>
+            <iconify-icon icon="mdi:trash" class="icon-large color-danger"></iconify-icon>
           </button>
         </li>
       </ul>

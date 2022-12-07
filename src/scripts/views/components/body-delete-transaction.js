@@ -11,8 +11,8 @@ class BodyDeleteTransaction extends HTMLElement {
       <div class="modal-body modal-confirm">
         <span>Tindakan ini tidak dapat dikembalikan</span>
         <div class="justify-content-between row p-3">
-          <button type="button" class="btn btn-primary col-4" data-bs-toggle="modal" data-bs-target="#detailTransaksi">Batal</button>
-          <button type="button" id="btnDeleteTransaction-${transaction.id}" class="btn btn-danger col-4 btnDeleteTransaction">Hapus</button>
+          <button type="button" class="btn btn-primary btn-primary-color col-4" data-bs-toggle="modal" data-bs-target="#detailTransaksi">Batal</button>
+          <button type="button" id="btnDeleteTransaction-${transaction.id}" class="btn btn-danger btn-danger-color col-4 btnDeleteTransaction">Hapus</button>
         </div>
       </div>
     `;

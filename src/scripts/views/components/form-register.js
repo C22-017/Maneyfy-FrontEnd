@@ -13,7 +13,11 @@ class FormRegister extends HTMLElement {
             <div class="col-lg-6 form-input">
               <form id="register-form" action="">
                 <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-center head">
-                  <img class="img-fluid logo-login-register" src="${CONFIG.IMAGE_BRAND_LOGO_PATH}" alt="">
+                  <picture>
+                    <source type="image/webp" srcset="${CONFIG.IMAGE_BRAND_LOGO_PATH}.webp">
+                    <source type="image/png" srcset="${CONFIG.IMAGE_BRAND_LOGO_PATH}.png">
+                    <img src="${CONFIG.IMAGE_BRAND_LOGO_PATH}.png" class="img-fluid logo-login-register" alt="Logo maneyfy">
+                  </picture>
                 </div>
       
                 <div class="divider d-flex align-items-center my-4">
@@ -65,7 +69,11 @@ class FormRegister extends HTMLElement {
               </div>
             </div>
             <div class="col-lg-6 hero-login-register">
-              <img src="${CONFIG.IMAGE_HERO_REGISTER_PATH}" class="img-fluid" alt="img_maneyfy_register">
+              <picture>
+                <source type="image/webp" srcset="${CONFIG.IMAGE_HERO_REGISTER_PATH}.webp">
+                <source type="image/png" srcset="${CONFIG.IMAGE_HERO_REGISTER_PATH}.png">
+                <img src="${CONFIG.IMAGE_HERO_REGISTER_PATH}.png" class="img-fluid" alt="Ilustrasi daftar akun untuk dapat menggunakan maneyfy">
+              </picture>
             </div>
           </div>
         </div>

@@ -15,12 +15,12 @@ class ItemWalletKelola extends HTMLElement {
         </li>
         <li class="list-group-item padding-icon-kelola">
           <button type="button" name="btnIconEditDompet" class="btn btn-transparent p-2 btn-icon-focus" id="editDompet-${dompet.id}" data-bs-toggle="modal" data-bs-target="#editDompet">
-            <iconify-icon icon="material-symbols:edit" class="icon-large text-primary"></iconify-icon>
+            <iconify-icon icon="material-symbols:edit" class="icon-large color-primary"></iconify-icon>
           </button>
         </li>
         <li class="list-group-item padding-icon-kelola">
           <button type="button" name="btnIconDeleteDompet" class="btn p-2 btn-icon-delete btn-icon-focus" id="deleteDompet-${dompet.id}" data-bs-toggle="modal" data-bs-target="#hapusDompet">
-            <iconify-icon icon="mdi:trash" class="icon-large text-danger"></iconify-icon>
+            <iconify-icon icon="mdi:trash" class="icon-large color-danger"></iconify-icon>
           </button>
         </li>
       </ul>

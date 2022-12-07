@@ -1,4 +1,4 @@
-import { rupiahFormat } from '../../utils/format-currency-idr';
+import { rupiahFormat, formattingRupiahToInput, integerRupiahToInput } from '../../utils/format-currency-idr';
 
 class BodyEditTransaction extends HTMLElement {
   set dompetSelected(dompet) {
@@ -13,7 +13,8 @@ class BodyEditTransaction extends HTMLElement {
   _render() {
     const dompet = this._dompetSelected;
     const transaction = this._transaction;
-    const amount = rupiahFormat(dompet.amount);
+    const amountWallet = rupiahFormat(dompet.amount);
+    const amountTransaction = integerRupiahToInput(transaction.amount_transaction);
 
     this.innerHTML = `
       <div class="row">
@@ -21,7 +22,7 @@ class BodyEditTransaction extends HTMLElement {
           <span>Dompet</span>
           <div class="d-flex flex-fill flex-row align-items-center justify-content-center gap-2">
             <div><img class="icon-add-edit-transaction" src="${dompet.IconDompet.url_icDompet}" alt="logo"></div>
-            <span class="label-dompet">${dompet.name_dompet} (${amount})</span>
+            <span class="label-dompet">${dompet.name_dompet} (${amountWallet})</span>
           </div>
         </div>
         <div class="form-transaksi col-12 col-lg-3 align-self-center dompet-pick">
@@ -38,7 +39,7 @@ class BodyEditTransaction extends HTMLElement {
               <div class="input-group-prepend">
                 <span class="input-group-text">Rp</span>
               </div>
-              <input type="number" class="form-control" id="amountEditTransaction" value="${transaction.amount_transaction}" placeholder="Rp 100.000" min="500" max="1000000000">
+              <input type="text" pattern="\\d*" class="form-control" id="amountEditTransaction" value="${amountTransaction}" placeholder="Rp 100.000" min="500" max="1000000000">
             </div>
           </div>
         </div>
@@ -58,6 +59,11 @@ class BodyEditTransaction extends HTMLElement {
         </div>
       </div>
     `;
+
+    const elementAmount = document.querySelector('#amountEditTransaction');
+    elementAmount.addEventListener('keyup', () => {
+      elementAmount.value = formattingRupiahToInput(elementAmount.value);
+    });
   }
 
   _nameCategorySelector(transaction) {

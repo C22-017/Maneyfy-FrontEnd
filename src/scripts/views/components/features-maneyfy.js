@@ -23,14 +23,22 @@ class FeaturesManeyfy extends HTMLElement {
               <p>Kamu bisa menambahkan dompet tanpa batas untuk memisahkan setiap kebutuhanmu</p>
             </div>
             <div class="col-lg-6">
-              <img src="${CONFIG.IMAGE_FEATURES_1_PATH}" class="img-fluid image-features" alt="features_1_maneyfy">
+              <picture>
+                <source type="image/webp" srcset="${CONFIG.IMAGE_FEATURES_1_PATH}.webp">
+                <source type="image/png" srcset="${CONFIG.IMAGE_FEATURES_1_PATH}.png">
+                <img src="${CONFIG.IMAGE_FEATURES_1_PATH}.png" class="img-fluid image-features" alt="Ilustrasi menambahkan dompet">
+              </picture>
             </div>
           </div> <!-- End Feature 1 -->
 
           <!-- Feature 2 -->
           <div class="row feture-tabs reverse" data-aos="fade-up">
             <div class="col-lg-6">
-              <img src="${CONFIG.IMAGE_FEATURES_2_PATH}" class="img-fluid" alt="features_2_maneyfy">
+              <picture>
+                <source type="image/webp" srcset="${CONFIG.IMAGE_FEATURES_2_PATH}.webp">
+                <source type="image/png" srcset="${CONFIG.IMAGE_FEATURES_2_PATH}.png">
+                <img src="${CONFIG.IMAGE_FEATURES_2_PATH}.png" class="img-fluid" alt="Ilustrasi melihat laporan">
+              </picture>
             </div>
             <div class="col-lg-6 content">
               <h3>Lihat laporan pencatatan dengan mudah</h3>
@@ -45,14 +53,22 @@ class FeaturesManeyfy extends HTMLElement {
               <p>Kamu dapat mengelompokkan pencatatan berdasarkan kategori. Selain itu kamu juga dapat menambahkan kategori baru sesuai kebutuhanmu</p>
             </div>
             <div class="col-lg-6">
-              <img src="${CONFIG.IMAGE_FEATURES_3_PATH}" class="img-fluid" alt="features_3_maneyfy">
+              <picture>
+                <source type="image/webp" srcset="${CONFIG.IMAGE_FEATURES_3_PATH}.webp">
+                <source type="image/png" srcset="${CONFIG.IMAGE_FEATURES_3_PATH}.png">
+                <img src="${CONFIG.IMAGE_FEATURES_3_PATH}.png" class="img-fluid" alt="Ilustrasi mengatur keuangan dengan kategori">
+              </picture>
             </div>
           </div> <!-- End Feature 3 -->
 
           <!-- Feature 4 -->
           <div class="row feture-tabs reverse" data-aos="fade-up">
             <div class="col-lg-6">
-              <img src="${CONFIG.IMAGE_FEATURES_4_PATH}" class="img-fluid" alt="features_4_maneyfy">
+              <picture>
+                <source type="image/webp" srcset="${CONFIG.IMAGE_FEATURES_4_PATH}.webp">
+                <source type="image/png" srcset="${CONFIG.IMAGE_FEATURES_4_PATH}.png">
+                <img src="${CONFIG.IMAGE_FEATURES_4_PATH}.png" class="img-fluid" alt="Ilustrasi mengubah kebiasaan">
+              </picture>
             </div>  
             <div class="col-lg-6 content">
               <h3>Ubah kebiasaan buruk dalam mengatur keuangan</h3>

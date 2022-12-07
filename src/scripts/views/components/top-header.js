@@ -42,7 +42,12 @@ class TopHeader extends HTMLElement {
           </div>
           <div class="dropdown wallet-container">
             <button class="dropdown-toggle" type="button" id="dropdownWallet" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <img src="${CONFIG.ICON_WALLET_USER}" alt="" class="icon-header"><span class="dompet-list">${dompet.name_dompet}</span>
+              <picture>
+                <source type="image/webp" srcset="${CONFIG.ICON_WALLET_USER}.webp">
+                <source type="image/png" srcset="${CONFIG.ICON_WALLET_USER}.png">
+                <img src="${CONFIG.ICON_WALLET_USER}.png" class="icon-header" alt="Icon dompet pengguna">
+              </picture>
+              <span class="dompet-list">${dompet.name_dompet}</span>
             </button>
             <div class="dropdown-menu" id="dompetListHeader" aria-labelledby="dropdownWallet"></div>
           </div>
@@ -59,8 +64,8 @@ class TopHeader extends HTMLElement {
             <div class="modal-body modal-confirm">
               <span>Kamu akan diarahkan ke halaman Login untuk masuk kembali ke akunmu</span>
               <div class="justify-content-between row p-3">
-                <button type="button" class="btn btn-primary col-4" data-bs-dismiss="modal" aria-label="Close">Batal</button>
-                <button type="button" id="btnLogout" class="btn btn-danger col-4">Keluar</button>
+                <button type="button" class="btn btn-primary btn-primary-color col-4" data-bs-dismiss="modal" aria-label="Close">Batal</button>
+                <button type="button" id="btnLogout" class="btn btn-danger btn-danger-color col-4">Keluar</button>
               </div>
             </div>
           </div>

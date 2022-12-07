@@ -10,7 +10,11 @@ class TipsContent extends HTMLElement {
       <h1 class="titlePage mb-3 pt-3">Tips Mengelola Keuangan</h1>
 
       <div class="image">
-        <img src="${CONFIG.IMAGE_TIPS_ILUSTRATION}" class="img" alt="Ilustrasi Tips">
+        <picture>
+          <source type="image/webp" srcset="${CONFIG.IMAGE_TIPS_ILUSTRATION}.webp">
+          <source type="image/png" srcset="${CONFIG.IMAGE_TIPS_ILUSTRATION}.png">
+          <img src="${CONFIG.IMAGE_TIPS_ILUSTRATION}.png" class="img-fluid" alt="Ilustrasi tips dalam mengelola keuangan">
+        </picture>
       </div>
       
       <div class="accordion mb-3" id="accordionPanelsStayOpenExample">
