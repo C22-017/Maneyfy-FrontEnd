@@ -13,7 +13,7 @@ exports.config = {
   output: 'e2e/outputs',
   helpers: {
     Puppeteer: {
-      url: 'https://maneyfy-beta2.netlify.app',
+      url: 'https://maneyfy-beta4.netlify.app',
       show: true,
       windowSize: '1200x900',
     },

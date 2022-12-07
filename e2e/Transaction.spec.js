@@ -1,5 +1,3 @@
-const assert = require('assert');
-
 Feature('Add Transaction');
 
 Before(({ I }) => {

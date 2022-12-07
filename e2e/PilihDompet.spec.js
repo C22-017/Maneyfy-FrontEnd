@@ -1,5 +1,3 @@
-const assert = require('assert');
-
 Feature('Pilih Dompet on Maneyfy');
 
 Before(({ I }) => {

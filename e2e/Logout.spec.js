@@ -1,5 +1,3 @@
-const assert = require('assert');
-
 Feature('Logout from Maneyfy');
 
 Before(({ I }) => {
@@ -13,7 +11,7 @@ Scenario('1 Logout', async ({ I }) => {
 
   I.see('MASUK');
   I.fillField('email', 'testing@gmail.com');
-  I.fillField('password', 'tetsing123');
+  I.fillField('password', 'testing123');
   I.click('Login');
   I.wait(5);
 

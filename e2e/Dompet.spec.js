@@ -1,5 +1,3 @@
-const assert = require('assert');
-
 Feature('Add Dompet on Maneyfy');
 
 Before(({ I }) => {

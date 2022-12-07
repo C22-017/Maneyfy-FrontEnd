@@ -4,7 +4,10 @@
         "es2021": true,
         "node": true
     },
-    "extends": "airbnb-base",
+    "extends": [
+      "airbnb-base",
+      "plugin:codeceptjs/recommended"
+    ],
     "overrides": [
     ],
     "parserOptions": {
@@ -31,5 +34,8 @@
       "prefer-destructuring": "off",
       "no-param-reassign": "off",
       "no-lonely-if": "off"
-    }
+    },
+    "plugins": [
+      "codeceptjs"
+    ]
 }

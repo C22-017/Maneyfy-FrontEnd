@@ -1,12 +1,10 @@
-const assert = require('assert');
-
-Feature('Kategori Pemasukan on Maneyfy');
+Feature('Kategori Pendapatan on Maneyfy');
 
 Before(({ I }) => {
   I.amOnPage('/');
 });
 
-Scenario('1 Add Kategori Pemasukan', async ({ I }) => {
+Scenario('1 Add Kategori Pendapatan', async ({ I }) => {
   I.see('Login', '.getstarted');
   I.click('.getstarted');
   I.amOnPage('/#/login');
@@ -21,7 +19,7 @@ Scenario('1 Add Kategori Pemasukan', async ({ I }) => {
   I.click('.profile__link');
   I.wait(5);
 
-  I.click('Kelola Pemasukan');
+  I.click('Kelola Pendapatan');
   I.wait(5);
   I.click('.add-earning');
   I.wait(5);
@@ -36,7 +34,7 @@ Scenario('1 Add Kategori Pemasukan', async ({ I }) => {
   I.wait(5);
 });
 
-Scenario('2 Edit Kategori Pemasukan', async ({ I }) => {
+Scenario('2 Edit Kategori Pendapatan', async ({ I }) => {
   I.see('Login', '.getstarted');
   I.click('.getstarted');
   I.amOnPage('/#/login');
@@ -51,7 +49,7 @@ Scenario('2 Edit Kategori Pemasukan', async ({ I }) => {
   I.click('.profile__link');
   I.wait(5);
 
-  I.click('Kelola Pemasukan');
+  I.click('Kelola Pendapatan');
   I.wait(5);
   I.click('btnIconEditEarning');
   I.wait(5);
@@ -66,7 +64,7 @@ Scenario('2 Edit Kategori Pemasukan', async ({ I }) => {
   I.wait(5);
 });
 
-Scenario('3 Delete Kategori Pemasukan', async ({ I }) => {
+Scenario('3 Delete Kategori Pendapatan', async ({ I }) => {
   I.see('Login', '.getstarted');
   I.click('.getstarted');
   I.amOnPage('/#/login');
@@ -81,7 +79,7 @@ Scenario('3 Delete Kategori Pemasukan', async ({ I }) => {
   I.click('.profile__link');
   I.wait(5);
 
-  I.click('Kelola Pemasukan');
+  I.click('Kelola Pendapatan');
   I.wait(5);
   I.click('btnIconDeleteEarning');
   I.wait(5);

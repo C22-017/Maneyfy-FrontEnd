@@ -1,5 +1,3 @@
-const assert = require('assert');
-
 Feature('Register Maneyfy');
 
 Before(({ I }) => {

@@ -1,5 +1,3 @@
-const assert = require('assert');
-
 Feature('See Profile on Maneyfy');
 
 Before(({ I }) => {
