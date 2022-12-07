@@ -13,7 +13,7 @@ class BodyEditTransaction extends HTMLElement {
   _render() {
     const dompet = this._dompetSelected;
     const transaction = this._transaction;
-    const amountWallet = rupiahFormat(dompet.amountWallet);
+    const amountWallet = rupiahFormat(dompet.amount);
     const amountTransaction = integerRupiahToInput(transaction.amount_transaction);
 
     this.innerHTML = `

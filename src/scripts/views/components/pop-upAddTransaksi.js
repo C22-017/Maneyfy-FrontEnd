@@ -9,7 +9,7 @@ const addTransaksi = `
         <body-add-transaction class="modal-body text-center tambah-transaksi"></body-add-transaction>
         <div class="modal-footer">
           <div class="d-grid justify-content-md-end">
-            <button type="button" class="btn btn-primary" id="btnCreateTransaction">Tambah</button>
+            <button type="button" class="btn btn-primary btn-primary-color px-4" id="btnCreateTransaction">Tambah</button>
           </div>
         </div>
       </div>
@@ -53,7 +53,7 @@ const addTransaksi = `
         </div>
         <div class="modal-footer">
           <div class="d-grid d-md-flex justify-content-md-end">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addTransaksi" id="btnChooseCategoryAdd">Pilih</button>
+            <button type="button" class="btn btn-primary btn-primary-color px-4" data-bs-toggle="modal" data-bs-target="#addTransaksi" id="btnChooseCategoryAdd">Pilih</button>
           </div>
         </div>
       </div>

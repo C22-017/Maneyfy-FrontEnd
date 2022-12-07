@@ -3,8 +3,30 @@
   vertical-align: middle !important;
 }
 
-.btn-primary {
-  
+.btn-primary-color {
+  background-color: $primary-color;
+  font-weight: 700;
+  border-radius: 10px;
+  border: 0;
+  padding: 0.7rem 0;
+  box-shadow: 0px 5px 30px rgb(216 220 255 / 40%);
+}
+
+.btn-danger-color {
+  background-color: $background-logout;
+  font-weight: 700;
+  border-radius: 10px;
+  border: 0;
+  padding: 0.7rem 0;
+  box-shadow: 0px 5px 30px rgb(216 220 255 / 40%);
+}
+
+.color-primary {
+  color: $primary-color;
+}
+
+.color-danger {
+  color: $background-logout;
 }
 
 .icon-header {

@@ -8,9 +8,9 @@ const detailTransaksi = `
           </div>
           <body-detail-transaction class="modal-body justify-content-evenly row gap-3"></body-detail-transaction>
           <div class="modal-footer justify-content-between">
-            <button type="button" class="btn btn-danger col-4" data-bs-toggle="modal"
+            <button type="button" class="btn btn-danger btn-danger-color col-4" data-bs-toggle="modal"
               data-bs-target="#hapusTransaksi">Hapus</button>
-            <button type="button" class="btn btn-secondary col-4" data-bs-toggle="modal"
+            <button type="button" class="btn btn-primary btn-primary-color col-4" data-bs-toggle="modal"
               data-bs-target="#editTransaksi" id="btnEditTransaction">Ubah</button>
           </div>
         </div>
@@ -21,7 +21,7 @@ const detailTransaksi = `
       <div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title" id="exampleModalLabel">Hapus Transaksi ?</h4>
+            <h4 class="modal-title" id="exampleModalLabel">Hapus Transaksi?</h4>
             <button type="button" class="btn-close p-3" data-bs-toggle="modal" data-bs-target="#detailTransaksi"></button>
           </div>
           <body-delete-transaction></body-delete-transaction>
@@ -39,7 +39,7 @@ const detailTransaksi = `
           <body-edit-transaction class="modal-body text-center tambah-transaksi"></body-edit-transaction>
           <div class="modal-footer">
             <div class="d-grid justify-content-md-end">
-              <button type="button" class="btn btn-primary" id="btnUpdateTransaction">Simpan</button>
+              <button type="button" class="btn btn-primary btn-primary-color px-4" id="btnUpdateTransaction">Simpan</button>
             </div>
           </div>
         </div>
@@ -85,7 +85,7 @@ const detailTransaksi = `
           </div>
           <div class="modal-footer">
             <div class="d-grid d-md-flex justify-content-md-end">
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editTransaksi" id="btnChooseCategory">Pilih</button>
+              <button type="button" class="btn btn-primary btn-primary-color px-4" data-bs-toggle="modal" data-bs-target="#editTransaksi" id="btnChooseCategory">Pilih</button>
             </div>
           </div>
         </div>

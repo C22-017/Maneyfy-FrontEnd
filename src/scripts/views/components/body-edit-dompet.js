@@ -22,7 +22,7 @@ class BodyEditDompet extends HTMLElement {
           </div>
         </div>
         <div class="d-grid d-md-flex justify-content-md-end pt-4">
-          <button type="button" name="btnEditDompet" id="btnEditDompet-${dompet.id}" class="btn btn-primary">Simpan</button>
+          <button type="button" name="btnEditDompet" id="btnEditDompet-${dompet.id}" class="btn btn-primary btn-primary-color px-4">Simpan</button>
         </div>
       </div>
     `;

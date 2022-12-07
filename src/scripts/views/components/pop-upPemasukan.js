@@ -33,7 +33,7 @@ const pemasukan = `
             <body-tambah-earning></body-tambah-earning>
             <div class="modal-footer p-3">
               <div class="d-grid w-100 d-md-flex justify-content-md-end">
-              <button type="button" id="btnTambahEarning" class="btn btn-primary">Tambah</button>
+              <button type="button" id="btnTambahEarning" class="btn btn-primary btn-primary-color px-4">Tambah</button>
               </div>
             </div>   
           </div>
@@ -64,7 +64,7 @@ const pemasukan = `
             </div>
             <div class="modal-footer">
               <div class="d-grid d-md-flex justify-content-md-end">
-                <button type="button" class="btn btn-primary btnChooseIconEarning" data-bs-toggle="modal" data-bs-target="#tambahKategoriPemasukan">Pilih</button>
+                <button type="button" class="btn btn-primary btnChooseIconEarning btn-primary-color px-4" data-bs-toggle="modal" data-bs-target="#tambahKategoriPemasukan">Pilih</button>
               </div>
             </div>
           </div>
@@ -83,7 +83,7 @@ const pemasukan = `
             </div>
             <div class="modal-footer">
               <div class="d-grid d-md-flex justify-content-md-end">
-                <button type="button" class="btn btn-primary btnChooseIconEarning" data-bs-toggle="modal" data-bs-target="#editKategoriPemasukan">Pilih</button>
+                <button type="button" class="btn btn-primary btnChooseIconEarning btn-primary-color px-4" data-bs-toggle="modal" data-bs-target="#editKategoriPemasukan">Pilih</button>
               </div>
             </div>
           </div>

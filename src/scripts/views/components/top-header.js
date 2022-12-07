@@ -59,8 +59,8 @@ class TopHeader extends HTMLElement {
             <div class="modal-body modal-confirm">
               <span>Kamu akan diarahkan ke halaman Login untuk masuk kembali ke akunmu</span>
               <div class="justify-content-between row p-3">
-                <button type="button" class="btn btn-primary col-4" data-bs-dismiss="modal" aria-label="Close">Batal</button>
-                <button type="button" id="btnLogout" class="btn btn-danger col-4">Keluar</button>
+                <button type="button" class="btn btn-primary btn-primary-color col-4" data-bs-dismiss="modal" aria-label="Close">Batal</button>
+                <button type="button" id="btnLogout" class="btn btn-danger btn-danger-color col-4">Keluar</button>
               </div>
             </div>
           </div>

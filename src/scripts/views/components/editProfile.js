@@ -34,9 +34,9 @@ const editProfile = (dataUser) => {
               </div>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-danger col-4" data-bs-toggle="modal" data-bs-target="#hapusAkun">Hapus
+              <button type="button" class="btn btn-danger btn-danger-color col-5" data-bs-toggle="modal" data-bs-target="#hapusAkun">Hapus
                 Akun</button>
-              <button type="submit" class="btn btn-primary col-4">Simpan</button>
+              <button type="submit" class="btn btn-primary btn-primary-color col-4">Simpan</button>
             </div>
           </form>
         </div>
@@ -54,9 +54,9 @@ const editProfile = (dataUser) => {
             <span>Tindakan ini akan menghapus data kamu dari database, termasuk Transaksi yang sudah ditambahkan
               sebelumnya</span>
             <div class="justify-content-between row p-3">
-              <button type="button" class="btn btn-primary col-4" data-bs-toggle="modal"
+              <button type="button" class="btn btn-primary btn-primary-color col-4" data-bs-toggle="modal"
                 data-bs-target="#kelolaProfil">Batal</button>
-              <button type="button" id="btnDeleteUser" class="btn btn-danger col-4">Hapus</button>
+              <button type="button" id="btnDeleteUser" class="btn btn-danger btn-danger-color col-4">Hapus</button>
             </div>
           </div>
         </div>
