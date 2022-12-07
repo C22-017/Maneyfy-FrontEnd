@@ -21,7 +21,7 @@ exports.config = {
   include: {
     I: './steps_file.js',
   },
-  name: 'restofind-apps',
+  name: 'maneyfy-webapps',
   plugins: {
     retryFailedStep: {
       enabled: true,

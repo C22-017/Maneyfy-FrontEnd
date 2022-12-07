@@ -75,6 +75,9 @@ module.exports = merge(common, {
       overrideExtension: true,
     }),
     new CssMinimizerPlugin(),
-    new BundleAnalyzerPlugin(),
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      openAnalyzer: false,
+    }),
   ],
 });
