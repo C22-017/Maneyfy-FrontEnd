@@ -132,7 +132,11 @@ const TransactionInitiator = {
 
       if (transactionResult.data.length === 0) {
         listHistoryElement.innerHTML = `
-          <img src="${CONFIG.IMAGE_DATA_NOT_FOUND}" class="img-transaction-not-found">
+          <picture>
+            <source type="image/webp" srcset="${CONFIG.IMAGE_DATA_NOT_FOUND}.webp">
+            <source type="image/png" srcset="${CONFIG.IMAGE_DATA_NOT_FOUND}.png">
+            <img src="${CONFIG.IMAGE_DATA_NOT_FOUND}.png" class="img-transaction-not-found" alt="Ilustrasi transaksi tidak ditemukan">
+          </picture>
           <p>Tidak ada transaksi pada bulan dan tahun ini</p>
         `;
       } else {

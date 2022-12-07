@@ -58,7 +58,7 @@ const KelolaEarningInitiator = {
       const nameEarning = getElement('#inputNameEarningTambah').value;
 
       if (nameEarning === '') {
-        alert('Nama kategori pemasukan harus diisi');
+        alert('Nama kategori Pendapatan harus diisi');
         return false;
       }
 
@@ -79,7 +79,7 @@ const KelolaEarningInitiator = {
       hideLoading();
 
       if (responseTambahEarning.status === 'success') {
-        alert('Kategori Pemasukan berhasil dibuat');
+        alert('Kategori Pendapatan berhasil dibuat');
         location.reload();
       } else {
         alert(responseTambahEarning.msg);
@@ -119,7 +119,7 @@ const KelolaEarningInitiator = {
             const nameEarning = getElement('#inputNameEarningEdit').value;
 
             if (nameEarning === '') {
-              alert('Nama kategori pemasukan harus diisi');
+              alert('Nama kategori Pendapatan harus diisi');
               return false;
             }
 
@@ -133,7 +133,7 @@ const KelolaEarningInitiator = {
             hideLoading();
 
             if (responseEdit.msg === 'Data updated successfully') {
-              alert('Kategori Pemasukan berhasil diubah');
+              alert('Kategori Pendapatan berhasil diubah');
               location.reload();
             } else {
               alert(responseEdit.msg);
@@ -178,7 +178,7 @@ const KelolaEarningInitiator = {
         hideLoading();
 
         if (respons.msg === 'Category Earning berhasil dihapus') {
-          alert('Kategori Pemasukan berhasil dihapus');
+          alert('Kategori Pendapatan berhasil dihapus');
           location.reload();
         } else {
           alert(respons.msg);

@@ -1,14 +1,14 @@
 const pemasukan = `
     <div class="pemasukan shadow-sm col-12 col-sm-12 col-lg-3 text-center">
       <button type="button" class="btn titleKelola" data-bs-toggle="modal" data-bs-target="#kelolaKategoriPemasukan">
-        Kelola Pemasukan
+        Kelola Pendapatan
       </button>
 
       <div class="modal fade" id="kelolaKategoriPemasukan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title" id="exampleModalLabel">Kelola Kategori Pemasukan</h4>
+              <h4 class="modal-title" id="exampleModalLabel">Kelola Kategori Pendapatan</h4>
               <button type="button" class="btn-close p-3" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -27,7 +27,7 @@ const pemasukan = `
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title" id="exampleModalLabel">Tambah Kategori Pemasukan</h4>
+              <h4 class="modal-title" id="exampleModalLabel">Tambah Kategori Pendapatan</h4>
               <button type="button" class="btn-close p-3" data-bs-toggle="modal" data-bs-target="#kelolaKategoriPemasukan"></button>
             </div>
             <body-tambah-earning></body-tambah-earning>
@@ -44,7 +44,7 @@ const pemasukan = `
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title" id="exampleModalLabel">Edit Kategori Pemasukan</h4>
+              <h4 class="modal-title" id="exampleModalLabel">Edit Kategori Pendapatan</h4>
               <button type="button" class="btn-close p-3" data-bs-toggle="modal" data-bs-target="#kelolaKategoriPemasukan"></button>
             </div>
             <body-edit-earning></body-edit-earning>     
@@ -56,7 +56,7 @@ const pemasukan = `
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title" id="exampleModalLabel">Pilih Icon Pemasukan</h4>
+              <h4 class="modal-title" id="exampleModalLabel">Pilih Icon Pendapatan</h4>
               <button type="button" class="btn-close p-3" data-bs-toggle="modal" data-bs-target="#tambahKategoriPemasukan"></button>
             </div>
             <div class="modal-body row gap-1">
@@ -75,7 +75,7 @@ const pemasukan = `
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title" id="exampleModalLabel">Pilih Icon Pemasukan</h4>
+              <h4 class="modal-title" id="exampleModalLabel">Pilih Icon Pendapatan</h4>
               <button type="button" class="btn-close p-3" data-bs-toggle="modal" data-bs-target="#editKategoriPemasukan"></button>
             </div>
             <div class="modal-body row gap-1">
@@ -94,7 +94,7 @@ const pemasukan = `
         <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title" id="exampleModalLabel">Hapus Kategori Pemasukan?</h4>
+              <h4 class="modal-title" id="exampleModalLabel">Hapus Kategori Pendapatan?</h4>
               <button type="button" class="btn-close p-3" data-bs-toggle="modal" data-bs-target="#kelolaKategoriPemasukan"></button>
             </div>
             <body-delete-earning></body-delete-earning>    

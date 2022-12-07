@@ -24,7 +24,11 @@ class HeroLanding extends HTMLElement {
               </div>
             </div>
             <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-              <img src="${CONFIG.IMAGE_HERO_LANDING_PATH}" class="img-fluid" alt="">
+              <picture>
+                <source type="image/webp" srcset="${CONFIG.IMAGE_HERO_LANDING_PATH}.webp">
+                <source type="image/png" srcset="${CONFIG.IMAGE_HERO_LANDING_PATH}.png">
+                <img src="${CONFIG.IMAGE_HERO_LANDING_PATH}.png" class="img-fluid" alt="Ilustrasi mengatur keuangan dengan maneyfy">
+              </picture>
             </div>
           </div>
         </div>

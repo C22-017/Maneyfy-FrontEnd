@@ -1,74 +1,74 @@
 .divider:after,
 .divider:before {
-content: "";
-flex: 1;
-height: 1px;
-background: #eee;
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
 }
 
 .head {
   padding-top: 70px;
 }
 .logo-login-register {
- height: 100px;
+  height: 100px;
 }
 
 form {
- width: 100%;
-
+  width: 100%;
 }
 
 .form-control-login-register {
- width: 70%;
- justify-content: center;
- margin: 0 auto;
- .togglePassword {
-  height: 100%;
-  cursor: pointer;
-  i {
-    font-size: 2rem;
-   }
- }
+  width: 70%;
+  justify-content: center;
+  margin: 0 auto;
+  .togglePassword {
+    height: 100%;
+    cursor: pointer;
+    i {
+      font-size: 2rem;
+    }
+  }
 }
 
 .button-filled {
- font-weight: 700;
- margin-bottom: 30px;
- line-height: 0;
- width: 200px;
- padding: 23px 30px;
- border-radius: 4px;
- transition: 0.5s;
- text-decoration: none;
- color: #fff;
- border-style:none;
- background: #42B2FA;
- border-radius: 20px;
- box-shadow: 0px 5px 30px rgba(216, 220, 255, 0.4);
- padding-left: 2.5rem; 
- padding-right: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  line-height: 0;
+  width: 200px;
+  padding: 23px 30px;
+  border-radius: 4px;
+  transition: 0.5s;
+  text-decoration: none;
+  color: #fff;
+  border-style: none;
+  background: #42b2fa;
+  border-radius: 10px;
+  box-shadow: 0px 5px 30px rgba(216, 220, 255, 0.4);
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 .button-outline {
- font-weight: 700;
- line-height: 0;
- width: 200px;
- margin-bottom: 70px;
- padding: 20px 30px;
- border-radius: 20px;
- border: #42B2FA;
- border-style:solid;
- transition: 0.5s;
- text-decoration: none;
- color: black;
- background: white;
- box-shadow: 0px 5px 30px rgba(216, 220, 255, 0.4);
- padding-left: 2.5rem; padding-right: 2.5rem;
+  font-weight: 700;
+  line-height: 0;
+  width: 200px;
+  margin-bottom: 70px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  border: #42b2fa;
+  border-style: solid;
+  transition: 0.5s;
+  text-decoration: none;
+  color: black;
+  background: white;
+  box-shadow: 0px 5px 30px rgba(216, 220, 255, 0.4);
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 .form-input {
- background-color: #A7CCED;
- justify-content: center;
+  background-color: #a7cced;
+  justify-content: center;
   margin: auto 0;
 }
 
@@ -79,26 +79,24 @@ form {
 }
 
 .h-custom {
- height: 100%;
- background-color: #A7CCED;
- }
-
- @media (max-width: 991px) {
-  .hero-login-register {
-    display: none;
-   }
+  height: 100%;
+  background-color: #a7cced;
 }
 
+@media (max-width: 991px) {
+  .hero-login-register {
+    display: none;
+  }
+}
 
- @media (max-width: 450px) {
- .h-custom {
- height: 100%;
- }
- .h-custom .form-control-login-register {
-  margin-left: 0px;
-  // padding-left: 20px;
-  margin-right:5px;
-  width: 100%;
- }
- 
+@media (max-width: 450px) {
+  .h-custom {
+    height: 100%;
+  }
+  .h-custom .form-control-login-register {
+    margin-left: 0px;
+    // padding-left: 20px;
+    margin-right: 5px;
+    width: 100%;
+  }
 }

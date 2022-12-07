@@ -22,7 +22,11 @@ class RegisterNow extends HTMLElement {
               </div>
             </div>
             <div class="col-lg-6 daftar-img" data-aos="zoom-out" data-aos-delay="200">
-              <img src="${CONFIG.IMAGE_REGISTER_NOW_PATH}" class="img-fluid" alt="growth with maneyfy">
+              <picture>
+                <source type="image/webp" srcset="${CONFIG.IMAGE_REGISTER_NOW_PATH}.webp">
+                <source type="image/png" srcset="${CONFIG.IMAGE_REGISTER_NOW_PATH}.png">
+                <img src="${CONFIG.IMAGE_REGISTER_NOW_PATH}.png" class="img-fluid" alt="Ilustrasi bergabung dengan maneyfy">
+              </picture>
             </div>
           </div>
         </div>

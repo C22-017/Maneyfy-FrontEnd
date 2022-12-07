@@ -14,7 +14,7 @@ class BodyTambahEarning extends HTMLElement {
         </div>
         <div class="col-8 border flex-fill">
           <div class="mb-3">
-            <label for="inputNameEarningTambah" class="form-label">Nama Kategori Pemasukan</label>
+            <label for="inputNameEarningTambah" class="form-label">Nama Kategori Pendapatan</label>
             <input type="text" class="form-control" id="inputNameEarningTambah">
           </div>
         </div>
