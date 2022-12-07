@@ -1,6 +1,7 @@
 import CONFIG from '../../../globals/config';
 import Transaction from '../../../services/api/transaction';
 import { getElement, getAllElement } from '../../element';
+import { rupiahToInteger } from '../../format-currency-idr';
 import { showLoading, hideLoading } from '../spinner-initiator';
 
 const TransactionInitiator = {
@@ -77,7 +78,7 @@ const TransactionInitiator = {
         typeTransaction,
         categoryTransactionId: idCategory,
         dompetId: this._selectedDompet.id,
-        amountTransaction: amountValue,
+        amountTransaction: rupiahToInteger(amountValue),
         nameTransaction: nameValue,
         dateTransaction: dateValue,
       };
@@ -358,7 +359,7 @@ const TransactionInitiator = {
         typeTransaction,
         categoryTransactionId: idCategory,
         dompetId: this._selectedDompet.id,
-        amountTransaction: amountValue,
+        amountTransaction: rupiahToInteger(amountValue),
         nameTransaction: nameValue,
         dateTransaction: dateValue,
       };
