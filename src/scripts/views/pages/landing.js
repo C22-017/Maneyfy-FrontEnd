@@ -19,7 +19,7 @@ const Landing = {
       </main>
     
       <footer>
-        <p><a href="https://github.com/C22-017" target="_blank" rel="noopener">Copyright 2022 - Maneyfy </p>
+        <p><a href="https://github.com/C22-017" target="_blank" rel="noopener">Copyright 2023 - Maneyfy </p>
       </footer>
     `;
   },
