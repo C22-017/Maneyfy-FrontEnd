@@ -1,5 +1,5 @@
 const CONFIG = {
-  BASE_URL: 'https://maneyfy-backend-production.up.railway.app/api/',
+  BASE_URL: 'https://maneyfy-database.onrender.com/api/',
   STORAGE_KEY: 'MANEYFY_WEBAPPS',
   // ASSETS IMAGE //
   IMAGE_LOGO_PATH: './images/logo.png',
